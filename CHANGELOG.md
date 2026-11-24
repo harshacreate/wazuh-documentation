@@ -1,1081 +1,1814 @@
-# Change Log
+<a id="change-log"></a>
+Change Log
 All notable changes to this project will be documented in this file.
 
-## [v5.1.0]
-
-- Support for Wazuh 5.1.0
-
-## [v5.0.1]
-
-- Support for Wazuh 5.0.1
-
-## [v5.0.0]
-
-### Added
-
-- Added documentation for the reporting plugin in the Wazuh dashboard package generation guide. ([#8682](https://github.com/wazuh/wazuh-documentation/pull/8682))
-- Added references for FIM (Syscheck) and inventory (Syscollector) state persistence settings. ([#8801](https://github.com/wazuh/wazuh-documentation/pull/8801))
-- Added documentation for SCA state persistence settings. ([#8841](https://github.com/wazuh/wazuh-documentation/pull/8841))
-- Added ARM64 support for Linux and macOS WPK packages. ([#8851](https://github.com/wazuh/wazuh-documentation/pull/8851))
-- Added ``integrity_interval`` to the syscheck ``synchronization`` configuration and updated the ``response_timeout`` default value. ([#9099](https://github.com/wazuh/wazuh-documentation/pull/9099))
-- Added ``integrity_interval`` to the SCA and the syscollector ``synchronization`` configuration. ([#9164](https://github.com/wazuh/wazuh-documentation/pull/9164))
-- Added *Upgrading to Wazuh 5.x* sub-section to the Upgrade guide. ([#9435](https://github.com/wazuh/wazuh-documentation/pull/9435))
-- Added the *Data analysis* documentation to the *User manual*. ([#9743](https://github.com/wazuh/wazuh-documentation/pull/9743)) ([#10348](https://github.com/wazuh/wazuh-documentation/pull/10348)) ([#10359](https://github.com/wazuh/wazuh-documentation/pull/10359)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10658](https://github.com/wazuh/wazuh-documentation/pull/10658)) ([#10702](https://github.com/wazuh/wazuh-documentation/pull/10702)) ([#10725](https://github.com/wazuh/wazuh-documentation/pull/10725)) ([#10730](https://github.com/wazuh/wazuh-documentation/pull/10730)) ([#10733](https://github.com/wazuh/wazuh-documentation/pull/10733)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10736](https://github.com/wazuh/wazuh-documentation/pull/10736)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10765](https://github.com/wazuh/wazuh-documentation/pull/10765)) ([#10816](https://github.com/wazuh/wazuh-documentation/pull/10816)) ([#10844](https://github.com/wazuh/wazuh-documentation/pull/10844))
-- Added the *Transitioning from 4.x to 5.x* documentation. ([#9772](https://github.com/wazuh/wazuh-documentation/pull/9772)) ([#9792](https://github.com/wazuh/wazuh-documentation/pull/9792)) ([#9817](https://github.com/wazuh/wazuh-documentation/pull/9817)) ([#9873](https://github.com/wazuh/wazuh-documentation/pull/9873)) ([#10028](https://github.com/wazuh/wazuh-documentation/pull/10028)) ([#10067](https://github.com/wazuh/wazuh-documentation/pull/10067)) ([#10264](https://github.com/wazuh/wazuh-documentation/pull/10264)) ([#10322](https://github.com/wazuh/wazuh-documentation/pull/10322)) ([#10353](https://github.com/wazuh/wazuh-documentation/pull/10353)) ([#10360](https://github.com/wazuh/wazuh-documentation/pull/10360)) ([#10396](https://github.com/wazuh/wazuh-documentation/pull/10396)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10524](https://github.com/wazuh/wazuh-documentation/pull/10524)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10610](https://github.com/wazuh/wazuh-documentation/pull/10610)) ([#10619](https://github.com/wazuh/wazuh-documentation/pull/10619)) ([#10631](https://github.com/wazuh/wazuh-documentation/pull/10631)) ([#10685](https://github.com/wazuh/wazuh-documentation/pull/10685)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10766](https://github.com/wazuh/wazuh-documentation/pull/10766)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10837](https://github.com/wazuh/wazuh-documentation/pull/10837))
-- Added the *Security Configuration Assessment* use case to the *Proof of concept guide*. ([#9777](https://github.com/wazuh/wazuh-documentation/pull/9777)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833)) ([#10843](https://github.com/wazuh/wazuh-documentation/pull/10843))
-- Added the *Network IDS integration* use case to the *Proof of concept guide*. ([#9831](https://github.com/wazuh/wazuh-documentation/pull/9831)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
-- Added the *Detecting a cross-site scripting (XSS) attack* use case to the *Proof of concept guide*. ([#9916](https://github.com/wazuh/wazuh-documentation/pull/9916)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
-- Added the *Wazuh CTI* documentation as a new top-level section. ([#9989](https://github.com/wazuh/wazuh-documentation/pull/9989)) ([#9990](https://github.com/wazuh/wazuh-documentation/pull/9990)) ([#10250](https://github.com/wazuh/wazuh-documentation/pull/10250)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500))
-- Added the *Incident response* dashboard section, the *Email* notification channel, and the *AI Assistant* configuration documentation to the *Wazuh dashboard* section. ([#10033](https://github.com/wazuh/wazuh-documentation/pull/10033))
-- Added the *Installation Assistant*, *Certs tool*, *Wazuh passwords tool*, *wazuh-manager-certs*, *wazuh-manager-resolve-credentials* and *resolve-credentials* documentation to the *Reference* section. ([#10047](https://github.com/wazuh/wazuh-documentation/pull/10047)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10540](https://github.com/wazuh/wazuh-documentation/pull/10540)) ([#10675](https://github.com/wazuh/wazuh-documentation/pull/10675)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10840](https://github.com/wazuh/wazuh-documentation/pull/10840))
-- Added a note to the *Regulatory compliance* index page stating that the rule and control mappings are indicative and require an independent qualified assessor for formal certification, and updated the list of supported frameworks. ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10708](https://github.com/wazuh/wazuh-documentation/pull/10708))
-- Added the *Detecting a known malicious file* use case to the *Proof of concept guide*. ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
-
-### Changed
-
-- Replaced `indexer_cluster_initial_master_nodes` with `indexer_initial_cluster_manager_nodes` in Puppet deployment documentation. ([#8666](https://github.com/wazuh/wazuh-documentation/pull/8666))
-- Updated the File Integrity Monitoring documentation to remove deprecated settings (`max_interval`, `queue_size`, `thread_pool`, `database`, and `registry_enabled`), add the missing `check_device` setting, and fix the `max_eps` definition in the synchronization settings table. ([#8735](https://github.com/wazuh/wazuh-documentation/pull/8735))
-- Updated the FIM documentation to change the default FIM who-data mode provider to eBPF. ([#8805](https://github.com/wazuh/wazuh-documentation/pull/8805))
-- Updated references in steps and links to 5.x. ([#8853](https://github.com/wazuh/wazuh-documentation/pull/8853)) ([#9658](https://github.com/wazuh/wazuh-documentation/pull/9658)) ([#9660](https://github.com/wazuh/wazuh-documentation/pull/9660))
-- Updated the *Installation from sources* documentation to Wazuh 5.0, covering the build dependencies, the Wazuh manager installation steps with the Wazuh indexer and the Wazuh dashboard, token enrollment for the Wazuh agent, and the Linux, Windows and macOS installation and uninstall steps. Made the section visible in *Deployment options*. ([#9397](https://github.com/wazuh/wazuh-documentation/pull/9397)) ([#10576](https://github.com/wazuh/wazuh-documentation/pull/10576)) ([#10586](https://github.com/wazuh/wazuh-documentation/pull/10586)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10640](https://github.com/wazuh/wazuh-documentation/pull/10640)) ([#10646](https://github.com/wazuh/wazuh-documentation/pull/10646)) ([#10656](https://github.com/wazuh/wazuh-documentation/pull/10656))
-- Updated the *Installation guide*. ([#9545](https://github.com/wazuh/wazuh-documentation/pull/9545)) ([#9682](https://github.com/wazuh/wazuh-documentation/pull/9682)) ([#9692](https://github.com/wazuh/wazuh-documentation/pull/9692)) ([#9736](https://github.com/wazuh/wazuh-documentation/pull/9736)) ([#9771](https://github.com/wazuh/wazuh-documentation/pull/9771)) ([#9962](https://github.com/wazuh/wazuh-documentation/pull/9962)) ([#9968](https://github.com/wazuh/wazuh-documentation/pull/9968)) ([#9969](https://github.com/wazuh/wazuh-documentation/pull/9969)) ([#9994](https://github.com/wazuh/wazuh-documentation/pull/9994)) ([#10002](https://github.com/wazuh/wazuh-documentation/pull/10002)) ([#10019](https://github.com/wazuh/wazuh-documentation/pull/10019)) ([#10187](https://github.com/wazuh/wazuh-documentation/pull/10187)) ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10221](https://github.com/wazuh/wazuh-documentation/pull/10221)) ([#10239](https://github.com/wazuh/wazuh-documentation/pull/10239)) ([#10251](https://github.com/wazuh/wazuh-documentation/pull/10251)) ([#10252](https://github.com/wazuh/wazuh-documentation/pull/10252)) ([#10255](https://github.com/wazuh/wazuh-documentation/pull/10255)) ([#10352](https://github.com/wazuh/wazuh-documentation/pull/10352)) ([#10361](https://github.com/wazuh/wazuh-documentation/pull/10361)) ([#10394](https://github.com/wazuh/wazuh-documentation/pull/10394)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10529](https://github.com/wazuh/wazuh-documentation/pull/10529)) ([#10539](https://github.com/wazuh/wazuh-documentation/pull/10539)) ([#10548](https://github.com/wazuh/wazuh-documentation/pull/10548)) ([#10559](https://github.com/wazuh/wazuh-documentation/pull/10559)) ([#10562](https://github.com/wazuh/wazuh-documentation/pull/10562)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10608](https://github.com/wazuh/wazuh-documentation/pull/10608)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10629](https://github.com/wazuh/wazuh-documentation/pull/10629)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10652](https://github.com/wazuh/wazuh-documentation/pull/10652)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10841](https://github.com/wazuh/wazuh-documentation/pull/10841)) ([#10842](https://github.com/wazuh/wazuh-documentation/pull/10842))
-- Updated the *Installation alternatives* documentation. ([#9576](https://github.com/wazuh/wazuh-documentation/pull/9576)) ([#9587](https://github.com/wazuh/wazuh-documentation/pull/9587)) ([#9589](https://github.com/wazuh/wazuh-documentation/pull/9589)) ([#9591](https://github.com/wazuh/wazuh-documentation/pull/9591)) ([#9595](https://github.com/wazuh/wazuh-documentation/pull/9595)) ([#9597](https://github.com/wazuh/wazuh-documentation/pull/9597)) ([#9606](https://github.com/wazuh/wazuh-documentation/pull/9606)) ([#9607](https://github.com/wazuh/wazuh-documentation/pull/9607)) ([#9674](https://github.com/wazuh/wazuh-documentation/pull/9674)) ([#10270](https://github.com/wazuh/wazuh-documentation/pull/10270)) ([#10275](https://github.com/wazuh/wazuh-documentation/pull/10275)) ([#10324](https://github.com/wazuh/wazuh-documentation/pull/10324)) ([#10326](https://github.com/wazuh/wazuh-documentation/pull/10326)) ([#10332](https://github.com/wazuh/wazuh-documentation/pull/10332)) ([#10349](https://github.com/wazuh/wazuh-documentation/pull/10349)) ([#10447](https://github.com/wazuh/wazuh-documentation/pull/10447)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10505](https://github.com/wazuh/wazuh-documentation/pull/10505)) ([#10560](https://github.com/wazuh/wazuh-documentation/pull/10560)) ([#10563](https://github.com/wazuh/wazuh-documentation/pull/10563)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10628](https://github.com/wazuh/wazuh-documentation/pull/10628)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630))
-- Updated the *Wazuh agent* documentation in *User manual*. ([#9665](https://github.com/wazuh/wazuh-documentation/pull/9665)) ([#9669](https://github.com/wazuh/wazuh-documentation/pull/9669)) ([#9701](https://github.com/wazuh/wazuh-documentation/pull/9701)) ([#9702](https://github.com/wazuh/wazuh-documentation/pull/9702)) ([#9812](https://github.com/wazuh/wazuh-documentation/pull/9812)) ([#9993](https://github.com/wazuh/wazuh-documentation/pull/9993)) ([#10035](https://github.com/wazuh/wazuh-documentation/pull/10035)) ([#10065](https://github.com/wazuh/wazuh-documentation/pull/10065)) ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10214](https://github.com/wazuh/wazuh-documentation/pull/10214)) ([#10263](https://github.com/wazuh/wazuh-documentation/pull/10263)) ([#10266](https://github.com/wazuh/wazuh-documentation/pull/10266)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10464](https://github.com/wazuh/wazuh-documentation/pull/10464)) ([#10529](https://github.com/wazuh/wazuh-documentation/pull/10529)) ([#10538](https://github.com/wazuh/wazuh-documentation/pull/10538)) ([#10565](https://github.com/wazuh/wazuh-documentation/pull/10565)) ([#10598](https://github.com/wazuh/wazuh-documentation/pull/10598)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10620](https://github.com/wazuh/wazuh-documentation/pull/10620)) ([#10625](https://github.com/wazuh/wazuh-documentation/pull/10625)) ([#10642](https://github.com/wazuh/wazuh-documentation/pull/10642)) ([#10676](https://github.com/wazuh/wazuh-documentation/pull/10676)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10697](https://github.com/wazuh/wazuh-documentation/pull/10697)) ([#10698](https://github.com/wazuh/wazuh-documentation/pull/10698)) ([#10724](https://github.com/wazuh/wazuh-documentation/pull/10724)) ([#10737](https://github.com/wazuh/wazuh-documentation/pull/10737)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750)) ([#10761](https://github.com/wazuh/wazuh-documentation/pull/10761)) ([#10763](https://github.com/wazuh/wazuh-documentation/pull/10763)) ([#10783](https://github.com/wazuh/wazuh-documentation/pull/10783)) ([#10800](https://github.com/wazuh/wazuh-documentation/pull/10800)) ([#10802](https://github.com/wazuh/wazuh-documentation/pull/10802)) ([#10820](https://github.com/wazuh/wazuh-documentation/pull/10820)) ([#10821](https://github.com/wazuh/wazuh-documentation/pull/10821)) ([#10831](https://github.com/wazuh/wazuh-documentation/pull/10831))
-- Updated the *Wazuh dashboard* documentation in *User manual*. ([#9688](https://github.com/wazuh/wazuh-documentation/pull/9688)) ([#10033](https://github.com/wazuh/wazuh-documentation/pull/10033)) ([#10036](https://github.com/wazuh/wazuh-documentation/pull/10036)) ([#10213](https://github.com/wazuh/wazuh-documentation/pull/10213)) ([#10249](https://github.com/wazuh/wazuh-documentation/pull/10249)) ([#10351](https://github.com/wazuh/wazuh-documentation/pull/10351)) ([#10386](https://github.com/wazuh/wazuh-documentation/pull/10386)) ([#10388](https://github.com/wazuh/wazuh-documentation/pull/10388)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10402](https://github.com/wazuh/wazuh-documentation/pull/10402)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10590](https://github.com/wazuh/wazuh-documentation/pull/10590)) ([#10633](https://github.com/wazuh/wazuh-documentation/pull/10633)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10772](https://github.com/wazuh/wazuh-documentation/pull/10772))
-- Updated the *Quickstart* documentation. ([#9680](https://github.com/wazuh/wazuh-documentation/pull/9680)) ([#9769](https://github.com/wazuh/wazuh-documentation/pull/9769)) ([#10234](https://github.com/wazuh/wazuh-documentation/pull/10234)) ([#10248](https://github.com/wazuh/wazuh-documentation/pull/10248)) ([#10258](https://github.com/wazuh/wazuh-documentation/pull/10258)) ([#10344](https://github.com/wazuh/wazuh-documentation/pull/10344)) ([#10347](https://github.com/wazuh/wazuh-documentation/pull/10347)) ([#10379](https://github.com/wazuh/wazuh-documentation/pull/10379)) ([#10393](https://github.com/wazuh/wazuh-documentation/pull/10393)) ([#10506](https://github.com/wazuh/wazuh-documentation/pull/10506)) ([#10547](https://github.com/wazuh/wazuh-documentation/pull/10547)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10618](https://github.com/wazuh/wazuh-documentation/pull/10618)) ([#10629](https://github.com/wazuh/wazuh-documentation/pull/10629)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750))
-- Updated the *Wazuh server* documentation to the new *Wazuh manager* documentation in the *User manual*. ([#9728](https://github.com/wazuh/wazuh-documentation/pull/9728)) ([#9737](https://github.com/wazuh/wazuh-documentation/pull/9737)) ([#10064](https://github.com/wazuh/wazuh-documentation/pull/10064)) ([#10237](https://github.com/wazuh/wazuh-documentation/pull/10237)) ([#10343](https://github.com/wazuh/wazuh-documentation/pull/10343)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10497](https://github.com/wazuh/wazuh-documentation/pull/10497)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10673](https://github.com/wazuh/wazuh-documentation/pull/10673)) ([#10688](https://github.com/wazuh/wazuh-documentation/pull/10688)) ([#10726](https://github.com/wazuh/wazuh-documentation/pull/10726)) ([#10763](https://github.com/wazuh/wazuh-documentation/pull/10763)) ([#10785](https://github.com/wazuh/wazuh-documentation/pull/10785)) ([#10798](https://github.com/wazuh/wazuh-documentation/pull/10798)) ([#10825](https://github.com/wazuh/wazuh-documentation/pull/10825)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
-- Updated the *User administration* documentation. ([#9745](https://github.com/wazuh/wazuh-documentation/pull/9745)) ([#9758](https://github.com/wazuh/wazuh-documentation/pull/9758)) ([#9765](https://github.com/wazuh/wazuh-documentation/pull/9765)) ([#9766](https://github.com/wazuh/wazuh-documentation/pull/9766)) ([#9775](https://github.com/wazuh/wazuh-documentation/pull/9775)) ([#10040](https://github.com/wazuh/wazuh-documentation/pull/10040)) ([#10236](https://github.com/wazuh/wazuh-documentation/pull/10236)) ([#10259](https://github.com/wazuh/wazuh-documentation/pull/10259)) ([#10265](https://github.com/wazuh/wazuh-documentation/pull/10265)) ([#10337](https://github.com/wazuh/wazuh-documentation/pull/10337)) ([#10389](https://github.com/wazuh/wazuh-documentation/pull/10389)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10627](https://github.com/wazuh/wazuh-documentation/pull/10627)) ([#10687](https://github.com/wazuh/wazuh-documentation/pull/10687)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701)) ([#10771](https://github.com/wazuh/wazuh-documentation/pull/10771))
-- Updated the *Monitoring GitHub* documentation. ([#9836](https://github.com/wazuh/wazuh-documentation/pull/9836)) ([#9840](https://github.com/wazuh/wazuh-documentation/pull/9840)) ([#9949](https://github.com/wazuh/wazuh-documentation/pull/9949)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10793](https://github.com/wazuh/wazuh-documentation/pull/10793))
-- Updated the *Monitoring Office 365* documentation. ([#9935](https://github.com/wazuh/wazuh-documentation/pull/9935)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615))
-- Updated the *Proof of concept guide* use cases for File integrity monitoring, Vulnerability detection, Security Configuration Assessment, Monitoring Docker events, Detecting an SQL injection attack, Network IDS integration, Monitoring AWS infrastructure, Detecting hidden processes, and Blocking a known malicious actor. ([#9777](https://github.com/wazuh/wazuh-documentation/pull/9777)) ([#9831](https://github.com/wazuh/wazuh-documentation/pull/9831)) ([#9916](https://github.com/wazuh/wazuh-documentation/pull/9916)) ([#10336](https://github.com/wazuh/wazuh-documentation/pull/10336)) ([#10420](https://github.com/wazuh/wazuh-documentation/pull/10420)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10678](https://github.com/wazuh/wazuh-documentation/pull/10678)) ([#10699](https://github.com/wazuh/wazuh-documentation/pull/10699)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833)) ([#10843](https://github.com/wazuh/wazuh-documentation/pull/10843)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
-- Updated the *Container security* documentation. ([#9816](https://github.com/wazuh/wazuh-documentation/pull/9816)) ([#9819](https://github.com/wazuh/wazuh-documentation/pull/9819)) ([#9823](https://github.com/wazuh/wazuh-documentation/pull/9823)) ([#10206](https://github.com/wazuh/wazuh-documentation/pull/10206)) ([#10380](https://github.com/wazuh/wazuh-documentation/pull/10380))
-- Updated the *System inventory* documentation. ([#9820](https://github.com/wazuh/wazuh-documentation/pull/9820)) ([#9832](https://github.com/wazuh/wazuh-documentation/pull/9832)) ([#10215](https://github.com/wazuh/wazuh-documentation/pull/10215)) ([#10216](https://github.com/wazuh/wazuh-documentation/pull/10216)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10580](https://github.com/wazuh/wazuh-documentation/pull/10580)) ([#10650](https://github.com/wazuh/wazuh-documentation/pull/10650)) ([#10667](https://github.com/wazuh/wazuh-documentation/pull/10667)) ([#10712](https://github.com/wazuh/wazuh-documentation/pull/10712)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738))
-- Updated the *Security configuration assessment* capability documentation. ([#9834](https://github.com/wazuh/wazuh-documentation/pull/9834)) ([#9849](https://github.com/wazuh/wazuh-documentation/pull/9849)) ([#10178](https://github.com/wazuh/wazuh-documentation/pull/10178)) ([#10367](https://github.com/wazuh/wazuh-documentation/pull/10367)) ([#10377](https://github.com/wazuh/wazuh-documentation/pull/10377)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10669](https://github.com/wazuh/wazuh-documentation/pull/10669)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10707](https://github.com/wazuh/wazuh-documentation/pull/10707)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738)) ([#10762](https://github.com/wazuh/wazuh-documentation/pull/10762)) ([#10801](https://github.com/wazuh/wazuh-documentation/pull/10801))
-- Updated the *Vulnerability detection* capability documentation and added a *Use cases* section. ([#9835](https://github.com/wazuh/wazuh-documentation/pull/9835)) ([#9841](https://github.com/wazuh/wazuh-documentation/pull/9841)) ([#10018](https://github.com/wazuh/wazuh-documentation/pull/10018)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10408](https://github.com/wazuh/wazuh-documentation/pull/10408)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10560](https://github.com/wazuh/wazuh-documentation/pull/10560)) ([#10563](https://github.com/wazuh/wazuh-documentation/pull/10563)) ([#10564](https://github.com/wazuh/wazuh-documentation/pull/10564)) ([#10648](https://github.com/wazuh/wazuh-documentation/pull/10648)) ([#10668](https://github.com/wazuh/wazuh-documentation/pull/10668)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10709](https://github.com/wazuh/wazuh-documentation/pull/10709)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738)) ([#10762](https://github.com/wazuh/wazuh-documentation/pull/10762)) ([#10792](https://github.com/wazuh/wazuh-documentation/pull/10792))
-- Updated the *Command monitoring* capability documentation. ([#9883](https://github.com/wazuh/wazuh-documentation/pull/9883)) ([#9915](https://github.com/wazuh/wazuh-documentation/pull/9915)) ([#10357](https://github.com/wazuh/wazuh-documentation/pull/10357)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10637](https://github.com/wazuh/wazuh-documentation/pull/10637))
-- Updated the *File integrity monitoring* capability documentation to Wazuh 5.0. ([#9961](https://github.com/wazuh/wazuh-documentation/pull/9961)) ([#10165](https://github.com/wazuh/wazuh-documentation/pull/10165)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10392](https://github.com/wazuh/wazuh-documentation/pull/10392)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10671](https://github.com/wazuh/wazuh-documentation/pull/10671)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10711](https://github.com/wazuh/wazuh-documentation/pull/10711)) ([#10729](https://github.com/wazuh/wazuh-documentation/pull/10729)) ([#10806](https://github.com/wazuh/wazuh-documentation/pull/10806))
-- Updated the *Using Wazuh for GDPR compliance* documentation in *Regulatory compliance* to Wazuh 5.0. ([#9944](https://github.com/wazuh/wazuh-documentation/pull/9944)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10705](https://github.com/wazuh/wazuh-documentation/pull/10705)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782)) ([#10844](https://github.com/wazuh/wazuh-documentation/pull/10844))
-- Updated the *Monitoring Linux system calls* capability documentation to Wazuh 5.0. ([#10010](https://github.com/wazuh/wazuh-documentation/pull/10010)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10647](https://github.com/wazuh/wazuh-documentation/pull/10647)) ([#10672](https://github.com/wazuh/wazuh-documentation/pull/10672))
-- Updated the *Wazuh indexer API reference*, removing the non-tracked version number from its page header, grouping its sections by plugin, and fixing a duplicate tag name that could merge two unrelated sections. ([#10015](https://github.com/wazuh/wazuh-documentation/pull/10015)) ([#10016](https://github.com/wazuh/wazuh-documentation/pull/10016)) ([#10017](https://github.com/wazuh/wazuh-documentation/pull/10017)) ([#10025](https://github.com/wazuh/wazuh-documentation/pull/10025)) ([#10041](https://github.com/wazuh/wazuh-documentation/pull/10041)) ([#10042](https://github.com/wazuh/wazuh-documentation/pull/10042)) ([#10043](https://github.com/wazuh/wazuh-documentation/pull/10043)) ([#10044](https://github.com/wazuh/wazuh-documentation/pull/10044)) ([#10048](https://github.com/wazuh/wazuh-documentation/pull/10048)) ([#10449](https://github.com/wazuh/wazuh-documentation/pull/10449)) ([#10450](https://github.com/wazuh/wazuh-documentation/pull/10450)) ([#10518](https://github.com/wazuh/wazuh-documentation/pull/10518))
-- Updated the *Using Wazuh for TSC compliance* documentation in *Regulatory compliance* to Wazuh 5.0. ([#10027](https://github.com/wazuh/wazuh-documentation/pull/10027)) ([#10045](https://github.com/wazuh/wazuh-documentation/pull/10045)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10710](https://github.com/wazuh/wazuh-documentation/pull/10710)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774))
-- Updated the *Log data collection* capability documentation to Wazuh 5.0, covering Wazuh agent configuration, collecting logs from files and operating systems, log data analysis, and new use cases. ([#10034](https://github.com/wazuh/wazuh-documentation/pull/10034)) ([#10037](https://github.com/wazuh/wazuh-documentation/pull/10037)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10568](https://github.com/wazuh/wazuh-documentation/pull/10568)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10822](https://github.com/wazuh/wazuh-documentation/pull/10822))
-- Updated the *Reference* documentation to Wazuh 5.0, splitting the local configuration reference into separate `wazuh-manager.conf` and `ossec.conf` sections, renaming manager daemons and tools with the `wazuh-manager-` prefix, updating the internal configuration, daemons, and tools references, and removing documentation for configuration sections and CLI tools no longer supported in Wazuh 5.0, and adding the *Wazuh Common Schema (WCS)* section, with the *How WCS works*, *How Wazuh uses WCS fields*, and *Key WCS fields* pages and the *WCS field reference* with the findings and state indices, plus the *Helper functions* reference. ([#10047](https://github.com/wazuh/wazuh-documentation/pull/10047)) ([#10070](https://github.com/wazuh/wazuh-documentation/pull/10070)) ([#10071](https://github.com/wazuh/wazuh-documentation/pull/10071)) ([#10072](https://github.com/wazuh/wazuh-documentation/pull/10072)) ([#10177](https://github.com/wazuh/wazuh-documentation/pull/10177)) ([#10215](https://github.com/wazuh/wazuh-documentation/pull/10215)) ([#10266](https://github.com/wazuh/wazuh-documentation/pull/10266)) ([#10271](https://github.com/wazuh/wazuh-documentation/pull/10271)) ([#10323](https://github.com/wazuh/wazuh-documentation/pull/10323)) ([#10345](https://github.com/wazuh/wazuh-documentation/pull/10345)) ([#10365](https://github.com/wazuh/wazuh-documentation/pull/10365)) ([#10366](https://github.com/wazuh/wazuh-documentation/pull/10366)) ([#10400](https://github.com/wazuh/wazuh-documentation/pull/10400)) ([#10401](https://github.com/wazuh/wazuh-documentation/pull/10401)) ([#10409](https://github.com/wazuh/wazuh-documentation/pull/10409)) ([#10421](https://github.com/wazuh/wazuh-documentation/pull/10421)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10540](https://github.com/wazuh/wazuh-documentation/pull/10540)) ([#10589](https://github.com/wazuh/wazuh-documentation/pull/10589)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10601](https://github.com/wazuh/wazuh-documentation/pull/10601)) ([#10602](https://github.com/wazuh/wazuh-documentation/pull/10602)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10624](https://github.com/wazuh/wazuh-documentation/pull/10624)) ([#10638](https://github.com/wazuh/wazuh-documentation/pull/10638)) ([#10645](https://github.com/wazuh/wazuh-documentation/pull/10645)) ([#10651](https://github.com/wazuh/wazuh-documentation/pull/10651)) ([#10654](https://github.com/wazuh/wazuh-documentation/pull/10654)) ([#10657](https://github.com/wazuh/wazuh-documentation/pull/10657)) ([#10658](https://github.com/wazuh/wazuh-documentation/pull/10658)) ([#10665](https://github.com/wazuh/wazuh-documentation/pull/10665)) ([#10666](https://github.com/wazuh/wazuh-documentation/pull/10666)) ([#10675](https://github.com/wazuh/wazuh-documentation/pull/10675)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10725](https://github.com/wazuh/wazuh-documentation/pull/10725)) ([#10726](https://github.com/wazuh/wazuh-documentation/pull/10726)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10752](https://github.com/wazuh/wazuh-documentation/pull/10752)) ([#10769](https://github.com/wazuh/wazuh-documentation/pull/10769)) ([#10781](https://github.com/wazuh/wazuh-documentation/pull/10781)) ([#10783](https://github.com/wazuh/wazuh-documentation/pull/10783)) ([#10786](https://github.com/wazuh/wazuh-documentation/pull/10786)) ([#10800](https://github.com/wazuh/wazuh-documentation/pull/10800)) ([#10802](https://github.com/wazuh/wazuh-documentation/pull/10802)) ([#10825](https://github.com/wazuh/wazuh-documentation/pull/10825)) ([#10831](https://github.com/wazuh/wazuh-documentation/pull/10831)) ([#10836](https://github.com/wazuh/wazuh-documentation/pull/10836)) ([#10838](https://github.com/wazuh/wazuh-documentation/pull/10838)) ([#10840](https://github.com/wazuh/wazuh-documentation/pull/10840))
-- Updated the *Active response* capability documentation to Wazuh 5.0, covering configuration from the Wazuh dashboard, the consolidated `block-ip` script, developing custom scripts, migrating custom scripts from Wazuh 4.x, and new use cases for blocking web attacks and removing malicious files. ([#10062](https://github.com/wazuh/wazuh-documentation/pull/10062)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10768](https://github.com/wazuh/wazuh-documentation/pull/10768)) ([#10796](https://github.com/wazuh/wazuh-documentation/pull/10796))
-- Replaced the `admin` user with the dedicated `wazuh-manager` user in the Wazuh indexer connector credential examples, and standardized the indexer connector certificate name to `indexer-connector.pem`/`indexer-connector-key.pem` across the *Installation guide*, *Deployment options*, and *User manual* documentation, also correcting the certificate ownership and permissions in the *Installation guide*'s certificate deployment step so the Wazuh manager can read them after dropping privileges. ([#10063](https://github.com/wazuh/wazuh-documentation/pull/10063))
-- Updated the *Using Wazuh for PCI DSS compliance* documentation in *Regulatory compliance* to Wazuh 5.0. ([#10066](https://github.com/wazuh/wazuh-documentation/pull/10066)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10357](https://github.com/wazuh/wazuh-documentation/pull/10357)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10703](https://github.com/wazuh/wazuh-documentation/pull/10703)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782))
-- Updated the *Getting started* documentation to Wazuh 5.0, covering the dashboard screenshot gallery, the *Architecture* section's overview, component communication and required ports, and the *Use cases* section. ([#10069](https://github.com/wazuh/wazuh-documentation/pull/10069)) ([#10073](https://github.com/wazuh/wazuh-documentation/pull/10073)) ([#10231](https://github.com/wazuh/wazuh-documentation/pull/10231)) ([#10239](https://github.com/wazuh/wazuh-documentation/pull/10239)) ([#10244](https://github.com/wazuh/wazuh-documentation/pull/10244)) ([#10246](https://github.com/wazuh/wazuh-documentation/pull/10246)) ([#10364](https://github.com/wazuh/wazuh-documentation/pull/10364)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10526](https://github.com/wazuh/wazuh-documentation/pull/10526)) ([#10527](https://github.com/wazuh/wazuh-documentation/pull/10527)) ([#10637](https://github.com/wazuh/wazuh-documentation/pull/10637)) ([#10673](https://github.com/wazuh/wazuh-documentation/pull/10673)) ([#10674](https://github.com/wazuh/wazuh-documentation/pull/10674)) ([#10785](https://github.com/wazuh/wazuh-documentation/pull/10785)) ([#10798](https://github.com/wazuh/wazuh-documentation/pull/10798)) ([#10823](https://github.com/wazuh/wazuh-documentation/pull/10823)) ([#10824](https://github.com/wazuh/wazuh-documentation/pull/10824)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
-- Updated the *Using Wazuh for HIPAA compliance* documentation in *Regulatory compliance* to Wazuh 5.0. ([#10083](https://github.com/wazuh/wazuh-documentation/pull/10083)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10704](https://github.com/wazuh/wazuh-documentation/pull/10704)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774))
-- Updated the *Monitoring Google Cloud* documentation in *Cloud security* to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the integration from the Wazuh dashboard, a consolidated log sink export flow, and configuring the Wazuh modules for Pub/Sub and Storage buckets. ([#10092](https://github.com/wazuh/wazuh-documentation/pull/10092)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701))
-- Updated the *Wazuh indexer* documentation in *User manual* to Wazuh 5.0, covering data streams, stateful indices and data retention, the Wazuh Common Schema, Sigma rules, index templates, the Setup, Content Manager, Reporting, Security Analytics, Notifications, and Alerting modules, indexer tuning, migrating indices, backup and restore, role-based access control, and audit logs. ([#10093](https://github.com/wazuh/wazuh-documentation/pull/10093)) ([#10271](https://github.com/wazuh/wazuh-documentation/pull/10271)) ([#10350](https://github.com/wazuh/wazuh-documentation/pull/10350)) ([#10362](https://github.com/wazuh/wazuh-documentation/pull/10362)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10613](https://github.com/wazuh/wazuh-documentation/pull/10613)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701)) ([#10732](https://github.com/wazuh/wazuh-documentation/pull/10732)) ([#10733](https://github.com/wazuh/wazuh-documentation/pull/10733))
-- Updated the *Monitoring Microsoft Azure* documentation in *Cloud security* to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the integration from the Wazuh dashboard, configuring credentials for Azure Log Analytics, Azure Storage, and the standalone Wazuh module for Microsoft Graph, the Microsoft Intune integration, and use cases. ([#10139](https://github.com/wazuh/wazuh-documentation/pull/10139)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10729](https://github.com/wazuh/wazuh-documentation/pull/10729)) ([#10817](https://github.com/wazuh/wazuh-documentation/pull/10817))
-- Updated the *Wazuh indexer cluster* documentation in *User manual* to Wazuh 5.0, covering cluster architecture and node types, required ports, cluster configuration, certificate deployment, cluster tuning, security initialization, adding and removing nodes, cluster management, and troubleshooting. ([#10183](https://github.com/wazuh/wazuh-documentation/pull/10183)) ([#10185](https://github.com/wazuh/wazuh-documentation/pull/10185)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10350](https://github.com/wazuh/wazuh-documentation/pull/10350)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10689](https://github.com/wazuh/wazuh-documentation/pull/10689)) ([#10773](https://github.com/wazuh/wazuh-documentation/pull/10773)) ([#10842](https://github.com/wazuh/wazuh-documentation/pull/10842))
-- Updated the *Deployment on Docker* documentation to Wazuh 5.0, covering the Nginx agent connection role, readiness checks and restart steps, Docker Compose plugin requirements, local image build options, container access and persistence, uninstall steps, and a corrected internal link in *Wazuh Docker utilities*. ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10325](https://github.com/wazuh/wazuh-documentation/pull/10325)) ([#10333](https://github.com/wazuh/wazuh-documentation/pull/10333)) ([#10356](https://github.com/wazuh/wazuh-documentation/pull/10356)) ([#10528](https://github.com/wazuh/wazuh-documentation/pull/10528)) ([#10632](https://github.com/wazuh/wazuh-documentation/pull/10632)) ([#10770](https://github.com/wazuh/wazuh-documentation/pull/10770)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10839](https://github.com/wazuh/wazuh-documentation/pull/10839))
-- Updated the *Deployment with Ansible* documentation to Wazuh 5.0, covering generated deployment passwords, enrollment token-based agent deployment, certificate handling, and the *Roles* and *Variables references*. ([#10319](https://github.com/wazuh/wazuh-documentation/pull/10319)) ([#10341](https://github.com/wazuh/wazuh-documentation/pull/10341)) ([#10639](https://github.com/wazuh/wazuh-documentation/pull/10639)) ([#10659](https://github.com/wazuh/wazuh-documentation/pull/10659)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10776](https://github.com/wazuh/wazuh-documentation/pull/10776)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832))
-- Updated the *Deployment on Kubernetes* documentation to Wazuh 5.0, covering the resource requirements, network policies, Amazon EKS and local cluster deployment steps, enrollment token-based agent deployment, and the clean up steps. Removed the steps to change the password of Wazuh users. ([#9941](https://github.com/wazuh/wazuh-documentation/pull/9941)) ([#10320](https://github.com/wazuh/wazuh-documentation/pull/10320)) ([#10324](https://github.com/wazuh/wazuh-documentation/pull/10324)) ([#10346](https://github.com/wazuh/wazuh-documentation/pull/10346)) ([#10358](https://github.com/wazuh/wazuh-documentation/pull/10358)) ([#10525](https://github.com/wazuh/wazuh-documentation/pull/10525)) ([#10607](https://github.com/wazuh/wazuh-documentation/pull/10607)) ([#10621](https://github.com/wazuh/wazuh-documentation/pull/10621)) ([#10626](https://github.com/wazuh/wazuh-documentation/pull/10626))
-- Updated the *Using Wazuh for NIST 800-53 compliance* documentation in *Regulatory compliance* to Wazuh 5.0. ([#10381](https://github.com/wazuh/wazuh-documentation/pull/10381)) ([#10706](https://github.com/wazuh/wazuh-documentation/pull/10706)) ([#10736](https://github.com/wazuh/wazuh-documentation/pull/10736)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782))
-- Updated the *Wazuh indexer API* documentation for Wazuh 5.0, including the use of data streams and the Wazuh Common Schema fields in the examples, and the JSON Web Token authentication steps. ([#10419](https://github.com/wazuh/wazuh-documentation/pull/10419)) ([#10442](https://github.com/wazuh/wazuh-documentation/pull/10442)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10799](https://github.com/wazuh/wazuh-documentation/pull/10799))
-- Updated the *Monitoring Amazon Web Services (AWS)* documentation in *Cloud security* to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the AWS integrations from the Wazuh dashboard, the updated policies and service configuration, findings-based use cases, the new Amazon ECR image scanning use case, the Custom Logs Buckets and AWS Security Hub CSPM sections, and troubleshooting. ([#10420](https://github.com/wazuh/wazuh-documentation/pull/10420)) ([#10446](https://github.com/wazuh/wazuh-documentation/pull/10446)) ([#10459](https://github.com/wazuh/wazuh-documentation/pull/10459)) ([#10606](https://github.com/wazuh/wazuh-documentation/pull/10606))
-- Updated the *Wazuh server API* documentation to the new *Wazuh manager API* documentation in the *User manual*, including its use cases. ([#10530](https://github.com/wazuh/wazuh-documentation/pull/10530)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10698](https://github.com/wazuh/wazuh-documentation/pull/10698)) ([#10702](https://github.com/wazuh/wazuh-documentation/pull/10702)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10819](https://github.com/wazuh/wazuh-documentation/pull/10819))
-- Updated the *Offline installation guide* documentation. ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10652](https://github.com/wazuh/wazuh-documentation/pull/10652)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670))
-- Updated the *Malware detection* documentation in *Capabilities* to Wazuh 5.0, covering the threat detection ruleset, threat intelligence, rootkit detection, file integrity monitoring with threat intelligence, and use cases. ([#10727](https://github.com/wazuh/wazuh-documentation/pull/10727)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10818](https://github.com/wazuh/wazuh-documentation/pull/10818))
-- Updated the *Wazuh server cluster* documentation in *User manual* to the new *Wazuh manager cluster* documentation for Wazuh 5.0, covering the cluster architecture, security requirements, node configuration, data synchronization, certificates deployment, adding nodes, Wazuh agent connections, load balancers, and their troubleshooting. ([#10728](https://github.com/wazuh/wazuh-documentation/pull/10728)) ([#10767](https://github.com/wazuh/wazuh-documentation/pull/10767)) ([#10841](https://github.com/wazuh/wazuh-documentation/pull/10841))
-- Updated the *Upgrade guide*: removed the steps and sample output that only applied to 4.x, updated the sample output and manager configuration path, and added the `node.options` backup, the `opensearch.yml` prompt note and the `ossec.conf.new` note. ([#10845](https://github.com/wazuh/wazuh-documentation/pull/10845))
-
-### Removed
-
-- Removed all `agent-auth` references as this tool was replaced by `wazuh-agent-auth`. ([#8718](https://github.com/wazuh/wazuh/pull/8718))
-- Removed `compatibility.override_main_response_version` setting from Wazuh Indexer configuration as it is no longer supported in OpenSearch 3.0. ([#8609](https://github.com/wazuh/wazuh-documentation/pull/8609))
-- Removed several Rootcheck configuration options and added a corresponding note to the central components upgrade guide. ([#8759](https://github.com/wazuh/wazuh-documentation/pull/8759))
-- Removed references to the server version of the `manage_agents` tool. ([#8792](https://github.com/wazuh/wazuh-documentation/pull/8792))
-- Removed `cron.prefix`, `cron.statistics.*`, and `wazuh.monitoring.*` configuration settings from the Wazuh dashboard. ([#8790](https://github.com/wazuh/wazuh-documentation/pull/8790))
-- Removed references to deprecated client communication and FIM configuration options. ([#8809](https://github.com/wazuh/wazuh-documentation/pull/8809))
-- Removed documentation and references to deprecated Wazuh Manager daemons: `wazuh-agentlessd`, `wazuh-csyslogd`, `wazuh-dbd`, `wazuh-integratord`, `wazuh-maild`, and `wazuh-reportd`. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
-- Removed documentation and references to deprecated CLI tools: `clear_stats`, `update_ruleset`, and `wazuh-regex`. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
-- Removed documentation to deprecated `fluent-forward` tool. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
-- Removed support for legacy operating systems, including Red Hat 5, CentOS 5, Oracle Linux 5, SUSE Linux Enterprise Server 11, AIX, HP-UX, Solaris, Windows XP, Windows Vista, and Windows Server 2003. ([#8894](https://github.com/wazuh/wazuh-documentation/pull/8894))
-- Removed deprecated configuration variables in the *Deployment with Puppet* documentation. ([#9378](https://github.com/wazuh/wazuh-documentation/pull/9378))
-- Removed Osquery references as this capability is now deprecated. ([#8958](https://github.com/wazuh/wazuh-documentation/pull/8958))
-- Removed the *Migrating a Wazuh Docker deployment from Wazuh 4.x to 5.x* page from the *Deployment on Docker* documentation. Its URL now redirects to the *Docker deployments* section of the *Transitioning from 4.x to 5.x* documentation. ([#10839](https://github.com/wazuh/wazuh-documentation/pull/10839))
-
-## [v4.14.11]
-
-### Added
-
-- Added a note on the launchd resource limits that can make the Wazuh agent miss macOS ULS events under high CPU load, and how to remove them, to the *Log data collection* documentation. ([#10717](https://github.com/wazuh/wazuh-documentation/pull/10717))
-- Added the `rootcheck.max_pid` internal option, updated the `rootcheck.sleep` description, and added a note to the `check_pids` setting, in the *Reference* documentation. ([#10805](https://github.com/wazuh/wazuh-documentation/pull/10805))
-
-### Fixed
-
-- Corrected the description of the files that the Wazuh manager pushes to the agents in a group, noting that the manager skips files whose names start with a dot and binary files, in the *Centralized configuration* reference documentation. ([#10780](https://github.com/wazuh/wazuh-documentation/pull/10780))
-
-## [v4.14.10]
-
-### Added
-
-- Added the `analysisd.rule_tree_memory_warning` and `analysisd.rule_tree_memory_limit` internal options and a section on the rule tree memory thresholds to the *Internal configuration* reference documentation. ([#10397](https://github.com/wazuh/wazuh-documentation/pull/10397))
-- **Post-release**: Added the *Using the Wazuh dashboard* method to the *Upgrading the Wazuh agent* documentation, and a paragraph on the automatic removal of disconnected agents with the `monitord.delete_old_agents` internal option to the *Removing agents* documentation. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
-- **Post-release**: Added the two-tenant example and the multi-tenant behavior to the *ms-graph* reference and *Microsoft Graph API setup* documentation, the daemons that accept `-t` to *Verifying configuration*, and a note on running `agent_control` in a cluster to the *agent_control* reference. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
-
-### Changed
-
-- Removed the `auth.timeout_seconds` and `auth.timeout_microseconds` internal options from the *Internal configuration* reference documentation. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399))
-- Documented that `logcollector.remote_commands` also controls the sockets and socket targets that Wazuh agents receive through centralized configuration, in the *Internal configuration*, *localfile*, *socket*, and *Centralized configuration* reference documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Updated the macOS ULS log tool style description in the *Log data collection* documentation to cover the `--style ndjson` format used on macOS 10.15 and later. ([#10567](https://github.com/wazuh/wazuh-documentation/pull/10567))
-- Updated the `wazuh-certs-generator` image version to 0.0.5 in the *Deployment on Docker* and *Upgrading Wazuh Docker* documentation. ([#10588](https://github.com/wazuh/wazuh-documentation/pull/10588))
-- **Post-release**: Updated the *Wazuh agent* installation documentation for Windows to list Windows Server 2025 and to add the commands that download the installer. ([#10681](https://github.com/wazuh/wazuh-documentation/pull/10681))
-- **Post-release**: Documented that Wazuh 4.14.7 and later don't include the database output (`wazuh-dbd`) in the *database_output*, *wazuh-dbd*, *Internal configuration*, *wazuh-control*, *Alert management* and *Installing the Wazuh server from sources* documentation. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
-- **Post-release**: Updated the *Elastic Stack*, *OpenSearch*, *Splunk* and *Amazon Security Lake* integration documentation for Logstash 9.5.6. ([#10814](https://github.com/wazuh/wazuh-documentation/pull/10814))
-
-### Fixed
-
-- Removed Amazon Inspector Classic from the *Amazon Inspector* integration documentation, which now covers Amazon Inspector (v2) only. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399))
-- Added the Windows and macOS agent restart commands and the Windows path of shared policies to the steps for enabling, disabling, and sharing policies, and corrected the fields of checks marked as not applicable, in the *Security Configuration Assessment* documentation. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399)) ([#10425](https://github.com/wazuh/wazuh-documentation/pull/10425)) ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Added a note about the pages that a read-only user cannot open to the *User administration* documentation. ([#10425](https://github.com/wazuh/wazuh-documentation/pull/10425))
-- Added a note that the Wazuh module for Google Cloud Pub/Sub supports only one `gcp-pubsub` block per configuration file to the *Monitoring Google Cloud Pub/Sub* documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
-- Corrected the queue list in the *Wazuh server queue* documentation, the allowed `<protocol>` values in the *Wazuh manager* documentation, and the archives files in the *Event logging* documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
-- Corrected the restart step in the *SSL with NGINX* documentation and the node address placeholders in the *Wazuh dashboard certificates* documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
-- Corrected the Shuffle webhook URL in the *Integration with external APIs* documentation and the request method and log files in the *VirusTotal integration* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Corrected the default values of `email_alert_level` and `email_log_source` in the *Local configuration (ossec.conf)* reference, the rule `502` example, the SMTP relay packages for RHEL 9, and the SASL password map for RHEL 10 in the *Alert management* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10566](https://github.com/wazuh/wazuh-documentation/pull/10566))
-- Corrected the default port scan setting, the macOS configuration file path, the port field mappings, the *Traffic* tab description, the *Listeners* tab name, and the alert field names in the *System inventory* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
-- Added CentOS Stream 9 and 10 to the *Packages list*, and corrected the default port scan setting, the macOS configuration file path, and the CentOS entries of the compatibility matrix in the *Vulnerability detection* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Corrected the command that adds the attacker IP address in the *Blocking a known malicious actor* proof of concept, and added a note about the initial scan to the *File integrity monitoring* proof of concept. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Corrected the sample alerts in the *Microsoft Graph* setup documentation and the `only_future_events` and invalid configuration descriptions in the *ms-graph* reference. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
-- Corrected the macOS default directories in the *syscheck* reference and the macOS Unified Logging query in the *Log data collection* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
-- Corrected the password change and agent installation steps in the *Wazuh Puppet module* documentation, the Puppet repository commands in the *Puppet server* and *Puppet agent* installation documentation, and added a note that the Puppet server package is not published for Ubuntu 24.04 to the *Puppet server* installation documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10579](https://github.com/wazuh/wazuh-documentation/pull/10579))
-- Corrected the Python dependency steps for Ubuntu 24.04, Debian 13, and RHEL 10 in the *Google Cloud* and *Microsoft Azure* documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10600](https://github.com/wazuh/wazuh-documentation/pull/10600))
-- Corrected the disk space requirement in the *Wazuh server installation* documentation and the process name fields of eBPF who-data alerts in the *File integrity monitoring* documentation. ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
-- Replaced the "here" link text with descriptive link text in the *Via agent configuration* enrollment documentation. ([#10605](https://github.com/wazuh/wazuh-documentation/pull/10605))
-- **Post-release**: Fixed the breadcrumbs home link, which had no accessible name for screen readers, and the missing styling of the development notice on the documentation home page. ([#10660](https://github.com/wazuh/wazuh-documentation/pull/10660))
-- **Post-release**: Clarified the Windows agent installation paths in the *Via agent configuration*, *Using password authentication*, *Wazuh manager identity verification*, *Wazuh agent identity verification*, and *Installing a custom WPK* documentation, and corrected the key and certificate paths and the package name in the *Deployment variables* documentation for macOS and Windows. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
-- **Post-release**: Corrected the `generate_wpk_package.sh` usage and the manual Linux steps in the *Creating a custom WPK* documentation, and linked the *Agent upgrade module* documentation to its configuration reference. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
-- **Post-release**: Updated the menu screenshot in the *Wazuh agent connection* documentation, and corrected the menu paths and figures in the *MITRE ATT&CK framework* documentation. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
-- **Post-release**: Corrected the allowed values of the `name`, `os`, and `profile` filters, the temporary file name, the reload description, the keepalive interval and the sample log, and added the limits for group files in the *Centralized configuration (agent.conf)* reference, and corrected the `config-profile` description in the *client* reference. ([#10686](https://github.com/wazuh/wazuh-documentation/pull/10686)) ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
-- **Post-release**: Added the Reporting prerequisite for a read-only user, the document level security limits and the group policy actions for the agent group use case to the *Wazuh RBAC* documentation, and the step that deletes the built-in role list mapper to the *Keycloak* documentation. Corrected product names and image titles, replaced two screenshots, added two, and added alt text to the screenshots in the *Single sign-on* documentation. ([#10695](https://github.com/wazuh/wazuh-documentation/pull/10695)) ([#10777](https://github.com/wazuh/wazuh-documentation/pull/10777))
-- **Post-release**: Corrected the who-data setup, the Windows rules, integration, and active response, and the YARA attack emulation steps in the *File integrity monitoring*, *Detecting and removing malware using VirusTotal integration*, and *Detecting malware using YARA integration* proofs of concept, and the Windows agent service name in the *Proof of Concept guide*. ([#10693](https://github.com/wazuh/wazuh-documentation/pull/10693))
-- **Post-release**: Renamed the sample title of the vulnerability inventory data in the *How it works* page of the *Vulnerability detection* documentation. ([#10692](https://github.com/wazuh/wazuh-documentation/pull/10692))
-- **Post-release**: Added the `PATH` export to the CMake installation step for CentOS 6/7 and an Amazon Linux 2 tab to the Yum steps of the *Installing the Wazuh agent from sources* documentation. ([#10683](https://github.com/wazuh/wazuh-documentation/pull/10683))
-- **Post-release**: Corrected the cluster name in the expected output of the cluster test in the *Installing the Wazuh indexer using the assisted installation method* documentation. ([#10682](https://github.com/wazuh/wazuh-documentation/pull/10682))
-- **Post-release**: Removed the leading `.\` from the PowerShell command in the *Deploying Wazuh agents on Windows endpoints* installation documentation, so it matches the CMD command. ([#10684](https://github.com/wazuh/wazuh-documentation/pull/10684))
-- **Post-release**: Added `apt-get update` to the APT commands that install the required packages and dependencies in the *Deploying Wazuh agents on Linux endpoints*, *Installing the Wazuh indexer step by step*, *Installing the Wazuh server step by step*, *Installing the Wazuh dashboard step by step*, and *Wazuh central components* upgrade documentation. ([#10746](https://github.com/wazuh/wazuh-documentation/pull/10746))
-- **Post-release**: Corrected the default values and allowed values of `notify_time`, `logcollector.max_lines`, `skip_nfs`, and the GitHub and Office 365 `interval` options, the *gcp-bucket* example interval and the `only_logs_after` description and example, the `discard_regex` field name in the *wodle name="aws-s3"* reference, and the macOS tab name in the *syscheck* reference. Clarified the *auth*, *remote*, *socket*, *syscheck* and *syslog_output* reference descriptions and the *wazuh-logcollector.state* file paths. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778)) ([#10835](https://github.com/wazuh/wazuh-documentation/pull/10835))
-- **Post-release**: Standardized the Windows agent service name in the restart commands, documented when remote commands are needed for policies pushed from the Wazuh server and for policies enabled in `agent.conf` outside the `ruleset/sca` folder, added the starting check ID for custom policies, and updated the *Available SCA policies* table and the use case examples in the *Security Configuration Assessment* documentation. ([#10779](https://github.com/wazuh/wazuh-documentation/pull/10779)) ([#10813](https://github.com/wazuh/wazuh-documentation/pull/10813))
-- **Post-release**: Removed the `<options>` line, which has no effect on PagerDuty incidents, from the PagerDuty example in the *integration* reference documentation. ([#10803](https://github.com/wazuh/wazuh-documentation/pull/10803))
-- **Post-release**: Corrected the synchronization description in the *File integrity monitoring* documentation, which now says that the Wazuh server inventory updates by default rather than always in the *How it works*, *Advanced settings*, and *Windows Registry monitoring* pages, and refers to the "registry inventory" instead of the "file inventory" in the *Windows Registry monitoring* page. ([#10135](https://github.com/wazuh/wazuh-documentation/pull/10135)) ([#10815](https://github.com/wazuh/wazuh-documentation/pull/10815))
-- **Post-release**: Added `--ignore-installed` to the Python 3.8–3.10 pip command of the *Microsoft Azure* documentation, so it installs next to the packages the system manages, such as the RPM `chardet` on Amazon Linux 2023. ([#10846](https://github.com/wazuh/wazuh-documentation/pull/10846))
-
-## [v4.14.9]
-
-### Added
-
-- Added the `agent.tcp_keepidle`, `agent.tcp_keepintvl`, `agent.tcp_keepcnt`, and `agent.send_timeout` internal options to the *Internal configuration* reference documentation. ([#10029](https://github.com/wazuh/wazuh-documentation/pull/10029))
-
-### Changed
-
-- Updated the *Wazuh server* disk space requirements in the *Installation guide* to include the vulnerability detection database. ([#10267](https://github.com/wazuh/wazuh-documentation/pull/10267))
-- Updated the eBPF who-data requirements and fallback behavior in the *File integrity monitoring* and *Reference* documentation to describe the eBPF health check instead of a kernel version check. ([#10331](https://github.com/wazuh/wazuh-documentation/pull/10331))
-- **Post-release**: Updated the *Wazuh Cloud service* documentation to describe Wazuh Cloud as the software as a service (SaaS) edition of Wazuh, including the introduction, benefits, shared responsibility model, FAQ and limitations. ([#10413](https://github.com/wazuh/wazuh-documentation/pull/10413)) ([#10433](https://github.com/wazuh/wazuh-documentation/pull/10433))
-
-### Fixed
-
-- Fixed the Distributed deployment steps for securing the installation in the *Wazuh dashboard* step-by-step installation documentation. ([#10330](https://github.com/wazuh/wazuh-documentation/pull/10330))
-- Fixed code samples and commands that could not be copied and used as written across the *Regulatory compliance*, *Deployment options*, *Development*, *Migration guide*, *Proof of concept guide*, *Upgrade guide* and *User manual* documentation. ([#10334](https://github.com/wazuh/wazuh-documentation/pull/10334)) ([#10369](https://github.com/wazuh/wazuh-documentation/pull/10369)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10371](https://github.com/wazuh/wazuh-documentation/pull/10371)) ([#10373](https://github.com/wazuh/wazuh-documentation/pull/10373)) ([#10374](https://github.com/wazuh/wazuh-documentation/pull/10374)) ([#10385](https://github.com/wazuh/wazuh-documentation/pull/10385)) ([#10516](https://github.com/wazuh/wazuh-documentation/pull/10516)) ([#10614](https://github.com/wazuh/wazuh-documentation/pull/10614))
-- Fixed dead links, typos, garbled sentences, broken inline markup and XML code blocks marked as `console` across the *Compliance*, *Deployment options*, *Getting started*, *Installation guide*, *Integrations guide*, *Release notes*, *Upgrade guide* and *User manual* documentation. ([#10335](https://github.com/wazuh/wazuh-documentation/pull/10335)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10372](https://github.com/wazuh/wazuh-documentation/pull/10372)) ([#10375](https://github.com/wazuh/wazuh-documentation/pull/10375)) ([#10448](https://github.com/wazuh/wazuh-documentation/pull/10448))
-- Fixed incorrect field names, setting names, menu names, values and examples that did not work as written across the *Cloud security*, *User manual* and *Wazuh Cloud* documentation, including the Wazuh indexer API, the Wazuh dashboard, the Wazuh manager and the single sign-on guides. ([#10354](https://github.com/wazuh/wazuh-documentation/pull/10354)) ([#10355](https://github.com/wazuh/wazuh-documentation/pull/10355)) ([#10369](https://github.com/wazuh/wazuh-documentation/pull/10369)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10371](https://github.com/wazuh/wazuh-documentation/pull/10371)) ([#10372](https://github.com/wazuh/wazuh-documentation/pull/10372)) ([#10433](https://github.com/wazuh/wazuh-documentation/pull/10433)) ([#10514](https://github.com/wazuh/wazuh-documentation/pull/10514)) ([#10517](https://github.com/wazuh/wazuh-documentation/pull/10517)) ([#10554](https://github.com/wazuh/wazuh-documentation/pull/10554)) ([#10557](https://github.com/wazuh/wazuh-documentation/pull/10557))
-- **Post-release**: Fixed the Python 3.11–3.13 dependency installation command in the *Google Cloud* prerequisites documentation, which failed on Python 3.13. ([#10414](https://github.com/wazuh/wazuh-documentation/pull/10414))
-- **Post-release**: Fixed missing image alt text, generic "here" link text and a duplicate page title across the *Cloud security*, *Regulatory compliance*, *Development*, *Proof of concept guide* and *User manual* documentation. ([#10415](https://github.com/wazuh/wazuh-documentation/pull/10415))
-- **Post-release**: Fixed the manager address placeholder in the configuration step of the *Solaris* and *HP-UX* Wazuh agent installation documentation to match the installed `ossec.conf`. ([#10555](https://github.com/wazuh/wazuh-documentation/pull/10555))
-- **Post-release**: Fixed the list of registry value types supported by `report_changes` in the *Windows Registry monitoring* page of the *File integrity monitoring* documentation and in the *Reference* documentation. ([#10556](https://github.com/wazuh/wazuh-documentation/pull/10556))
-- **Post-release**: Fixed the site header search button and footer links toggle, which had no accessible names for screen readers. ([#10593](https://github.com/wazuh/wazuh-documentation/pull/10593))
-- **Post-release**: Fixed the CloudTrail and CloudWatch spelling on the *Amazon S3* wodle page and the option group headings on the *SCA* page of the *Reference* documentation. ([#10603](https://github.com/wazuh/wazuh-documentation/pull/10603)) ([#10604](https://github.com/wazuh/wazuh-documentation/pull/10604))
-
-## [v4.14.8]
-
-### Added
-
-- **Post-release**: Added a note to the *Regulatory compliance* documentation stating that the rule and control mappings are indicative and require an independent qualified assessor for formal certification. ([#10202](https://github.com/wazuh/wazuh-documentation/pull/10202))
+<a id="v510"></a>
+[v5.1.0]
 
-### Fixed
+Support for Wazuh 5.1.0
 
-- **Post-release**: Clarified where the `wazuh-install-files.tar` archive is created in the *Quickstart* documentation's installation note. ([#10186](https://github.com/wazuh/wazuh-documentation/pull/10186))
-- **Post-release**: Added `curl` to the prerequisite package list for the APT repository instructions in the *Installation guide*'s Wazuh indexer, manager, dashboard, and agent sections. ([#10188](https://github.com/wazuh/wazuh-documentation/pull/10188))
-- **Post-release**: Fixed the version selector incorrectly showing versions 4.4 through 4.14 as unavailable across the *Regulatory compliance* documentation pages. ([#10203](https://github.com/wazuh/wazuh-documentation/pull/10203))
-- **Post-release**: Fixed the version selector and old-URL redirect handling for 5 archived *Cloud security* and *User manual* pages that had never been registered as valid in `redirects.js`. ([#10204](https://github.com/wazuh/wazuh-documentation/pull/10204))
+<a id="v501"></a>
+[v5.0.1]
 
-## [v4.14.7]
+Support for Wazuh 5.0.1
 
-### Added
+<a id="v500"></a>
+[v5.0.0]
 
-- **Post-release**: Added guidance about matching the Wazuh manager version to the existing cluster nodes in the *Adding new Wazuh server nodes* documentation. ([#10007](https://github.com/wazuh/wazuh-documentation/pull/10007)) ([#10130](https://github.com/wazuh/wazuh-documentation/pull/10130))
+<a id="added"></a>
+Added
 
-### Fixed
+Added documentation for the reporting plugin in the Wazuh dashboard package generation guide. ([#8682](https://github.com/wazuh/wazuh-documentation/pull/8682))
 
-- **Post-release**: Obscured the sample private key values in the GCP credentials documentation. ([#9971](https://github.com/wazuh/wazuh-documentation/pull/9971))
-- **Post-release**: Fixed the *User manual* index page so it shows the full page list for the *Wazuh dashboard* and *Data analysis* subsections. ([#9992](https://github.com/wazuh/wazuh-documentation/pull/9992))
-- **Post-release**: Fixed the *Deployment with Puppet* index page so the *Wazuh Puppet module* reference pages are listed. ([#9992](https://github.com/wazuh/wazuh-documentation/pull/9992))
-- **Post-release**: Fixed a duplicate heading in the *Architecture* documentation's component communication section, separating the Wazuh dashboard's connections to the Wazuh server and Wazuh indexer. ([#10038](https://github.com/wazuh/wazuh-documentation/pull/10038))
-- **Post-release**: Clarified the LDAPS connection success step and updated its screenshot in the *Active Directory and LDAP integration* documentation. ([#10039](https://github.com/wazuh/wazuh-documentation/pull/10039))
-- **Post-release**: Fixed missing or non-descriptive image alt text in the *Installation guide*, *Deployment options*, *Quickstart*, *Proof of concept guide*, *Integrations guide*, *Cloud security*, *Upgrade guide*, and *Active Response* documentation. ([#10057](https://github.com/wazuh/wazuh-documentation/pull/10057)) ([#10081](https://github.com/wazuh/wazuh-documentation/pull/10081)) ([#10082](https://github.com/wazuh/wazuh-documentation/pull/10082)) ([#10089](https://github.com/wazuh/wazuh-documentation/pull/10089))
-- **Post-release**: Fixed the heading hierarchy in the *Using Wazuh for TSC compliance* documentation by converting two bolded subtopics into real H2 sections. ([#10060](https://github.com/wazuh/wazuh-documentation/pull/10060))
-- **Post-release**: Fixed third-party brand-name casing inconsistencies (CloudTrail, VirusTotal, PyInstaller, AlienVault) in the *Proof of concept guide* documentation. ([#10087](https://github.com/wazuh/wazuh-documentation/pull/10087)) ([#10166](https://github.com/wazuh/wazuh-documentation/pull/10166))
-- **Post-release**: Fixed a stray, garbled label fragment left in the *GDPR* compliance documentation's page titles, which also affected the sitewide sidebar navigation. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
-- **Post-release**: Fixed the shared site footer's *Getting started* and *Installation guide* links, which pointed at the wrong domain. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
-- **Post-release**: Corrected the `<certificate>` configuration option's stated default value in the *Indexer integration* documentation. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
-- **Post-release**: Updated the *User administration* documentation to name the Google identity provider integration by its full product name, Google Workspace. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
-- **Post-release**: Disambiguated duplicated *Attack emulation* and *Visualize the alerts* headings in the *Proof of concept guide*'s YARA integration and VirusTotal malware-detection pages by naming the target OS in each. ([#10091](https://github.com/wazuh/wazuh-documentation/pull/10091))
-- **Post-release**: Fixed links pointing to the `current` documentation version instead of the version being read, in the *Cloud service*, *PCI DSS compliance*, and *System inventory* documentation. ([#10126](https://github.com/wazuh/wazuh-documentation/pull/10126))
-- **Post-release**: Fixed typos and wrong `code-block` language tags in the *Capabilities* documentation's command monitoring, file integrity, log data collection, and malware detection use cases. ([#10127](https://github.com/wazuh/wazuh-documentation/pull/10127))
-- **Post-release**: Fixed a malformed `code-block` directive that silently dropped its content in the *Generate agent package* documentation. ([#10128](https://github.com/wazuh/wazuh-documentation/pull/10128))
-- **Post-release**: Fixed reference-page formatting and completeness issues and worked-example value mismatches across the *Reference*, *Indexer API*, *Ruleset*, and *User manual* documentation. ([#10129](https://github.com/wazuh/wazuh-documentation/pull/10129)) ([#10136](https://github.com/wazuh/wazuh-documentation/pull/10136))
-- **Post-release**: Fixed typos, subject/verb agreement, and formatting issues in the *Wazuh manager*, *Wazuh dashboard*, *Wazuh indexer*, and *Wazuh server cluster* documentation. ([#10130](https://github.com/wazuh/wazuh-documentation/pull/10130))
-- **Post-release**: Fixed the overlapping agent range labels in the *Quickstart* hardware requirements table and the en dash in the `--uninstall` installation assistant flag. ([#10133](https://github.com/wazuh/wazuh-documentation/pull/10133))
-- **Post-release**: Fixed inconsistent Windows service naming, a `registry_ignore` example mismatch, leftover file-based wording in the attribute recording section, and inaccurate default scan-frequency wording in the *File integrity monitoring* documentation's *Windows Registry monitoring* page, and added notes disambiguating the `recursion_level` limits for `<directories>` and `<windows_registry>`. ([#10134](https://github.com/wazuh/wazuh-documentation/pull/10134)) ([#10137](https://github.com/wazuh/wazuh-documentation/pull/10137))
-- **Post-release**: Removed a stale, unpublished `pm_event` table from the *wazuh-db* daemon reference's source and dropped two `wodle-osquery` cross-references from the *Deploying with Ansible* reference that pointed at the wrong page. ([#10138](https://github.com/wazuh/wazuh-documentation/pull/10138))
-- **Post-release**: Fixed an image filename containing a space in the *CloudTrail* documentation and corrected the `only_logs_after` date format documented in the *GCP bucket* reference and capability pages. ([#10140](https://github.com/wazuh/wazuh-documentation/pull/10140))
-- **Post-release**: Normalized inconsistent tab labels across the documentation that were silently splitting synchronized tab selections into separate, unsynced groups. ([#10143](https://github.com/wazuh/wazuh-documentation/pull/10143))
-- **Post-release**: Fixed mismatched screenshot titles in the *Proof of concept guide* and *Active Response* documentation. ([#10161](https://github.com/wazuh/wazuh-documentation/pull/10161))
-- **Post-release**: Corrected a false version-support claim and a URL-breaking formatting issue in `llms.txt`. ([#10162](https://github.com/wazuh/wazuh-documentation/pull/10162))
-- **Post-release**: Fixed a third-party brand-name casing inconsistency (PagerDuty) in the *Integration with external APIs* documentation. ([#10166](https://github.com/wazuh/wazuh-documentation/pull/10166))
-- **Post-release**: Clarified the *Security configuration assessment* documentation's policy enabling and disabling section and removed the nonexistent `sca_win_audit` entry from the available policies table. ([#10179](https://github.com/wazuh/wazuh-documentation/pull/10179))
-- **Post-release**: Fixed missing, duplicated, and overlong meta descriptions across the documentation, and removed unreferenced leftover images. ([#10180](https://github.com/wazuh/wazuh-documentation/pull/10180))
+Added references for FIM (Syscheck) and inventory (Syscollector) state persistence settings. ([#8801](https://github.com/wazuh/wazuh-documentation/pull/8801))
 
-## [v4.14.6]
-
-### Changed
-
-- **Post-release**: Updated the *Monitoring Microsoft Azure* documentation page title. ([#9923](https://github.com/wazuh/wazuh-documentation/pull/9923))
-
-### Fixed
-
-- **Post-release**: Fixed dead link in release notes. ([#9761](https://github.com/wazuh/wazuh-documentation/pull/9761))
-- **Post-release**: Fixed broken link in the *Adding new Wazuh server nodes* section and moved the root user privileges note into the *All-in-one deployment* and *Distributed deployment* pages. ([#9934](https://github.com/wazuh/wazuh-documentation/pull/9934)) ([#9937](https://github.com/wazuh/wazuh-documentation/pull/9937))
-
-## [v4.14.5]
-
-### Added
-
-- **Post-release**: Added upgrade warning for the `data.user` to `data.dstuser` field mapping change introduced in Wazuh 4.14.1. ([#9741](https://github.com/wazuh/wazuh-documentation/pull/9741))
-- **Post-release**: Added authentik to the Single Sign-On documentation. ([#9656](https://github.com/wazuh/wazuh-documentation/pull/9656))
-- **Post-release**: Added the *System requirements* section to the *Wazuh server cluster* documentation. ([#9668](https://github.com/wazuh/wazuh-documentation/pull/9668))
-
-### Changed
-
-- **Post-release**: Updated the *User administration* index page. ([#9528](https://github.com/wazuh/wazuh-documentation/pull/9528))
-- **Post-release**: Updated the *Active Directory and LDAP integration* section. ([#9533](https://github.com/wazuh/wazuh-documentation/pull/9533))
-- **Post-release**: Added a clarification about expected command outputs. ([#9593](https://github.com/wazuh/wazuh-documentation/pull/9593))
-- **Post-release**: Updated the *Installation guide*. ([#9691](https://github.com/wazuh/wazuh-documentation/pull/9691)) ([#9692](https://github.com/wazuh/wazuh-documentation/pull/9692)) ([#9694](https://github.com/wazuh/wazuh-documentation/pull/9694)) ([#9742](https://github.com/wazuh/wazuh-documentation/pull/9742)) ([#9746](https://github.com/wazuh/wazuh-documentation/pull/9746))
-
-### Fixed
+Added documentation for SCA state persistence settings. ([#8841](https://github.com/wazuh/wazuh-documentation/pull/8841))
 
-- **Post-release**: Fixed the Apache ``access_log`` path on the Windows endpoint in the *Blocking a known malicious actor* section of the *Proof of Concept guide*. ([#9530](https://github.com/wazuh/wazuh-documentation/pull/9530))
-- **Post-release**: Fixed the ``opensearch_dashboards.yml`` configuration for Google Workspace in the *Single Sign-On* documentation. ([#9586](https://github.com/wazuh/wazuh-documentation/pull/9586))
-- **Post-release**: Fixed the ``cluster`` reference values in the *ossec.conf* documentation. ([#9666](https://github.com/wazuh/wazuh-documentation/pull/9666))
-
-## [v4.14.4]
-
-### Added
-
-- Added a reference for the Linux ARM WPK packages to the WPK list. ([#9317](https://github.com/wazuh/wazuh-documentation/pull/9317))
-- Added note to the *Installing the Wazuh agent* section in the *Deploying with Ansible* documentation about Amazon Linux 2 systems. ([#9430](https://github.com/wazuh/wazuh-documentation/pull/9430))
-
-### Changed
-
-- **Post-release**: Updated command to change ownership of the private key file in the *PingOne* Single Sign-On documentation. ([#9432](https://github.com/wazuh/wazuh-documentation/pull/9432))
-- **Post-release**: Updated the **Wazuh server API** documentation. ([#9468](https://github.com/wazuh/wazuh-documentation/pull/9468))
-- **Post-release**: Updated the *Wazuh server cluster* documentation. ([#9436](https://github.com/wazuh/wazuh-documentation/pull/9436))
-
-### Fixed
-
-- Added a step to start the Docker service upon installation in the *Monitoring Docker events* PoC. ([#9376](https://github.com/wazuh/wazuh-documentation/pull/9376))
-- **Post-release**: Added steps to the Single Sign-On documentation. ([#9392](https://github.com/wazuh/wazuh-documentation/pull/9392)) ([#9395](https://github.com/wazuh/wazuh-documentation/pull/9395))
-- **Post-release**: Fixed AARCH64 WPK package download links. ([#9392](https://github.com/wazuh/wazuh-documentation/pull/9392)) ([#9398](https://github.com/wazuh/wazuh-documentation/pull/9398))
-
-### Changed
-
-- **Post-release**: Updated the *Using Wazuh for GDPR compliance* documentation. ([#9431](https://github.com/wazuh/wazuh-documentation/pull/9431))
-
-## [v4.14.3]
-
-### Added
-
-- Added the macOS 26 (Tahoe) SCA policy reference to the *Available SCA policies* section. ([#9158](https://github.com/wazuh/wazuh-documentation/pull/9158))
-- Added a reference for the macOS ARM WPK package to the WPK list. ([#9215](https://github.com/wazuh/wazuh-documentation/pull/9215))
-- **Post-release**: Added note about Linux WPK ARM packages in 4.14.3 and earlier versions. ([#9304](https://github.com/wazuh/wazuh-documentation/pull/9304))
-- **Post-release**: Updated the Agent documentation structure. ([#9367](https://github.com/wazuh/wazuh-documentation/pull/9367))
-
-### Changed
-
-- Added ARM64 to Deployment on Docker prerequisites and updated certificate generator version. ([#9163](https://github.com/wazuh/wazuh-documentation/pull/9163))
-- Updated steps in the *Building Docker images locally* section. ([#9174](https://github.com/wazuh/wazuh-documentation/pull/9174))
-- **Post-release**: Updated the *Deployment with Ansible* documentation. ([#9295](https://github.com/wazuh/wazuh-documentation/pull/9295))
-- **Post-release**: Updated the *Configure Python and YARA* section of the *Proof of concept guide* documentation. ([#9315](https://github.com/wazuh/wazuh-documentation/pull/9315))
-- **Post-release**: Updated the *Network IDS integration* section of the *Proof of concept guide* documentation. ([#9314](https://github.com/wazuh/wazuh-documentation/pull/9314))
-- **Post-release**: Updated the *Single sign-on* documentation. ([#9300](https://github.com/wazuh/wazuh-documentation/pull/9300)) ([#9332](https://github.com/wazuh/wazuh-documentation/pull/9332))
-- **Post-release**: Updated images in the *File integrity monitoring* documentation. ([#9326](https://github.com/wazuh/wazuh-documentation/pull/9326))
-- **Post-release**: Updated the *Adding new Wazuh indexer nodes* section. ([#9331](https://github.com/wazuh/wazuh-documentation/pull/9331))
-- **Post-release**: Updated the *File integrity monitoring* documentation. ([#9326](https://github.com/wazuh/wazuh-documentation/pull/9326)) ([#9333](https://github.com/wazuh/wazuh-documentation/pull/9333))
-- **Post-release**: Updated the *Use Cases* section of the *Wazuh server API* documentation. ([#9335](https://github.com/wazuh/wazuh-documentation/pull/9335))
-- **Post-release**: Updated the *Regulatory compliance* documentation. ([#9375](https://github.com/wazuh/wazuh-documentation/pull/9375))
-- **Post-release**: Updated the *Wazuh server* documentation. ([#9374](https://github.com/wazuh/wazuh-documentation/pull/9374))
-- **Post-release**: Updated securing your Wazuh installation steps in *Installing the Wazuh dashboard step by step* documentation. ([#9379](https://github.com/wazuh/wazuh-documentation/pull/9379))
-- **Post-release**: Updated the default value of `run_as` to `true` in the Wazuh dashboard configuration. ([#9377](https://github.com/wazuh/wazuh-documentation/pull/9377))
-- **Post-release**: Updated the RBAC configuration. ([#9380](https://github.com/wazuh/wazuh-documentation/pull/9380))
-- **Post-release**: Updated the *agent_upgrade* tool reference documentation to show current version and added the ``-d, --debug`` option. ([#9382](https://github.com/wazuh/wazuh-documentation/pull/9382))
-
-### Fixed
-
-- **Post-release**: Fixed Wazuh Server image rendering in *Installation Guide* documentation. ([#9369](https://github.com/wazuh/wazuh-documentation/pull/9369)) ([#9371](https://github.com/wazuh/wazuh-documentation/pull/9371))
-
-## [v4.14.2]
-
-### Added
-
-- **Post-release**: Added LLMs-ready documentation. ([#9201](https://github.com/wazuh/wazuh-documentation/pull/9201)) ([#9232](https://github.com/wazuh/wazuh-documentation/pull/9232)) ([#9238](https://github.com/wazuh/wazuh-documentation/pull/9238))
-- **Post-release**: Added note about macOS WPK ARM packages in 4.14.2 and earlier versions. ([#9224](https://github.com/wazuh/wazuh-documentation/pull/9224))
-- **Post-release**: Added note about disabling Wazuh repositories in the *Wazuh central components* section of the *Uprade guide*. ([#9224](https://github.com/wazuh/wazuh-documentation/pull/9224))
-
-### Changed
-
-- Updated the Wazuh module for Filebeat version references to ``0.5``. ([#9149](https://github.com/wazuh/wazuh-documentation/pull/9149))
-- **Post-release**: Updated the *Use case: Detecting malware on Windows endpoints using YARA* section. ([#9205](https://github.com/wazuh/wazuh-documentation/pull/9205))
-- **Post-release**: Added new step in *Disk space utilization on Linux endpoint* documentation. ([#9210](https://github.com/wazuh/wazuh-documentation/pull/9210))
-- **Post-release**: Updated step in *Upgrading the Wazuh dashboard* documentation. ([#9217](https://github.com/wazuh/wazuh-documentation/pull/9217))
-- **Post-release**: Updated *Wazuh server configuration* section in *Malware Detection* documentation. ([#9236](https://github.com/wazuh/wazuh-documentation/pull/9236))
-- **Post-release**: Updated the *Monitoring Microsoft Azure with Wazuh* documentation. ([#9231](https://github.com/wazuh/wazuh-documentation/pull/9231)) ([#9255](https://github.com/wazuh/wazuh-documentation/pull/9255)) ([#9264](https://github.com/wazuh/wazuh-documentation/pull/9264))
-- **Post-release**: Changed warnings to notes across the documentation. ([#9240](https://github.com/wazuh/wazuh-documentation/pull/9240))
-- **Post-release**: Updated *Monitoring Google Cloud services* documentation. ([#9251](https://github.com/wazuh/wazuh-documentation/pull/9251))
-- **Post-release**: Updated step in the Wazuh RBAC *Creating and setting a Wazuh admin user* section. ([#9252](https://github.com/wazuh/wazuh-documentation/pull/9252))
-- **Post-release**: Updated the *Active Response* documentation. ([#9254](https://github.com/wazuh/wazuh-documentation/pull/9254)) ([#9258](https://github.com/wazuh/wazuh-documentation/pull/9258)) ([#9262](https://github.com/wazuh/wazuh-documentation/pull/9262))
-- **Post-release**: Updated the *Monitoring system calls* documentation. ([#9271](https://github.com/wazuh/wazuh-documentation/pull/9271))
-- **Post-release**: Updated the *Installing the Wazuh dashboard step by step* documentation. ([#9260](https://github.com/wazuh/wazuh-documentation/pull/9260))
-
-### Fixed
-
-- Fixed code block highlighting and indentation for ``securityContext`` in *Upgrading Wazuh on Kubernetes*. ([#9161](https://github.com/wazuh/wazuh-documentation/pull/9161))
-- **Post-release**: Fixed command syntax in the *Monitoring GitHub audit logs* section. ([#9213](https://github.com/wazuh/wazuh-documentation/pull/9213))
-- **Post-release**: Fixed Change the password of Wazuh users steps in the *Deployment on Kubernetes* guide. ([#9296](https://github.com/wazuh/wazuh-documentation/pull/9296))
-
-## [v4.14.1]
-
-### Added
-
-- **Post-release**: Added clarification to the ``field`` option in the *Rules syntax* section. ([#9103](https://github.com/wazuh/wazuh-documentation/pull/9103))
-- **Post-release**: Added Syscollector parameter references. ([#9108](https://github.com/wazuh/wazuh-documentation/pull/9108)) ([#9109](https://github.com/wazuh/wazuh-documentation/pull/9109))
-- **Post-release**: Added ``apache`` to the allowed ``log_format`` values in the localfile configuration documentation. ([#9114](https://github.com/wazuh/wazuh-documentation/pull/9114))
-- **Post-release**: Added step to set file ownership and permissions when modifying default decoders. ([#9141](https://github.com/wazuh/wazuh-documentation/pull/9141))
-
-### Changed
-
-- **Post-release**: Updated the *Navigating the Wazuh dashboard* section. ([#9105](https://github.com/wazuh/wazuh-documentation/pull/9105))
-- **Post-release**: Updated the *Development* section. ([#9104](https://github.com/wazuh/wazuh-documentation/pull/9104))
-- **Post-release**: Updated the *Agents* manifests in the *Deployment on Kubernetes* section. ([#9111](https://github.com/wazuh/wazuh-documentation/pull/9111))
-- **Post-release**: Updated the *Deployment on Kubernetes* section to include separate configurations for EKS and other cluster types. ([#9181](https://github.com/wazuh/wazuh-documentation/pull/9181))
-- **Post-release**: Updated the Deployment on Kubernetes documentation. ([#9154](https://github.com/wazuh/wazuh-documentation/pull/9154)) ([#9195](https://github.com/wazuh/wazuh-documentation/pull/9195))
-- **Post-release**: Updated the *Monitoring Microsoft Graph services with Wazuh* section. ([#9107](https://github.com/wazuh/wazuh-documentation/pull/9107))
-- **Post-release**: Updated the *log_format* reference sub-section. ([#9117](https://github.com/wazuh/wazuh-documentation/pull/9117))
-- **Post-release**: Updated deployment on Docker documentation. ([#9138](https://github.com/wazuh/wazuh-documentation/pull/9138))
-- **Post-release**: Updated the auditd restart command. ([#9140](https://github.com/wazuh/wazuh-documentation/pull/9140))
-- **Post-release**: Updated the *Resources* table in the *RBAC reference* guide. ([#9118](https://github.com/wazuh/wazuh-documentation/pull/9118))
-- **Post-release**: Updated the command in the Wazuh sever API *Getting started* guide. ([#9143](https://github.com/wazuh/wazuh-documentation/pull/9143))
-- **Post-release**: Updated the *Adding new Wazuh server nodes* section. ([#9144](https://github.com/wazuh/wazuh-documentation/pull/9144)) ([#9145](https://github.com/wazuh/wazuh-documentation/pull/9145))
-- **Post-release**: Updated the *Wazuh Cloud service* documentation. ([#9136](https://github.com/wazuh/wazuh-documentation/pull/9136))
-- **Post-release**: Updated the version references for the Wazuh certificates generation tool. ([#9152](https://github.com/wazuh/wazuh-documentation/pull/9152))
-- **Post-release**: Updated steps on the *Upgrading Wazuh Docker* section. ([#9155](https://github.com/wazuh/wazuh-documentation/pull/9155))
-- **Post-release**: Updated the *Detecting malware using YARA integration* PoC guide. ([#9165](https://github.com/wazuh/wazuh-documentation/pull/9165))
-- **Post-release**: Updated the *File integrity monitoring and YARA* section. ([#9166](https://github.com/wazuh/wazuh-documentation/pull/9166))
-- **Post-release**: Updated the *File integrity monitoring* capability documentation. ([#9167](https://github.com/wazuh/wazuh-documentation/pull/9167))
-- **Post-release**: Updated the *Installation from sources* documentation. ([#9168](https://github.com/wazuh/wazuh-documentation/pull/9168))
-- **Post-release**: Updated diagram images in the documentation. ([#9097](https://github.com/wazuh/wazuh-documentation/pull/9097))
-- **Post-release**: Updated the Wazuh signed package (WPK) files section. ([#9175](https://github.com/wazuh/wazuh-documentation/pull/9175))
-- **Post-release**: Updated `offline-url` setting reference in the vulnerability detection capability section. ([#9197](https://github.com/wazuh/wazuh-documentation/pull/9197))
-- **Post-release**: Updated the Wazuh Indexer API documentation. ([#9200](https://github.com/wazuh/wazuh-documentation/pull/9200))
-- **Post-release**: Updated the *How to configure SCA* section. ([#9202](https://github.com/wazuh/wazuh-documentation/pull/9202))
-
-### Fixed
-
-- **Post-release**: Updated the OpenSearch Dashboards version references. ([#9190](https://github.com/wazuh/wazuh-documentation/pull/9190))
-
-### Removed
-
-- **Post-release**: Removed the *Environment variables* sub-section in *Configuring AWS credentials*. ([#9110](https://github.com/wazuh/wazuh-documentation/pull/9110))
-- **Post-release**: Removed note about the credentials file in *Amazon Security Lake* section. ([#9112](https://github.com/wazuh/wazuh-documentation/pull/9112))
-
-## [v4.14.0]
-
-### Added
-
-- Added AlmaLinux 10 to the Wazuh agent packages list and the vulnerability detection compatibility matrix. ([#8691](https://github.com/wazuh/wazuh-documentation/pull/8691))
-- Added Rocky Linux 10 to the Wazuh agent packages list and the available SCA policies. ([#8799](https://github.com/wazuh/wazuh-documentation/pull/8799))
-- Updated monitoring Amazon Inspector documentation to include Inspector v2. ([#8820](https://github.com/wazuh/wazuh-documentation/pull/8820))
-- Updated the `filter` option in the `localfile` reference section. ([#8837](https://github.com/wazuh/wazuh-documentation/pull/8837))
-- Added Wazuh agent support for Debian 13. ([#8946](https://github.com/wazuh/wazuh-documentation/pull/8946))
-- Added a *Change the password of Wazuh users* step in Deployment on Kubernetes documentation. ([#8979](https://github.com/wazuh/wazuh-documentation/pull/8979))
-- **Post-release**: Added Wazuh indexer indices. ([#9009](https://github.com/wazuh/wazuh-documentation/pull/9009))
-- **Post-release**: Added mandatory dependency installation step for Debian-based operating systems in the *Deploying Wazuh agents on Linux endpoints* documentation. ([#9054](https://github.com/wazuh/wazuh-documentation/pull/9054))
-- **Post-release**: Added keystore update command in the section on installing the Wazuh dashboard. ([#9091](https://github.com/wazuh/wazuh-documentation/pull/9091))
-
-### Changed
-
-- Updated the Filebeat package revision number. ([#8627](https://github.com/wazuh/wazuh-documentation/pull/8627))
-- Updated centralized configuration (`agent.conf`) documentation to reflect that agents apply changes automatically (hot reload) without requiring a manual restart. ([#8711](https://github.com/wazuh/wazuh-documentation/pull/8711))
-- Updated the cloud security module dependencies for Python 3.13 compatibility. ([#8985](https://github.com/wazuh/wazuh-documentation/pull/8985))
-- Updated Docker and Kubernetes configurations to reflect new Wazuh indexer file paths. ([#8982](https://github.com/wazuh/wazuh-documentation/pull/8982))
-- **Post-release**: Updated step in *Keeping your custom Docker Compose files* section. ([#9010](https://github.com/wazuh/wazuh-documentation/pull/9010))
-- **Post-release**: Updated the *Deployment with Puppet* documentation. ([#9012](https://github.com/wazuh/wazuh-documentation/pull/9012)) ([#9016](https://github.com/wazuh/wazuh-documentation/pull/9016))
-- **Post-release**: Updated the command for changing Wazuh server API user passwords in the *Password management* documentation. ([#9051](https://github.com/wazuh/wazuh-documentation/pull/9051))
-- **Post-release**: Updated the *Configuring existing components to connect with the new node* sections. ([#9057](https://github.com/wazuh/wazuh-documentation/pull/9057))
-- **Post-release**: Updated the vulnerability detection compatibility matrix. ([#9060](https://github.com/wazuh/wazuh-documentation/pull/9060))
-- **Post-release**: Updated the IT hygiene use cases in the *Getting started* guide. ([#9071](https://github.com/wazuh/wazuh-documentation/pull/9071))
-- **Post-release**: Updated the Deployment on Kubernetes documentation. ([#9022](https://github.com/wazuh/wazuh-documentation/pull/9022))
-- **Post-release**: Updated the System Inventory documentation. ([#9052](https://github.com/wazuh/wazuh-documentation/pull/9052)) ([#9053](https://github.com/wazuh/wazuh-documentation/pull/9053)) ([#9067](https://github.com/wazuh/wazuh-documentation/pull/9067)) ([#9070](https://github.com/wazuh/wazuh-documentation/pull/9070)) ([#9073](https://github.com/wazuh/wazuh-documentation/pull/9073))
-- **Post-release**: Updated regulatory compliance documentation. ([#9074](https://github.com/wazuh/wazuh-documentation/pull/9074))
-- **Post-release**: Updated clarification on ``sca.remote_commands`` flag. ([#9077](https://github.com/wazuh/wazuh-documentation/pull/9077))
-- **Post-release**: Updated steps in the *Upgrading the Wazuh server* section. ([#9094](https://github.com/wazuh/wazuh-documentation/pull/9094))
-
-### Fixed
-
-- **Post-release**: Added missing step to *Updating old paths* in *Upgrading Wazuh on Kubernetes*. ([#9069](https://github.com/wazuh/wazuh-documentation/pull/9069))
-- **Post-release**: Updated the referenced OpenSearch version in the upgrade guide. ([#9068](https://github.com/wazuh/wazuh-documentation/pull/9068))
-- **Post-release**: Fixed indentation in ``remove-threat.py`` code line. ([#9078](https://github.com/wazuh/wazuh-documentation/pull/9078))
-
-### Removed
-
-- **Post-release**: Removed deprecation warnings for legacy operating systems. ([#9011](https://github.com/wazuh/wazuh-documentation/pull/9011))
-
-## [v4.13.1]
-
-### Added
-
-- **Post-release**: Updated the Wazuh Amazon Machine Images (AMI) documentation. ([#8938](https://github.com/wazuh/wazuh-documentation/pull/8938))
-- **Post-release**: Added the Wazuh global queries documentation. ([#8949](https://github.com/wazuh/wazuh-documentation/pull/8949))
-
-### Changed
-
-- **Post-release**: Updated the upgrade guide for Wazuh central components. ([#8934](https://github.com/wazuh/wazuh-documentation/pull/8934)) ([#8941](https://github.com/wazuh/wazuh-documentation/pull/8941)) ([#8944](https://github.com/wazuh/wazuh-documentation/pull/8944)) ([#8947](https://github.com/wazuh/wazuh-documentation/pull/8947)) ([#8956](https://github.com/wazuh/wazuh-documentation/pull/8956))
-- **Post-release**: Added indexer connector configuration steps to vulnerability detection documentation and removed troubleshooting section. ([#8942](https://github.com/wazuh/wazuh-documentation/pull/8942))
-- **Post-release**: Updated the *Navigating the Wazuh dashboard* section. ([#8950](https://github.com/wazuh/wazuh-documentation/pull/8950))
-- **Post-release**: Updated the System inventory documentation. ([#8955](https://github.com/wazuh/wazuh-documentation/pull/8955))
-- **Post-release**: Updated the *Getting started* guide. ([#8962](https://github.com/wazuh/wazuh-documentation/pull/8962)) ([#8963](https://github.com/wazuh/wazuh-documentation/pull/8963)) ([#8964](https://github.com/wazuh/wazuh-documentation/pull/8964)) ([#8965](https://github.com/wazuh/wazuh-documentation/pull/8965))
-- **Post-release**: Updated the URLs of malware samples. ([#8961](https://github.com/wazuh/wazuh-documentation/pull/8961))
-- **Post-release**: Updated the installation guide. ([#8936](https://github.com/wazuh/wazuh-documentation/pull/8936))
-- **Post-release**: Updated user manual documentation for Wazuh dashboard. ([#8967](https://github.com/wazuh/wazuh-documentation/pull/8967))
-- **Post-release**: Updated the prerequisites sub-section in *Deployment on Docker*. ([#8977](https://github.com/wazuh/wazuh-documentation/pull/8977))
-- **Post-release**: Updated the Virtual Machine (VM) documentation. ([#8981](https://github.com/wazuh/wazuh-documentation/pull/8981))
-- **Post-release**: Removed duplicated introductory bullets from source/cloud-security/azure/index.rst ([#8987](https://github.com/wazuh/wazuh-documentation/pull/8987))
-- **Post-release**: Updated the *Installation from sources* documentation. ([#8980](https://github.com/wazuh/wazuh-documentation/pull/8980))
-- **Post-release**: Updated the Amazon Security Lake integration documentation. ([#8989](https://github.com/wazuh/wazuh-documentation/pull/8989))
-- **Post-release**: Updated the *Deployment with Puppet* documentation. ([#8994](https://github.com/wazuh/wazuh-documentation/pull/8994))
-- **Post-release**: Updated the vulnerability detection compatibility matrix. ([#9061](https://github.com/wazuh/wazuh-documentation/pull/9061))
-- **Post-release**: Updated the *Resources* table in the *RBAC reference* guide. ([#9119](https://github.com/wazuh/wazuh-documentation/pull/9119))
-- **Post-release**: Updated the *Installation from sources* documentation. ([#9170](https://github.com/wazuh/wazuh-documentation/pull/9170))
-- **Post-release**: Updated the *Wazuh signed package (WPK) files* section. ([#9176](https://github.com/wazuh/wazuh-documentation/pull/9176))
-
-### Fixed
-
-- **Post-release**: Removed wazuh-states-fim index references. ([#8948](https://github.com/wazuh/wazuh-documentation/pull/8948))
-- **Post-release**: Removed unnecessary code block from agent installation from sources. ([#9000](https://github.com/wazuh/wazuh-documentation/pull/9000))
-- **Post-release**: Fixed indentation in ``remove-threat.py`` code line. ([#9079](https://github.com/wazuh/wazuh-documentation/pull/9079))
-
-### Removed
-
-- **Post-release**: Removed deprecation warnings for legacy operating systems. ([#9013](https://github.com/wazuh/wazuh-documentation/pull/9013))
-
-## [v4.13.0]
-
-### Added
-
-- Added support for CentOS Stream 10. ([#8607](https://github.com/wazuh/wazuh-documentation/pull/8607))
-- Added support for Red Hat Enterprise Linux 10. ([#8608](https://github.com/wazuh/wazuh-documentation/pull/8608))
-- Added the *Wazuh indexer configuration on hardened endpoints* section. ([#8437](https://github.com/wazuh/wazuh-documentation/pull/8437))
-- Added steps to preserve custom settings in the JVM configuration file during the indexer upgrade. ([#8603](https://github.com/wazuh/wazuh-documentation/pull/8603))
-- Added the CentOS Stream 9 SCA policy reference to the Available SCA policies section. ([#8602](https://github.com/wazuh/wazuh-documentation/pull/8602))
-- Added steps for installing a single node stack via Puppet in *Deployment with Puppet*. ([#8611](https://github.com/wazuh/wazuh-documentation/pull/8611))
-- Added information about filters in the Windows agent to block UNC and mapped drive paths to mitigate *NetNTLMv2* vulnerabilities. ([#8665](https://github.com/wazuh/wazuh-documentation/pull/8665))
-- Prepared the Wazuh global queries documentation for publication. ([#8722](https://github.com/wazuh/wazuh-documentation/pull/8722)) ([#8909](https://github.com/wazuh/wazuh-documentation/pull/8909))
-- Added `remoted.ctrl_msg_queue_size` internal option and new remoted statistics fields. ([#8769](https://github.com/wazuh/wazuh-documentation/pull/8769))
-- Added Wazuh agent deployment on Docker documentation. ([#8798](https://github.com/wazuh/wazuh-documentation/pull/8798)) ([#8845](https://github.com/wazuh/wazuh-documentation/pull/8845)) ([#8857](https://github.com/wazuh/wazuh-documentation/pull/8857))
-- Added Wazuh indexer indices. ([#8887](https://github.com/wazuh/wazuh-documentation/pull/8887))
-- Added deprecation warnings for legacy operating systems. ([#8897](https://github.com/wazuh/wazuh-documentation/pull/8897))
-- **Post-release**: Added the `wazuh_modules.rlimit_nofile` internal configuration option. ([#8922](https://github.com/wazuh/wazuh-documentation/pull/8922))
-
-### Changed
-
-- Updated the Available SCA policies section. ([#8602](https://github.com/wazuh/wazuh-documentation/pull/8602))
-- Added instructions for retrieving the correct Puppet agent node name and to set the ``<PUPPET_AGENT_NODE_NAME>`` placeholder in the manifest. ([#8664](https://github.com/wazuh/wazuh-documentation/pull/8664))
-- Updated the *Deployment on Docker* section. ([#8688](https://github.com/wazuh/wazuh-documentation/pull/8688))
-- Updated default values for `agents_disconnection_time` and `notify_time`. ([#8769](https://github.com/wazuh/wazuh-documentation/pull/8769))
-- Updated the default value of the `all` attribute in the `ports` Syscollector configuration option. ([#8840](https://github.com/wazuh/wazuh-documentation/pull/8840))
-- Replaced version references with replacement variables in Wazuh package generation. ([#8906](https://github.com/wazuh/wazuh-documentation/pull/8906))
-- Updated System inventory documentation. ([#8910](https://github.com/wazuh/wazuh-documentation/pull/8910))
-- **Post-release**: Updated 4.13.0 release notes entry. ([#8923](https://github.com/wazuh/wazuh-documentation/pull/8923)) ([#8925](https://github.com/wazuh/wazuh-documentation/pull/8925)) ([#8928](https://github.com/wazuh/wazuh-documentation/pull/8928))
-- **Post-release**: Updated steps in Upgrade Guide for exporting customizations from the Wazuh Dashboard. ([#8921](https://github.com/wazuh/wazuh-documentation/pull/8921))
-- **Post-release**: Updated references to Twitter. ([#8933](https://github.com/wazuh/wazuh-documentation/pull/8933))
-
-## [v4.12.0]
-
-### Added
-
-- Added reference to macOS arm64 WPK. ([#7883](https://github.com/wazuh/wazuh-documentation/pull/7883))
-- Added Ubuntu 24.04 SCA to the list of available SCAs. ([#8021](https://github.com/wazuh/wazuh-documentation/pull/8021))
-- Added the `<aws_profile>` authentication parameter to the Amazon Security Lake documentation. ([#8199](https://github.com/wazuh/wazuh-documentation/pull/8199))
-- Added ARM64 to the central components architecture references. ([#8173](https://github.com/wazuh/wazuh-documentation/pull/8173))
-- Added a note warning that downgrades to 4.11 and earlier versions from 4.12 and later are not possible. ([#8425](https://github.com/wazuh/wazuh-documentation/pull/8425))
-- Added new configuration options to the MS Graph integration documentation. ([#8226](https://github.com/wazuh/wazuh-documentation/pull/8226)) ([#8495](https://github.com/wazuh/wazuh-documentation/pull/8495)) ([#8496](https://github.com/wazuh/wazuh-documentation/pull/8496))
-- **Post-release**: Added troubleshooting steps to the *Virtual Machine (OVA)* installation guide. ([#8562](https://github.com/wazuh/wazuh-documentation/pull/8562))
-- **Post-release**: Added a note in the installation guide about firewall configuration to prevent communication issues between Wazuh components. ([#8622](https://github.com/wazuh/wazuh-documentation/pull/8622))
-- **Post-release**: Added instruction to run Windows backup commands in CMD (Command Prompt) and not PowerShell. ([#8672](https://github.com/wazuh/wazuh-documentation/pull/8672))
-- **Post-release**: Added clarification references to the *Agent upgrade module* section. ([#8687](https://github.com/wazuh/wazuh-documentation/pull/8687))
-- **Post-release**: Added the *Wazuh AI Analyst service* section to the Cloud service documentation. ([#8690](https://github.com/wazuh/wazuh-documentation/pull/8690))
-- **Post-release**: Added DNF package manager support for installation and configuration steps. ([#8689](https://github.com/wazuh/wazuh-documentation/pull/8689))
-- **Post-release**: Added security update for the `remove-threat.py` script and a warning to the Detecting and removing malware using VirusTotal integration POC guide. ([#8697](https://github.com/wazuh/wazuh-documentation/pull/8697))
-- **Post-release**: Added note about manual replication of `ossec.conf` between master and worker nodes. ([#8720](https://github.com/wazuh/wazuh-documentation/pull/8720))
-- **Post-release**: Added a table describing the possible environment statuses in the cloud service documentation. ([#8407](https://github.com/wazuh/wazuh-documentation/pull/8407))
-- **Post-release**: Added the Wazuh indexer API reference. ([#8756](https://github.com/wazuh/wazuh-documentation/pull/8756))
-- **Post-release**: Added examples of Wazuh tools to the user manual reference. ([#8763](https://github.com/wazuh/wazuh-documentation/pull/8763))
-- **Post-release**: Added the `ap-northeast-1` (Tokyo) region. ([#8818](https://github.com/wazuh/wazuh-documentation/pull/8818))
-- **Post-release**: Added a Q&A to the Cloud service FAQ section. ([#8832](https://github.com/wazuh/wazuh-documentation/pull/8832))
-- **Post-release**: Added agent restart commands to Agent enrollment methods section. ([#8836](https://github.com/wazuh/wazuh-documentation/pull/8836))
-- **Post-release**: Added Wazuh Docker support for Windows. ([#8852](https://github.com/wazuh/wazuh-documentation/pull/8852))
-- **Post-release**: Added new steps and images to the API Permission section of the *Wazuh Microsoft Graph API* setup documentation. ([#8898](https://github.com/wazuh/wazuh-documentation/pull/8898))
-
-### Changed
-
-- Updated Wazuh dashboard package generation guide. ([#7961](https://github.com/wazuh/wazuh-documentation/pull/7961))
-- Updated images in FIM PoC. [#7979](https://github.com/wazuh/wazuh-documentation/pull/7979)
-- Added clarification about PCRE2 case sensitivity and modifiers in the ruleset XML syntax guide. ([#8717](https://github.com/wazuh/wazuh-documentation/pull/8717))
-- Replaced the `--version` parameter with `--commit-sha` in the Wazuh dashboard package generation guide. ([#8216](https://github.com/wazuh/wazuh-documentation/pull/8216))
-- Updated the Filebeat package references in Packages list. ([#8348](https://github.com/wazuh/wazuh-documentation/pull/8348))
-- Updated Microsoft Entra ID SSO setup steps for the administrator role. ([#8399](https://github.com/wazuh/wazuh-documentation/pull/8399)) ([#8424](https://github.com/wazuh/wazuh-documentation/pull/8424))
-- Updated filebeat installation commands. ([#8410](https://github.com/wazuh/wazuh-documentation/pull/8410))
-- Updated the *Profiles* section in *Configuring AWS credentials*. ([#8426](https://github.com/wazuh/wazuh-documentation/pull/8426)) ([#8429](https://github.com/wazuh/wazuh-documentation/pull/8429))
-- Updated the *Who-data monitoring on Linux* section. ([#8435](https://github.com/wazuh/wazuh-documentation/pull/8435)), ([#8492](https://github.com/wazuh/wazuh-documentation/pull/8492))
-- Updated the *Agents* sub-section in *Deployment on Kubernetes*. ([#8475](https://github.com/wazuh/wazuh-documentation/pull/8475))
-- Updated the available SCA policies table. ([#8500](https://github.com/wazuh/wazuh-documentation/pull/8500))
-- **Post-release**: Updated the 4.12.0 release notes highlights text. ([#8510](https://github.com/wazuh/wazuh-documentation/pull/8510))
-- **Post-release**: Changed the *Packages list* title to *Open Virtual Appliances* in the *Virtual Machine (OVA)* section. ([#8514](https://github.com/wazuh/wazuh-documentation/pull/8514))
-- **Post-release**: Updated the launchctl `unload` and `load` commands with `launchctl bootout system` and `launchctl bootstrap system`. ([#8591](https://github.com/wazuh/wazuh-documentation/pull/8591))
-- **Post-release**: Updated the Wazuh repository addition steps for RHEL 9-compatible systems. ([#8594](https://github.com/wazuh/wazuh-documentation/pull/8594))
-- **Post-release**: Updated the `alienvault_reputation.ipset` download link in the *Blocking a known malicious actor* PoC. ([#8594](https://github.com/wazuh/wazuh-documentation/pull/8604))
-- **Post-release**: Updated agent upgrade documentation to include examples for upgrading multiple agents at once using the `-a` flag. ([#8617](https://github.com/wazuh/wazuh-documentation/pull/8617))
-- **Post-release**: Updated the *Wazuh package generation* guide. ([#8600](https://github.com/wazuh/wazuh-documentation/pull/8600)) ([#8626](https://github.com/wazuh/wazuh-documentation/pull/8626))
-- **Post-release**: Added steps to export and import dashboard customizations in the upgrade guide. ([#8618](https://github.com/wazuh/wazuh-documentation/pull/8618))
-- **Post-release**: Updated the vulnerability detection capability section. ([#8693](https://github.com/wazuh/wazuh-documentation/pull/8693))
-- **Post-release**: Changed the warning note on using the `$` and `&` characters when changing passwords in Docker deployments. ([#8694](https://github.com/wazuh/wazuh-documentation/pull/8694))
-- **Post-release**: Changed Windows commands in the backup guide to PowerShell. ([#8761](https://github.com/wazuh/wazuh-documentation/pull/8761))
-- **Post-release**: Updated 4.12.0 command output examples. ([#8779](https://github.com/wazuh/wazuh-documentation/pull/8779)) ([#8780](https://github.com/wazuh/wazuh-documentation/pull/8780))
-- **Post-release**: Updated the *Deployment on Docker* documentation. ([#8793](https://github.com/wazuh/wazuh-documentation/pull/8793)) ([#8839](https://github.com/wazuh/wazuh-documentation/pull/8839)) ([#8843](https://github.com/wazuh/wazuh-documentation/pull/8843))
-- **Post-release**: Updated the Windows logo in the documentation. ([#8804](https://github.com/wazuh/wazuh-documentation/pull/8804))
-- **Post-release**: Updated the offline installation guide. ([#8803](https://github.com/wazuh/wazuh-documentation/pull/8803))
-- **Post-release**: Updated the instruction and images in Wazuh server API getting started documentation to reflect the new navigation path (**Server management** > **Dev Tools**). ([#8811](https://github.com/wazuh/wazuh-documentation/pull/8811))
-- **Post-release**: Updated the *Getting started with Wazuh - Architecture* documentation. ([#8819](https://github.com/wazuh/wazuh-documentation/pull/8819))
-- **Post-release**: Changed Suricata ruleset file permission in POC guide. ([#8821](https://github.com/wazuh/wazuh-documentation/pull/8821))
-- **Post-release**: Adjusted the Data analysis documentation. ([#8850](https://github.com/wazuh/wazuh-documentation/pull/8850))
-- **Post-release**: Updated images and powershell command in **Leveraging LLMs for alert enrichment** PoC. [#8888](https://github.com/wazuh/wazuh-documentation/pull/8888)
-- **Post-release**: Updated RBAC reference to show actual policy names with wildcards. ([#8904](https://github.com/wazuh/wazuh-documentation/pull/8904))
-- **Post-release**: Updated steps in Upgrade Guide for exporting customizations from the Wazuh Dashboard. ([#8929](https://github.com/wazuh/wazuh-documentation/pull/8929))
-- **Post-release**: Updated user manual documentation for Wazuh dashboard. ([#8970](https://github.com/wazuh/wazuh-documentation/pull/8970))
-- **Post-release**: Updated the *Installation from sources* documentation. ([#8988](https://github.com/wazuh/wazuh-documentation/pull/8988))
-- **Post-release**: Updated the Amazon Security Lake integration documentation. ([#8990](https://github.com/wazuh/wazuh-documentation/pull/8990))
-- **Post-release**: Updated the vulnerability detection compatibility matrix. ([#9062](https://github.com/wazuh/wazuh-documentation/pull/9062))
-- **Post-release**: Updated the *Resources* table in the *RBAC reference* guide. ([#9120](https://github.com/wazuh/wazuh-documentation/pull/9120))
-- **Post-release**: Updated the *Installation from sources* documentation. ([#9173](https://github.com/wazuh/wazuh-documentation/pull/9173))
-- **Post-release**: Updated the *Wazuh signed package (WPK) files* section. ([#9177](https://github.com/wazuh/wazuh-documentation/pull/9177))
-
-### Fixed
-
-- **Post-release**: Updated the package list to include missing ARM64 architecture references for the Wazuh indexer and Wazuh dashboard. ([#8511](https://github.com/wazuh/wazuh-documentation/pull/8511))
-- **Post-release**: Fixed Filebeat DEB package URLs in the package list. ([#8577](https://github.com/wazuh/wazuh-documentation/pull/8577))
-- **Post-release**: Removed outdated version notices from documentation. ([#8578](https://github.com/wazuh/wazuh-documentation/pull/8578))
-- **Post-release**: Fixed command errors in the "Starting the service" section of the Wazuh server cluster documentation. ([#8587](https://github.com/wazuh/wazuh-documentation/pull/8587))
-- **Post-release**: Removed extra `PUT /rules/files/{filename}` reference from `rules:delete` ([#8599](https://github.com/wazuh/wazuh-documentation/pull/8599))
-- **Post-release**: Fixed incorrect reference from **Ubuntu** to **Windows** endpoint in the SCA use case documentation. ([#8629](https://github.com/wazuh/wazuh-documentation/pull/8629))
-- **Post-release**: Fixed incorrect URL and filepaths in the YARA download steps of the *Leveraging LLMs for Alert Enrichment* PoC. ([#8686](https://github.com/wazuh/wazuh-documentation/pull/8686))
-- **Post-release**: Corrected inaccurate references to the Wazuh Syscollector module. ([#8713](https://github.com/wazuh/wazuh-documentation/pull/8713))
-- **Post-release**: Corrected git command syntax in the Wazuh dashboard package generation guide. ([#8903](https://github.com/wazuh/wazuh-documentation/pull/8903))
-- **Post-release**: Removed unnecessary code block from agent installation from sources. ([#9002](https://github.com/wazuh/wazuh-documentation/pull/9002))
-- **Post-release**: Fixed indentation in ``remove-threat.py`` code line. ([#9080](https://github.com/wazuh/wazuh-documentation/pull/9080))
-
-### Removed
-
-- **Post-release**: Removed `us-gov-*` AWS regions references. ([#8791](https://github.com/wazuh/wazuh-documentation/pull/8791))
-
-## [v4.11.2]
-
-### Added
-
-- Added the ``authentication_pool_size`` option to the Wazuh server API configuration section. ([#8287](https://github.com/wazuh/wazuh-documentation/pull/8287))
-- Added clarifications that `<disabled>` is required in `active-response` blocks in *Use cases* and *Active response* reference sections. ([#8428](https://github.com/wazuh/wazuh-documentation/pull/8428))
-- Added new section on creating agent groups. ([#8436](https://github.com/wazuh/wazuh-documentation/pull/8436))
-- **Post-release**: Backported troubleshooting steps to the *Virtual Machine (OVA)* installation guide. ([#8563](https://github.com/wazuh/wazuh-documentation/pull/8563))
-- **Post-release**: Added security update for the `remove-threat.py` script and a warning to the Detecting and removing malware using VirusTotal integration POC guide. ([#8705](https://github.com/wazuh/wazuh-documentation/pull/8705))
-- **Post-release**: Changed Windows commands in the backup guide to PowerShell. ([#8764](https://github.com/wazuh/wazuh-documentation/pull/8764))
-- **Post-release**: Updated the offline installation guide. ([#8806](https://github.com/wazuh/wazuh-documentation/pull/8806))
-
-### Changed
-
-- **Post-release**: Clarified the conditions for the Wazuh repository disabling recommendation upon installation. ([#8408](https://github.com/wazuh/wazuh-documentation/pull/8408))
-- **Post-release**: Updated certificate location reference for Logstash and file permissions change command. ([#8415](https://github.com/wazuh/wazuh-documentation/pull/8415))
-- **Post-release**: Moved the note in the **Configuring vulnerability detection** documentation to appear after the `<indexer>` block. ([#8427](https://github.com/wazuh/wazuh-documentation/pull/8427))
-- **Post-release**: Included checkout command in Amazon Security Lake integration guide. ([#8423](https://github.com/wazuh/wazuh-documentation/pull/8423))
-- **Post-release**: Updated Vulnerability Detection Proof of Concept. ([#8422](https://github.com/wazuh/wazuh-documentation/pull/8422))
-- **Post-release**: Updated images and powershell command in **Leveraging LLMs for alert enrichment** PoC. [#8889](https://github.com/wazuh/wazuh-documentation/pull/8889)
-- **Post-release**: Adjusted the Data analysis documentation. ([#8899](https://github.com/wazuh/wazuh-documentation/pull/8899))
-- **Post-release**: Updated user manual documentation for Wazuh dashboard. ([#8972](https://github.com/wazuh/wazuh-documentation/pull/8972))
-- **Post-release**: Updated the Amazon Security Lake integration documentation. ([#8991](https://github.com/wazuh/wazuh-documentation/pull/8991))
-- **Post-release**: Updated the vulnerability detection compatibility matrix. ([#9063](https://github.com/wazuh/wazuh-documentation/pull/9063))
-- **Post-release**: Fixed indentation in ``remove-threat.py`` code line. ([#9081](https://github.com/wazuh/wazuh-documentation/pull/9081))
-- **Post-release**: Updated the *Resources* table in the *RBAC reference* guide. ([#9121](https://github.com/wazuh/wazuh-documentation/pull/9121))
-
-### Fixed
-
-- **Post-release**: Added missing Oracle Linux to the vulnerability detection compatibility matrix and fixed heading level. ([#8391](https://github.com/wazuh/wazuh-documentation/pull/8391))
-- **Post-release**: Added specific version for Email app in Shuffle integration section. ([#8420](https://github.com/wazuh/wazuh-documentation/pull/8420))
-- **Post-release**: Fixed mispelled word "address" occurrences. ([#8421](https://github.com/wazuh/wazuh-documentation/pull/8421))
-- **Post-release**: Fixed `wazuh-certs-tool` download command from static version number to use `WAZUH_CURRENT_VERSION` ([#8473](https://github.com/wazuh/wazuh-documentation/pull/8473))
-- **Post-release**: Add missing changes in Download configuration files from remote location section. ([#8476](https://github.com/wazuh/wazuh-documentation/pull/8476))
-- **Post-release**: Reverted new configuration options added to the MS Graph integration documentation. ([#8495](https://github.com/wazuh/wazuh-documentation/pull/8495))
-
-## [v4.11.1]
-
-- **Post-release**: Added missing entry to 4.11.1 release notes. ([#8280](https://github.com/wazuh/wazuh-documentation/pull/8280))
-- **Post-release**: Added clarification about the user account used to access the Wazuh dashboard. ([#8282](https://github.com/wazuh/wazuh-documentation/pull/8282))
-
-## [v4.11.0]
-
-### Added
-
-- Added architecture information to assistant pages. ([#7830](https://github.com/wazuh/wazuh-documentation/pull/7830))
-- Added CISA to the vulnerability source enumerations and compatibility matrix. ([#8201](https://github.com/wazuh/wazuh-documentation/pull/8201))
-- **Post-release**: Added new configuration options to the MS Graph integration documentation. ([#8226](https://github.com/wazuh/wazuh-documentation/pull/8226))
-- **Post-release**: Added Wazuh indexer API documentation. ([#8231](https://github.com/wazuh/wazuh-documentation/pull/8231))
-- **Post-release**: Added a table describing the possible environment statuses in the cloud service documentation. ([#8407](https://github.com/wazuh/wazuh-documentation/pull/8407))
-
-### Changed
-
-- Updated note about uninstalling Wazuh agents in Solaris. ([#7925](https://github.com/wazuh/wazuh-documentation/pull/7925))
-- Updated screenshots from System Inventory.  ([#8044](https://github.com/wazuh/wazuh-documentation/pull/8044))
-- Updated the Virtual Machine (OVA) and Amazon Machine Images (AMI) sections. Updated the operating system component to AL2023. ([#8201](https://github.com/wazuh/wazuh-documentation/pull/8201))
-- **Post-release**: Updated the explanation of the `frequency` option in the `localfile` documentation.
-- **Post-release**: Updated the Filebeat installation commands. ([#8390](https://github.com/wazuh/wazuh-documentation/pull/8390))
-- **Post-release**: Changed Suricata ruleset file permissions in POC guide. ([#8822](https://github.com/wazuh/wazuh-documentation/pull/8822))
-
-### Removed
-
-- Removed note about plugins and upgrading Wazuh central components. ([#8020](https://github.com/wazuh/wazuh-documentation/pull/8020))
-
-### Fixed
-
-- **Post-release**: Removed prompt symbol from code block. ([#8211](https://github.com/wazuh/wazuh-documentation/pull/8211))
-- **Post-release**: Increased note and code block indentation. ([8213](https://github.com/wazuh/wazuh-documentation/pull/8213))
-- **Post-release**: Fixed script argument in dashboard package generation command. ([8265](https://github.com/wazuh/wazuh-documentation/pull/8265))
-- **Post-release**: Fixed OpenSearch Dashboards version reference. ([8265](https://github.com/wazuh/wazuh-documentation/pull/8265))
-
-## [v4.10.5]
-
-- Support for Wazuh 4.10.5
-
-## [v4.10.4]
-
-- Support for Wazuh 4.10.4
-
-## [v4.10.3]
-
-- Support for Wazuh 4.10.3
-
-## [v4.10.2]
-
-### Fixed
-
-- Removed prompt symbol from code block. ([#8561](https://github.com/wazuh/wazuh-documentation/pull/8561))
-- Added specific version for Email app in Shuffle integration section. ([#8565](https://github.com/wazuh/wazuh-documentation/pull/8565))
-
-## [v4.10.1]
-
-- Support for Wazuh 4.10.1
-
-## [v4.10.0]
-
-### Added
-
-- Added documentation for the MDM Intune integration. ([#7661](https://github.com/wazuh/wazuh-documentation/pull/7661))
-- Added the agent uninstall RBAC action. ([#7708](https://github.com/wazuh/wazuh-documentation/pull/7708))
-- Added the ``anti_tampering`` configuration block documentation. ([#7580](https://github.com/wazuh/wazuh-documentation/pull/7580))
-- Added PowerPC package references back to the packages list. ([#7724](https://github.com/wazuh/wazuh-documentation/pull/7724))
-- Added dependencies to the dependency requirements in the Offline installation guide using the installation assistant. ([#7931](https://github.com/wazuh/wazuh-documentation/pull/7931))
-- Added ``wazuh.updates.disabled`` to the *Wazuh dashboard settings* reference document. ([#7977](https://github.com/wazuh/wazuh-documentation/pull/7977))
-- Added a troubleshooting guide to the Vulnerability detection capability section. ([#8014](https://github.com/wazuh/wazuh-documentation/pull/8014))
-
-### Changed
-
-- Replaced the commands to start and stop the Wazuh agent on macOS systems. ([#7498](https://github.com/wazuh/wazuh-documentation/pull/7498))
-- Updated the available options and examples for the MSI package generation command. ([#7501](https://github.com/wazuh/wazuh-documentation/pull/7501))
-- Updated the available SCA policies table. ([#7698](https://github.com/wazuh/wazuh-documentation/pull/7698))
-- Updated default and allowed ``chunk_size`` values for upgrading agents using wpk files. ([#7717](https://github.com/wazuh/wazuh-documentation/pull/7717))
-- Updated upgrading steps for Wazuh on Docker and Wazuh on Kubernetes deployments. ([#7859](https://github.com/wazuh/wazuh-documentation/pull/7859))
-- Replaced ``wazuh-packages`` repository references with ``wazuh-virtual-machines`` in the OVA generation guide. ([#7926](https://github.com/wazuh/wazuh-documentation/pull/7926))
-- Updated agent dashboard screenshots: Inventory, Stats, and Configuration. ([#7942](https://github.com/wazuh/wazuh-documentation/pull/7942))
-- Updated references for the new Wazuh dashboard Agents management section. ([#7944](https://github.com/wazuh/wazuh-documentation/pull/7944))
-- Replaced VirusTotal screenshot in the getting started guide. ([#7946](https://github.com/wazuh/wazuh-documentation/pull/7946))
-- Updated malware detection screenshots to include VirusTotal. ([#7975](https://github.com/wazuh/wazuh-documentation/pull/7975))
-- Updated **Inventory Data** page screenshots to reflect the newly added tabs: **Software**, **Network**, and **Processes**. ([#7976 ](https://github.com/wazuh/wazuh-documentation/pull/7976))
-- Changed ``urllib3`` dependency version to ``1.26.20`` and fixed references to the minimum Python version. ([#7978](https://github.com/wazuh/wazuh-documentation/pull/7978))
-- Updated references to the ``wazuh-packages`` repository in commands for building agent packages to reflect the latest repository structure. ([#7995](https://github.com/wazuh/wazuh-documentation/pull/7995))
-- Updated dashboard query configuration screenshots. ([#8027](https://github.com/wazuh/wazuh-documentation/pull/8027))
-- Improved Password management section. ([#8026](https://github.com/wazuh/wazuh-documentation/pull/8026))
-
-### Fixed
-
-- Updated URL in Puppet agent installation step. ([#7920](https://github.com/wazuh/wazuh-documentation/pull/7920))
-- Added ``gnupg`` to the dependencies installation step in the Install Ansible guide. ([#7932](https://github.com/wazuh/wazuh-documentation/pull/7932))
-- Added step in the *Upgrading Wazuh Docker* guide. ([#7929](https://github.com/wazuh/wazuh-documentation/pull/7929))
-- Fixed Securing your Wazuh installation steps for distributed deployments in Password management section. ([#8026](https://github.com/wazuh/wazuh-documentation/pull/8026))
-
-### Removed
-
-- Removed the step to disable the Wazuh manager service from the *Uninstalling the Wazuh central components* guide. ([#7814](https://github.com/wazuh/wazuh-documentation/pull/7814))
-- Removed ``wazuh-packages`` repository reference from release notes. ([#7970](https://github.com/wazuh/wazuh-documentation/pull/7970))
-
-## [v4.9.2]
-
-### Added
-
-- Updated the API host default value. ([#7933](https://github.com/wazuh/wazuh-documentation/pull/7933))
-
-## [v4.9.1]
-
-### Added
-
-- Added dependency requirements to the offline installation guide. ([#7755](https://github.com/wazuh/wazuh-documentation/pull/7755))
-- Added `SECURITY.md` to the Wazuh documentation repository. ([#7764](https://github.com/wazuh/wazuh-documentation/pull/7764))
-- Added support for Python 3.12 in configuration steps. ([#7673](https://github.com/wazuh/wazuh-documentation/pull/7673))
-- Added ARM64 Wazuh manager package references to Packages list. ([#7806](https://github.com/wazuh/wazuh-documentation/pull/7806))
-- Added *macOS Sequoia 15* to the Available SCA policies list. ([#7864](https://github.com/wazuh/wazuh-documentation/pull/7864))
-
-### Changed
-
-- Replaced  Wazuh keystore password insertion commands with a safer method and added a new parameter to the list of available options. ([#7593](https://github.com/wazuh/wazuh-documentation/pull/7593))
-- Restored Wazuh dashboard package revision number. ([#7762](https://github.com/wazuh/wazuh-documentation/pull/7762))
-
-### Fixed
-
-- Added a step for creating a retention policy using the Visual editor in the *Index life management* section. ([#7685](https://github.com/wazuh/wazuh-documentation/pull/7685))
-- Fixed debugging command for the Wazuh dashboard. ([#7769](https://github.com/wazuh/wazuh-documentation/pull/7769))
-- Fixed Wazuh indexer repository reference in the Wazuh indexer package generation guide. ([#7779](https://github.com/wazuh/wazuh-documentation/pull/7779))
-- Fixed highlighting in Docker compose configuration file example. ([#7867](https://github.com/wazuh/wazuh-documentation/pull/7867))
-
-### Removed
-
-- Removed the command to delete `opensearch_dashboards.yml` in the *Upgrading the Wazuh dashboard* section. ([#7777](https://github.com/wazuh/wazuh-documentation/pull/7777))
-- Removed the step to delete ss4o index templates in *Upgrading the Wazuh indexer*. ([#7810](https://github.com/wazuh/wazuh-documentation/pull/7810))
-
-## [v4.9.0]
-
-### Added
-
-- Added AWS Security Hub section to the monitoring AWS based services documentation. ([#7111](https://github.com/wazuh/wazuh-documentation/pull/7111)) ([#7649](https://github.com/wazuh/wazuh-documentation/pull/7649))
-- Added custom Filebeat user information and deleted obsolete information about ossec.conf file on Wazuh server. ([#7382](https://github.com/wazuh/wazuh-documentation/pull/7382))
-- Added journald log collection documentation. ([#7363](https://github.com/wazuh/wazuh-documentation/pull/7363))
-- Added documentation for Wazuh dashboard Packages generation. ([#7356](https://github.com/wazuh/wazuh-documentation/pull/7356))
-- Added documentation for Wazuh Indexer Packages generation. ([#7355](https://github.com/wazuh/wazuh-documentation/pull/7355))
-- Added instructions to collect core dumps in Red Hat based endpoints. ([#7347](https://github.com/wazuh/wazuh-documentation/pull/7347))
-- Added documentation for Wazuh as a custom source for the Amazon Security Lake integration. ([#7310](https://github.com/wazuh/wazuh-documentation/pull/7310)) ([#7586](https://github.com/wazuh/wazuh-documentation/pull/7586))
-- Added instructions to collect core dumps in Windows endpoints. ([#7299](https://github.com/wazuh/wazuh-documentation/pull/7299))
-- Added python and pip installation templates. ([#7298](https://github.com/wazuh/wazuh-documentation/pull/7298))
-- Added a note to warns of default auditd rule in some system that prevent Wazuh from working properly. ([#7291](https://github.com/wazuh/wazuh-documentation/pull/7291))
-- Added core dumps collection documentation. ([#7281](https://github.com/wazuh/wazuh-documentation/pull/7281))
-- Added HAProxy helper documentation. ([#7279](https://github.com/wazuh/wazuh-documentation/pull/7279)) ([#7403](https://github.com/wazuh/wazuh-documentation/pull/7403))
-- Added ability to disable the edition of configuration through API endpoints and UI. ([#7220](https://github.com/wazuh/wazuh-documentation/pull/7220))
-- Added journald log format to localfile reference. ([#7202](https://github.com/wazuh/wazuh-documentation/pull/7202))
-- Added required dependencies for AIX agent installation. ([#7196]https://github.com/wazuh/wazuh-documentation/pull/7196)
-- Added functionality to forward alerts to Fluentd. ([#6691](https://github.com/wazuh/wazuh-documentation/pull/6691))
-- Added the ``<forward_to>`` global option to the ``ossec.conf`` configuration reference. ([#6974](https://github.com/wazuh/wazuh-documentation/pull/6974))
-- Added guide to install Wazuh components offline using the assistant. ([#6920](https://github.com/wazuh/wazuh-documentation/pull/6920)) ([#7571](https://github.com/wazuh/wazuh-documentation/pull/7571)) ([#7672](https://github.com/wazuh/wazuh-documentation/pull/7672))
-- Added storage roles to the *Creating Google Cloud credentials* steps. ([#7577](https://github.com/wazuh/wazuh-documentation/pull/7577))
-- Added the *NumPy* dependency to the AWS prerequisites. ([#7589](https://github.com/wazuh/wazuh-documentation/pull/7589))
-- Updated the Available SCA policies table. ([#7644](https://github.com/wazuh/wazuh-documentation/pull/7644)) ([#7697](https://github.com/wazuh/wazuh-documentation/pull/7697))
-- Added a note advising on the minimum GCC compiler version required to build the Wazuh agent from source. ([#7648](https://github.com/wazuh/wazuh-documentation/pull/7648))
-
-### Changed
-
-- Updated note related to 'never,task' rule in auditd. ([#7381](https://github.com/wazuh/wazuh-documentation/pull/7381))
-- Update API script file name. ([#7296](https://github.com/wazuh/wazuh-documentation/pull/7296))
-- Updated syscollector scan minimum value ([#7247](https://github.com/wazuh/wazuh-documentation/pull/7247))
-- Updated new WPK paths and names. ([#7246](https://github.com/wazuh/wazuh-documentation/pull/7246))
-- Updated Windows agent GUI image. ([#7241](https://github.com/wazuh/wazuh-documentation/pull/7241))
-- Updated manual package generation documentation after package migration. ([#7204](https://github.com/wazuh/wazuh-documentation/pull/7204))
-- Removed the container ``path`` option and changed the container ``name`` in the Azure Storage use case to keep consistency with the values shown in the images. ([#6835](https://github.com/wazuh/wazuh-documentation/pull/6835))
-- Updated the ``/groups/{group_id}/files/{file_name}`` endpoint references. ([#7006](https://github.com/wazuh/wazuh-documentation/pull/7006))
-- Bumped cloud services Python minimum version to 3.8. ([#7130](https://github.com/wazuh/wazuh-documentation/pull/7130))
-- Changed the ``azure-storage-blob`` dependency version. ([#7443](https://github.com/wazuh/wazuh-documentation/pull/7443))
-- Updated single sign-on user administration section in the User manual to address OpenSearch changes. ([#7630](https://github.com/wazuh/wazuh-documentation/pull/7630)) ([#7635](https://github.com/wazuh/wazuh-documentation/pull/7635))
-- Updated the Google Cloud Platform posture management documentation. ([#7668](https://github.com/wazuh/wazuh-documentation/pull/7668))
-- Updated the Custom logos in the Wazuh dashboard documentation. ([#7665](https://github.com/wazuh/wazuh-documentation/pull/7665)) ([#7678](https://github.com/wazuh/wazuh-documentation/pull/7678))
-- Updated the Creating the ``wazuh-archives-*`` index pattern GIF image in the Event logging section of the Wazuh server documentation. ([#7669](https://github.com/wazuh/wazuh-documentation/pull/7669)).
-- Updated the Wazuh agent documentation in User manual. ([#7637](https://github.com/wazuh/wazuh-documentation/pull/7637))
-- Updated the Wazuh server cluster documentation in User manual. ([#7704](https://github.com/wazuh/wazuh-documentation/pull/7704))
-- Updated the Wazuh dashboard documentation in User manual. ([#7711](https://github.com/wazuh/wazuh-documentation/pull/7711))
-
-### Fixed
-
-- Fix Amazon Security Lake Source integration validation step. ([#7360](https://github.com/wazuh/wazuh-documentation/pull/7360))
-- Updated commands in installing the Wazuh agent from sources section. ([#6973](https://github.com/wazuh/wazuh-documentation/pull/6973))
-- Fixed **Indexer management** and **Dashboard management** references. ([#7583](https://github.com/wazuh/wazuh-documentation/pull/7583))
-- Fixed the name of the property **customization.logo.reports**. ([#7646](https://github.com/wazuh/wazuh-documentation/pull/7646))
-- Fixed ``wazuh-template.json`` links. ([#7652](https://github.com/wazuh/wazuh-documentation/pull/7652))
-
-### Removed
-
-- Removed unreferenced files. ([#7222](https://github.com/wazuh/wazuh-documentation/pull/7222))
-- Removed the ``logs.level`` app setting and the references to the plugin log files and *App logs* application. ([#6810](https://github.com/wazuh/wazuh-documentation/pull/6810))
-- Removed PowerPC package references from the packages list. ([#7684](https://github.com/wazuh/wazuh-documentation/pull/7684)) ([#7729](https://github.com/wazuh/wazuh-documentation/pull/7729))
-- Removed references to Alpine Linux Wazuh agent installation and upgrade. ([#7729](https://github.com/wazuh/wazuh-documentation/pull/7729))
-- Removed the Policy monitoring capability section. ([#7725](https://github.com/wazuh/wazuh-documentation/pull/7725))
-
-## [v4.8.2]
-
-- Support for Wazuh 4.8.2
-
-## [v4.8.1]
-
-### Added
-
-- Added clarification about the conditions to trigger an alert. ([#7506](https://github.com/wazuh/wazuh-documentation/pull/7506))
-
-### Changed
-
-- Updated the available options table for `wazuh-passwords-tool.sh`. ([#7412](https://github.com/wazuh/wazuh-documentation/pull/7412))
-- Updated `docker` and `urllib3` package version references. ([#7483](https://github.com/wazuh/wazuh-documentation/pull/7483))
-- Replaced `:ref:` with `:doc:` in AWS documentation. ([#7487](https://github.com/wazuh/wazuh-documentation/pull/7487))
-
-### Fixed
-
-- Fixed MS Graph module configuration example. ([#7378] (https://github.com/wazuh/wazuh-documentation/pull/7378))
-
-## [v4.8.0]
-
-### Added
-
-- Added the `timeout` and `retries` settings to the `integratord` configuration. ([#6442](https://github.com/wazuh/wazuh-documentation/pull/6442))
-- Added support for deploying with Ansible on Windows. ([#6640](https://github.com/wazuh/wazuh-documentation/pull/6640))
-- Added Wazuh v4.8.0 release notes. ([#6550](https://github.com/wazuh/wazuh-documentation/pull/6550))
-- Added the ``update_check`` configuration option. ([#6673](https://github.com/wazuh/wazuh-documentation/pull/6673))
-- Added the Filebeat deployment into Wazuh manager worker nodes for distributed deployments with Puppet. ([#6872](https://github.com/wazuh/wazuh-documentation/pull/6872))
-- Added keystore management tool section. ([#7000](https://github.com/wazuh/wazuh-documentation/pull/7000)) ([#7072](https://github.com/wazuh/wazuh-documentation/pull/7072))
-- Added available SCA policies in 4.8.0 version. ([#7049](https://github.com/wazuh/wazuh-documentation/pull/7049))
-- Added environment variable for Wazuh indexer in Wazuh on Docker deployment. ([#6750](https://github.com/wazuh/wazuh-documentation/pull/6750)) ([#7057](https://github.com/wazuh/wazuh-documentation/pull/7057))
-- Added step to remove the *ss4o* index templates from the Wazuh indexer upgrade guide. ([#7093](https://github.com/wazuh/wazuh-documentation/pull/7093))
-- Added deprecation notice for the ``cache`` Wazuh API configuration option. ([#7106](https://github.com/wazuh/wazuh-documentation/pull/7106))
-- Added warning about 4.8.0 upgrade. ([#7135](https://github.com/wazuh/wazuh-documentation/pull/7135))
-- Added the ``indexer`` configuration option to the Wazuh API documentation. ([#7164](https://github.com/wazuh/wazuh-documentation/pull/7164))
-- Added the ``offline-url`` vulnerability detection option to the Reference guide. ([#7193](https://github.com/wazuh/wazuh-documentation/pull/7193))
-- Added a note in the Reference guide about the ``<vulnerability-detector>`` change. ([#7243](https://github.com/wazuh/wazuh-documentation/pull/7243))
-- Added warning message about changing passwords for Docker and Kubernetes deployments. ([#7321](https://github.com/wazuh/wazuh-documentation/pull/7321))
-- Added sub-section about assigning multiple agents to a group in *Grouping agents*. ([#7309](https://github.com/wazuh/wazuh-documentation/pull/7309))
-- Added the ``vulnerability-detection.remediation_lru_size`` internal option to the reference guide. ([#7339](https://github.com/wazuh/wazuh-documentation/pull/7339))
-- Updated the list of supported Debian and Ubuntu operating system versions in the Deployment with Puppet guide. ([#7331](https://github.com/wazuh/wazuh-documentation/pull/7331))
-- Added steps to the password change process in the Deployment with Docker and Deployment with Kubernetes guides. ([#7365](https://github.com/wazuh/wazuh-documentation/pull/7365))
-- Added vulnerability detection configurations to the Upgrade guide. ([#7369](https://github.com/wazuh/wazuh-documentation/pull/7369))
-- Added the ``integrations`` -> ``virustotal`` -> ``public_key`` API configuration option. [#7359](https://github.com/wazuh/wazuh-documentation/pull/7359)
-
-### Changed
-
-- Updated the `logcollector.ip_update_interval` setting in the Internal options documentation. ([#6373](https://github.com/wazuh/wazuh-documentation/pull/6373))
-- Updated OSD version to 2.10.0. ([#6568](https://github.com/wazuh/wazuh-documentation/pull/6568))
-- Updated dashboard settings screenshots. ([#6711](https://github.com/wazuh/wazuh-documentation/pull/6711))
-- Changed the Wazuh dashboard home URL in single sign on configuration to just the base path. ([#6775](https://github.com/wazuh/wazuh-documentation/pull/6775)) ([#6809](https://github.com/wazuh/wazuh-documentation/pull/6809))
-- Enhanced the description and examples of the ``discard_regex`` and ``field`` feature. ([#6770](https://github.com/wazuh/wazuh-documentation/pull/6770))
-- Changed custom branding configuration documents. ([#6779](https://github.com/wazuh/wazuh-documentation/pull/6779))
-- Changed the ``ssl_protocol`` options and default value. ([#6790](https://github.com/wazuh/wazuh-documentation/pull/6790))
-- Updated the minimum supported OS requirement for the Wazuh manager. ([#6811](https://github.com/wazuh/wazuh-documentation/pull/6811))
-- Changed the AWS pyarrow PIP dependency version. ([#6814](https://github.com/wazuh/wazuh-documentation/pull/6814))
-- Updated a step in Upgrading the Wazuh server. ([#6879](https://github.com/wazuh/wazuh-documentation/pull/6879))
-- Updated Filebeat module revision to `0.4`. ([#6861](https://github.com/wazuh/wazuh-documentation/pull/6861))
-- Updated AWS, Azure, and GCP cloud security dependency installation steps. ([#6847](https://github.com/wazuh/wazuh-documentation/pull/6847))
-- Updated the vulnerability detection (VD) sections following the VD module refactor. ([#6792](https://github.com/wazuh/wazuh-documentation/pull/6792)) ([#7046](https://github.com/wazuh/wazuh-documentation/pull/7046)) ([#7058](https://github.com/wazuh/wazuh-documentation/pull/7058))
-- Updated screenshot and module reference from **Security events** to **Threat Hunting** in Amazon Security Lake section. ([#6956](https://github.com/wazuh/wazuh-documentation/pull/6956))
-- Improved steps in the Google Cloud Platform prerequisites section. ([#6964](https://github.com/wazuh/wazuh-documentation/pull/6964))
-- Updated Azure Diagnostics images. ([#6987](https://github.com/wazuh/wazuh-documentation/pull/6987))
-- Updated Azure Log Analytics images. ([#7002](https://github.com/wazuh/wazuh-documentation/pull/7002))
-- Updated ``installation-guide/wazuh-server/step-by-step`` considering configuration requirements for vulnerability detection. ([#7149](https://github.com/wazuh/wazuh-documentation/pull/7149))
-- Updated the ``user-manual/reference/unattended-installation`` section. ([#7162](https://github.com/wazuh/wazuh-documentation/pull/7162))
-- Changed Docker version requirement to ``6.0.0``. ([#7133](https://github.com/wazuh/wazuh-documentation/pull/7133))
-- Updated the Vulnerability detection PoC. ([#7215](https://github.com/wazuh/wazuh-documentation/pull/7215))
-- Replaced ``localhost`` occurrences. ([#7234](https://github.com/wazuh/wazuh-documentation/pull/7234)) ([#7285](https://github.com/wazuh/wazuh-documentation/pull/7285))
-- Updated the upgrading central components section. ([#7273](https://github.com/wazuh/wazuh-documentation/pull/7273))
-- Updated the *Monitoring Office 365 audit logs* section. ([#7275](https://github.com/wazuh/wazuh-documentation/pull/7275))
-- Updated *Installing the Wazuh manager from sources* with the latest vulnerability detection changes. ([#7316](https://github.com/wazuh/wazuh-documentation/pull/7316))
-- Updated screenshots and references to the new 4.8.0 interface look. ([#7280](https://github.com/wazuh/wazuh-documentation/pull/7280))
-
-### Fixed
-
-- Added the ``wazuh::repo`` class in Puppet manifest example in install Wazuh agent via Puppet section. ([#6954](https://github.com/wazuh/wazuh-documentation/pull/6954))
-- Removed steps to modify the number of shards from the offline installation guide. ([#6958](https://github.com/wazuh/wazuh-documentation/pull/6958))
-- Fixed password update step for distributed deployments. ([#6967](https://github.com/wazuh/wazuh-documentation/pull/6967))
-- Added fixes and updates to the MITRE ATT&CK framework section. ([#6962](https://github.com/wazuh/wazuh-documentation/pull/6962))
-- Modified master node address name to uppercase. ([#7127](https://github.com/wazuh/wazuh-documentation/pull/7127))
-- Added securing credentials steps to the Vulnerability detection capability section and the Upgrading central components section. ([#7235](https://github.com/wazuh/wazuh-documentation/pull/7235))
-- Replaced *Wazuh app* and *Wazuh plugin* references with *Wazuh dashboard* references. ([#7274](https://github.com/wazuh/wazuh-documentation/pull/7274))
-
-### Removed
-
-- Deprecated ``/vulnerability`` API endpoints. ([#6738](https://github.com/wazuh/wazuh-documentation/pull/6738))
-- Removed implicit ``id!=000`` WQL filter in the search bar. ([#6815](https://github.com/wazuh/wazuh-documentation/pull/6815))
-- Removed ``launchctl`` unload step from macOS uninstalling manual. ([#7123](https://github.com/wazuh/wazuh-documentation/pull/7123))
-- Removed ``Wazuh_Ruleset.pdf`` references. ([#7142](https://github.com/wazuh/wazuh-documentation/pull/7142))
-- Removed documentation for the ``allow-os`` vulnerability detection option. ([#7177](https://github.com/wazuh/wazuh-documentation/pull/7177))
-- Removed the *Migrating from OSSEC* section. ([#7301](https://github.com/wazuh/wazuh-documentation/pull/7301))
-- Removed notes about the lack of multi-tenancy support in MS-Graph sections. ([#7379](https://github.com/wazuh/wazuh-documentation/pull/7379))
-
-## [v4.7.5]
-
-- Support for Wazuh 4.7.5
-
-## [v4.7.4]
-
-- Support for Wazuh 4.7.4
-
-## [v4.7.3]
-
-- Support for Wazuh 4.7.3
-
-## [v4.7.2]
-
-### Added
-
-- Added custom role creation steps to GCP credentials configuration section. ([#6837](https://github.com/wazuh/wazuh-documentation/pull/6837))
-- Added a subsection for alert visualization in AWS Security Lake. Added a note about time to display alerts. ([#6838](https://github.com/wazuh/wazuh-documentation/pull/6838))
-- Added ``urllib3==1.26.18`` dependency to Docker installation steps. ([#6824](https://github.com/wazuh/wazuh-documentation/pull/6824))
-
-### Changed
-
-- Added minimum configuration reading permissions to RBAC section use case. ([#6850](https://github.com/wazuh/wazuh-documentation/pull/6850))
-- Updated AWS profile configuration instructions. ([#6803](https://github.com/wazuh/wazuh-documentation/pull/6803))
-- Updated configuration step in Yara use case and Apache web server installation step in Malware detection PoC. ([#6894](https://github.com/wazuh/wazuh-documentation/pull/6894))
-
-## [v4.7.1]
-
-### Added
-
-- Added deb/rpm selection tabs in offline installation download step. ([#6686](https://github.com/wazuh/wazuh-documentation/pull/6686))
-- Added missing RBAC policies for ``PUT /decoders/files/{filename}`` and ``PUT /rules/files/{filename}`` API endpoints. ([#6693](https://github.com/wazuh/wazuh-documentation/pull/6693))
-- Added ``pyarrow_hotfix`` dependency to AWS Prerequisites section. ([#6766](https://github.com/wazuh/wazuh-documentation/pull/6766))
-- Added clarifications to bucket policy configurations. ([#6769](https://github.com/wazuh/wazuh-documentation/pull/6769))
-
-### Changed
-
-- Updated the Wazuh Ansible documentation, including the Windows agent deployment example and the variable references. ([#6761](https://github.com/wazuh/wazuh-documentation/pull/6761))
-
-## [v4.7.0]
-
-### Added
-
-- Added support for Amazon Linux 2023 in Vulnerability Detector. ([#6446](https://github.com/wazuh/wazuh-documentation/pull/6446))
-- Clarified that Syscollector is now capable of fetching the PYPI and node packages. [#3464](https://github.com/wazuh/wazuh-documentation/pull/6346)
-- Added the Maltiverse integration section. ([#6257](https://github.com/wazuh/wazuh-documentation/pull/6257))
-- Added the New Custom Logs Buckets documentation. ([#6254](https://github.com/wazuh/wazuh-documentation/pull/6254))
-- Added the `options` section for integrations. ([#5962](https://github.com/wazuh/wazuh-documentation/pull/5962))
-
-### Changed
-
-- Updated the Maltiverse rule id. ([#6420](https://github.com/wazuh/wazuh-documentation/pull/6420))
-- Updated `PIP` and `process`` information in ports inventory. ([#6308](https://github.com/wazuh/wazuh-documentation/pull/6308))
-- Updated the link to "Using Dashboards Query Language". ([#6588](https://github.com/wazuh/wazuh-documentation/pull/6588))
-- Updated Filebeat module revision to `0.3`. ([#6760](https://github.com/wazuh/wazuh-documentation/pull/6760))
-- Changed the `allow_higher_versions` default value to `no`. ([#6776](https://github.com/wazuh/wazuh-documentation/pull/6776))
-
-### Fixed
-
-- Fixed paths to log files in VirusTotal integration section. ([#6651](https://github.com/wazuh/wazuh-documentation/pull/6651))
-
-### Removed
-
-- Removed reference for Wazuh indexer and dashboard mixed node from Deploying with Ansible guide. ([#6653](https://github.com/wazuh/wazuh-documentation/pull/6653))
-
-## [v4.6.0]
-
-### Added
-
-- Added integration for the Microsoft Graph API. ([#6317](https://github.com/wazuh/wazuh-documentation/pull/6317))
-- Added support for Debian Bookworm in Vulnerability Detector. ([#6338](https://github.com/wazuh/wazuh-documentation/pull/6368))
-- Added `<allow_higher_versions>` to 'remote' and 'auth' sections. ([#6333](https://github.com/wazuh/wazuh-documentation/pull/6333))
-- Added agent version filter option. ([#6312](https://github.com/wazuh/wazuh-documentation/pull/6312))
-- Added events webhook docs. ([#6151](https://github.com/wazuh/wazuh-documentation/pull/6151))
-- Added documentation to include user `.aws/config` file as default config. ([#6005](https://github.com/wazuh/wazuh-documentation/pull/6005))
-- Added the FIM wildcard Windows registers documentation. ([#5932](https://github.com/wazuh/wazuh-documentation/pull/5932))
-- Support AlmaLinux in Vulnerability Detector. ([#5904](https://github.com/wazuh/wazuh-documentation/pull/5904))
-- wazuh-authd can now generate X509 certificates. ([#5461](https://github.com/wazuh/wazuh-documentation/pull/5461))
-- Added a note in the Microsoft Graph documentation stating that multi-tenant is not supported. ([#6505](https://github.com/wazuh/wazuh-documentation/pull/6505))
-- Added the Email app version for the Shuffle integration. ([#6502](https://github.com/wazuh/wazuh-documentation/pull/6502))
-- Added differentiation between commands from different Python versions. ([#6514](https://github.com/wazuh/wazuh-documentation/pull/6514))
-- Added `path` parameter usage example to Azure Storage documentation. ([#6524](https://github.com/wazuh/wazuh-documentation/pull/6524))
-- Added documentation to change passwords for Kubernetes deployments. ([#6591](https://github.com/wazuh/wazuh-documentation/pull/6591))
-- Added the Wazuh v4.6.0 release notes. ([#6034](https://github.com/wazuh/wazuh-documentation/pull/6034)) ([#6561](https://github.com/wazuh/wazuh-documentation/pull/6561)) ([#6608](https://github.com/wazuh/wazuh-documentation/pull/6608)) ([#6682](https://github.com/wazuh/wazuh-documentation/pull/6682)) ([#6684](https://github.com/wazuh/wazuh-documentation/pull/6684))
-
-### Changed
-
-- Updated `securityadmin.sh` script output examples in SSO docs. ([#6436](https://github.com/wazuh/wazuh-documentation/pull/6436))
-- Updated output examples for indexer 4.6.0. ([#6437](https://github.com/wazuh/wazuh-documentation/pull/6437))
-- Updated the **Deploy new agent** section from UI screenshots. ([#6841](https://github.com/wazuh/wazuh-documentation/pull/6481))
-- Changed the Python 3.11 `pyarrow` dependency version. ([#6513](https://github.com/wazuh/wazuh-documentation/pull/6513))
-- Improved descriptions of the GCP wodle options. ([#6570](https://github.com/wazuh/wazuh-documentation/pull/6570))
-- Changed references to `wazuh/wazuh-kibana-app` repository. ([#6637](https://github.com/wazuh/wazuh-documentation/pull/6637))
-- Reduced the EPS limit default value for FIM. ([#6646](https://github.com/wazuh/wazuh-documentation/pull/6646))([#6657](https://github.com/wazuh/wazuh-documentation/pull/6657))
-- Adjusted the default vacuum settings. ([#6705](https://github.com/wazuh/wazuh-documentation/pull/6705))
-
-### Fixed
-
-- Fixed the GCP configuration examples. ([#6509](https://github.com/wazuh/wazuh-documentation/pull/6509))
-- Added several fixes to the Integration guide. ([#6526](https://github.com/wazuh/wazuh-documentation/pull/6526)) ([#6575](https://github.com/wazuh/wazuh-documentation/pull/6575))
-
-### Removed
-
-- Removed references to the Wazuh Kibana plugin and the Wazuh Splunk app. ([#6401](https://github.com/wazuh/wazuh-documentation/pull/6401))
-
-## [v4.5.4]
-
-### Added
-
-- Added the Wazuh v4.5.4 release notes. ([#6645](https://github.com/wazuh/wazuh-documentation/pull/6645))
-
-## [v4.5.3]
-### Added
-
-- Added support for Kibana 7.17.13. ([#6531](https://github.com/wazuh/wazuh-documentation/pull/6531))
-- Add a nested query example in the Filtering data using API queries page. ([#6362](https://github.com/wazuh/wazuh-documentation/pull/6362))
-- Added clarification to change one user password at a time on Docker. ([#6554](https://github.com/wazuh/wazuh-documentation/pull/6554))
-- Added clarifications for multi-node deployment steps on Docker. ([#6555](https://github.com/wazuh/wazuh-documentation/pull/6555)) ([#6578](https://github.com/wazuh/wazuh-documentation/pull/6578))
-- Added the Wazuh v4.5.3 release notes. ([#6522](https://github.com/wazuh/wazuh-documentation/pull/6522))([#6562](https://github.com/wazuh/wazuh-documentation/pull/6562))([#6566](https://github.com/wazuh/wazuh-documentation/pull/6566))([#6590](https://github.com/wazuh/wazuh-documentation/pull/6590))([#6602](https://github.com/wazuh/wazuh-documentation/pull/6602))
-
-### Changed
-
-- Updated the SUSE OVAL URL for offline update. ([#6435](https://github.com/wazuh/wazuh-documentation/pull/6435))
-- Updated the `agent_upgrade` command `force` flag description in the agent upgrade module documentation. ([#6345](https://github.com/wazuh/wazuh-documentation/pull/6345))
-
-### Fixed
-
-- Fixed configuration inconsistency in Wazuh Puppet agent installation. ([#6506](https://github.com/wazuh/wazuh-documentation/pull/6506))
-- Fixed an error on the API reference pages that was preventing the page from loading the header and the version selector. ([#6496](https://github.com/wazuh/wazuh-documentation/pull/6496))
-- Fixed an error in the first link in the "On this page" lateral menu. ([#6464](https://github.com/wazuh/wazuh-documentation/pull/6464))
-- Fixed Solaris 10 installation and upgrade steps. ([#6586](https://github.com/wazuh/wazuh-documentation/pull/6586))
-
-## [v4.5.2]
-
-### Added
-
-- Added the `connection_overtake_time` setting to the remoted documentation. ([#6361](https://github.com/wazuh/wazuh-documentation/pull/6361))
-- Explained how to use the Wazuh installation assistant `-p|--port` option in the Wazuh dashboard installation guide. ([#6322](https://github.com/wazuh/wazuh-documentation/pull/6322))
-- Added instructions on how to install Ansible on CentOS/RHEL 8. ([#6341](https://github.com/wazuh/wazuh-documentation/pull/6341))
-- Added steps for updating Wazuh API user passwords and enhanced instructions for changing passwords of Wazuh indexer users in Docker deployments. ([#6306](https://github.com/wazuh/wazuh-documentation/pull/6306))
-- Added support for Kibana 7.17.12. ([#6400](https://github.com/wazuh/wazuh-documentation/pull/6400))
-- Updated the Debian OVAL URL for offline update. ([#6430](https://github.com/wazuh/wazuh-documentation/pull/6430))
-- Added the Wazuh v4.5.2 release notes. ([#6389](https://github.com/wazuh/wazuh-documentation/pull/6389))
-
-## [v4.5.1]
-
-### Added
-
-- Included the new macOS Apple silicon installers. ([#6296](https://github.com/wazuh/wazuh-documentation/pull/6296))
-- Added `discard_regex` parameter to the services section of the AWS module reference. ([#6207](https://github.com/wazuh/wazuh-documentation/pull/6207))
-- Added support for Kibana 7.17.10 and 7.17.11. ([#6311](https://github.com/wazuh/wazuh-documentation/pull/6311))
-- Added the Wazuh v4.5.1 release notes. ([#6309](https://github.com/wazuh/wazuh-documentation/pull/6309))
-- Fixed the 'Setting up Puppet certificates' document indentation. ([#6355](https://github.com/wazuh/wazuh-documentation/pull/6355))
-- Updated Windows service name. [(#6160](https://github.com/wazuh/wazuh-documentation/pull/6160))
+Added ARM64 support for Linux and macOS WPK packages. ([#8851](https://github.com/wazuh/wazuh-documentation/pull/8851))
+
+Added ``integrity_interval`` to the syscheck ``synchronization`` configuration and updated the ``response_timeout`` default value. ([#9099](https://github.com/wazuh/wazuh-documentation/pull/9099))
+
+Added ``integrity_interval`` to the SCA and the syscollector ``synchronization`` configuration. ([#9164](https://github.com/wazuh/wazuh-documentation/pull/9164))
+
+Added Upgrading to Wazuh 5.x sub-section to the Upgrade guide. ([#9435](https://github.com/wazuh/wazuh-documentation/pull/9435))
+
+Added the Data analysis documentation to the User manual. ([#9743](https://github.com/wazuh/wazuh-documentation/pull/9743)) ([#10348](https://github.com/wazuh/wazuh-documentation/pull/10348)) ([#10359](https://github.com/wazuh/wazuh-documentation/pull/10359)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10658](https://github.com/wazuh/wazuh-documentation/pull/10658)) ([#10702](https://github.com/wazuh/wazuh-documentation/pull/10702)) ([#10725](https://github.com/wazuh/wazuh-documentation/pull/10725)) ([#10730](https://github.com/wazuh/wazuh-documentation/pull/10730)) ([#10733](https://github.com/wazuh/wazuh-documentation/pull/10733)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10736](https://github.com/wazuh/wazuh-documentation/pull/10736)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10765](https://github.com/wazuh/wazuh-documentation/pull/10765)) ([#10816](https://github.com/wazuh/wazuh-documentation/pull/10816)) ([#10844](https://github.com/wazuh/wazuh-documentation/pull/10844))
+
+Added the Transitioning from 4.x to 5.x documentation. ([#9772](https://github.com/wazuh/wazuh-documentation/pull/9772)) ([#9792](https://github.com/wazuh/wazuh-documentation/pull/9792)) ([#9817](https://github.com/wazuh/wazuh-documentation/pull/9817)) ([#9873](https://github.com/wazuh/wazuh-documentation/pull/9873)) ([#10028](https://github.com/wazuh/wazuh-documentation/pull/10028)) ([#10067](https://github.com/wazuh/wazuh-documentation/pull/10067)) ([#10264](https://github.com/wazuh/wazuh-documentation/pull/10264)) ([#10322](https://github.com/wazuh/wazuh-documentation/pull/10322)) ([#10353](https://github.com/wazuh/wazuh-documentation/pull/10353)) ([#10360](https://github.com/wazuh/wazuh-documentation/pull/10360)) ([#10396](https://github.com/wazuh/wazuh-documentation/pull/10396)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10524](https://github.com/wazuh/wazuh-documentation/pull/10524)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10610](https://github.com/wazuh/wazuh-documentation/pull/10610)) ([#10619](https://github.com/wazuh/wazuh-documentation/pull/10619)) ([#10631](https://github.com/wazuh/wazuh-documentation/pull/10631)) ([#10685](https://github.com/wazuh/wazuh-documentation/pull/10685)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10766](https://github.com/wazuh/wazuh-documentation/pull/10766)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10837](https://github.com/wazuh/wazuh-documentation/pull/10837))
+
+Added the Security Configuration Assessment use case to the Proof of concept guide. ([#9777](https://github.com/wazuh/wazuh-documentation/pull/9777)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833)) ([#10843](https://github.com/wazuh/wazuh-documentation/pull/10843))
+
+Added the Network IDS integration use case to the Proof of concept guide. ([#9831](https://github.com/wazuh/wazuh-documentation/pull/9831)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
+
+Added the Detecting a cross-site scripting (XSS) attack use case to the Proof of concept guide. ([#9916](https://github.com/wazuh/wazuh-documentation/pull/9916)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
+
+Added the Wazuh CTI documentation as a new top-level section. ([#9989](https://github.com/wazuh/wazuh-documentation/pull/9989)) ([#9990](https://github.com/wazuh/wazuh-documentation/pull/9990)) ([#10250](https://github.com/wazuh/wazuh-documentation/pull/10250)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500))
+
+Added the Incident response dashboard section, the Email notification channel, and the AI Assistant configuration documentation to the Wazuh dashboard section. ([#10033](https://github.com/wazuh/wazuh-documentation/pull/10033))
+
+Added the Installation Assistant, Certs tool, Wazuh passwords tool, wazuh-manager-certs, wazuh-manager-resolve-credentials and resolve-credentials documentation to the Reference section. ([#10047](https://github.com/wazuh/wazuh-documentation/pull/10047)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10540](https://github.com/wazuh/wazuh-documentation/pull/10540)) ([#10675](https://github.com/wazuh/wazuh-documentation/pull/10675)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10840](https://github.com/wazuh/wazuh-documentation/pull/10840))
+
+Added a note to the Regulatory compliance index page stating that the rule and control mappings are indicative and require an independent qualified assessor for formal certification, and updated the list of supported frameworks. ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10708](https://github.com/wazuh/wazuh-documentation/pull/10708))
+
+Added the Detecting a known malicious file use case to the Proof of concept guide. ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833))
+
+<a id="changed"></a>
+Changed
+
+Replaced `indexer_cluster_initial_master_nodes` with `indexer_initial_cluster_manager_nodes` in Puppet deployment documentation. ([#8666](https://github.com/wazuh/wazuh-documentation/pull/8666))
+
+Updated the File Integrity Monitoring documentation to remove deprecated settings (`max_interval`, `queue_size`, `thread_pool`, `database`, and `registry_enabled`), add the missing `check_device` setting, and fix the `max_eps` definition in the synchronization settings table. ([#8735](https://github.com/wazuh/wazuh-documentation/pull/8735))
+
+Updated the FIM documentation to change the default FIM who-data mode provider to eBPF. ([#8805](https://github.com/wazuh/wazuh-documentation/pull/8805))
+
+Updated references in steps and links to 5.x. ([#8853](https://github.com/wazuh/wazuh-documentation/pull/8853)) ([#9658](https://github.com/wazuh/wazuh-documentation/pull/9658)) ([#9660](https://github.com/wazuh/wazuh-documentation/pull/9660))
+
+Updated the Installation from sources documentation to Wazuh 5.0, covering the build dependencies, the Wazuh manager installation steps with the Wazuh indexer and the Wazuh dashboard, token enrollment for the Wazuh agent, and the Linux, Windows and macOS installation and uninstall steps. Made the section visible in Deployment options. ([#9397](https://github.com/wazuh/wazuh-documentation/pull/9397)) ([#10576](https://github.com/wazuh/wazuh-documentation/pull/10576)) ([#10586](https://github.com/wazuh/wazuh-documentation/pull/10586)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10640](https://github.com/wazuh/wazuh-documentation/pull/10640)) ([#10646](https://github.com/wazuh/wazuh-documentation/pull/10646)) ([#10656](https://github.com/wazuh/wazuh-documentation/pull/10656))
+
+Updated the Installation guide. ([#9545](https://github.com/wazuh/wazuh-documentation/pull/9545)) ([#9682](https://github.com/wazuh/wazuh-documentation/pull/9682)) ([#9692](https://github.com/wazuh/wazuh-documentation/pull/9692)) ([#9736](https://github.com/wazuh/wazuh-documentation/pull/9736)) ([#9771](https://github.com/wazuh/wazuh-documentation/pull/9771)) ([#9962](https://github.com/wazuh/wazuh-documentation/pull/9962)) ([#9968](https://github.com/wazuh/wazuh-documentation/pull/9968)) ([#9969](https://github.com/wazuh/wazuh-documentation/pull/9969)) ([#9994](https://github.com/wazuh/wazuh-documentation/pull/9994)) ([#10002](https://github.com/wazuh/wazuh-documentation/pull/10002)) ([#10019](https://github.com/wazuh/wazuh-documentation/pull/10019)) ([#10187](https://github.com/wazuh/wazuh-documentation/pull/10187)) ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10221](https://github.com/wazuh/wazuh-documentation/pull/10221)) ([#10239](https://github.com/wazuh/wazuh-documentation/pull/10239)) ([#10251](https://github.com/wazuh/wazuh-documentation/pull/10251)) ([#10252](https://github.com/wazuh/wazuh-documentation/pull/10252)) ([#10255](https://github.com/wazuh/wazuh-documentation/pull/10255)) ([#10352](https://github.com/wazuh/wazuh-documentation/pull/10352)) ([#10361](https://github.com/wazuh/wazuh-documentation/pull/10361)) ([#10394](https://github.com/wazuh/wazuh-documentation/pull/10394)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10529](https://github.com/wazuh/wazuh-documentation/pull/10529)) ([#10539](https://github.com/wazuh/wazuh-documentation/pull/10539)) ([#10548](https://github.com/wazuh/wazuh-documentation/pull/10548)) ([#10559](https://github.com/wazuh/wazuh-documentation/pull/10559)) ([#10562](https://github.com/wazuh/wazuh-documentation/pull/10562)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10608](https://github.com/wazuh/wazuh-documentation/pull/10608)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10629](https://github.com/wazuh/wazuh-documentation/pull/10629)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10652](https://github.com/wazuh/wazuh-documentation/pull/10652)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10841](https://github.com/wazuh/wazuh-documentation/pull/10841)) ([#10842](https://github.com/wazuh/wazuh-documentation/pull/10842))
+
+Updated the Installation alternatives documentation. ([#9576](https://github.com/wazuh/wazuh-documentation/pull/9576)) ([#9587](https://github.com/wazuh/wazuh-documentation/pull/9587)) ([#9589](https://github.com/wazuh/wazuh-documentation/pull/9589)) ([#9591](https://github.com/wazuh/wazuh-documentation/pull/9591)) ([#9595](https://github.com/wazuh/wazuh-documentation/pull/9595)) ([#9597](https://github.com/wazuh/wazuh-documentation/pull/9597)) ([#9606](https://github.com/wazuh/wazuh-documentation/pull/9606)) ([#9607](https://github.com/wazuh/wazuh-documentation/pull/9607)) ([#9674](https://github.com/wazuh/wazuh-documentation/pull/9674)) ([#10270](https://github.com/wazuh/wazuh-documentation/pull/10270)) ([#10275](https://github.com/wazuh/wazuh-documentation/pull/10275)) ([#10324](https://github.com/wazuh/wazuh-documentation/pull/10324)) ([#10326](https://github.com/wazuh/wazuh-documentation/pull/10326)) ([#10332](https://github.com/wazuh/wazuh-documentation/pull/10332)) ([#10349](https://github.com/wazuh/wazuh-documentation/pull/10349)) ([#10447](https://github.com/wazuh/wazuh-documentation/pull/10447)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10505](https://github.com/wazuh/wazuh-documentation/pull/10505)) ([#10560](https://github.com/wazuh/wazuh-documentation/pull/10560)) ([#10563](https://github.com/wazuh/wazuh-documentation/pull/10563)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10628](https://github.com/wazuh/wazuh-documentation/pull/10628)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630))
+
+Updated the Wazuh agent documentation in User manual. ([#9665](https://github.com/wazuh/wazuh-documentation/pull/9665)) ([#9669](https://github.com/wazuh/wazuh-documentation/pull/9669)) ([#9701](https://github.com/wazuh/wazuh-documentation/pull/9701)) ([#9702](https://github.com/wazuh/wazuh-documentation/pull/9702)) ([#9812](https://github.com/wazuh/wazuh-documentation/pull/9812)) ([#9993](https://github.com/wazuh/wazuh-documentation/pull/9993)) ([#10035](https://github.com/wazuh/wazuh-documentation/pull/10035)) ([#10065](https://github.com/wazuh/wazuh-documentation/pull/10065)) ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10214](https://github.com/wazuh/wazuh-documentation/pull/10214)) ([#10263](https://github.com/wazuh/wazuh-documentation/pull/10263)) ([#10266](https://github.com/wazuh/wazuh-documentation/pull/10266)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10464](https://github.com/wazuh/wazuh-documentation/pull/10464)) ([#10529](https://github.com/wazuh/wazuh-documentation/pull/10529)) ([#10538](https://github.com/wazuh/wazuh-documentation/pull/10538)) ([#10565](https://github.com/wazuh/wazuh-documentation/pull/10565)) ([#10598](https://github.com/wazuh/wazuh-documentation/pull/10598)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10620](https://github.com/wazuh/wazuh-documentation/pull/10620)) ([#10625](https://github.com/wazuh/wazuh-documentation/pull/10625)) ([#10642](https://github.com/wazuh/wazuh-documentation/pull/10642)) ([#10676](https://github.com/wazuh/wazuh-documentation/pull/10676)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10697](https://github.com/wazuh/wazuh-documentation/pull/10697)) ([#10698](https://github.com/wazuh/wazuh-documentation/pull/10698)) ([#10724](https://github.com/wazuh/wazuh-documentation/pull/10724)) ([#10737](https://github.com/wazuh/wazuh-documentation/pull/10737)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750)) ([#10761](https://github.com/wazuh/wazuh-documentation/pull/10761)) ([#10763](https://github.com/wazuh/wazuh-documentation/pull/10763)) ([#10783](https://github.com/wazuh/wazuh-documentation/pull/10783)) ([#10800](https://github.com/wazuh/wazuh-documentation/pull/10800)) ([#10802](https://github.com/wazuh/wazuh-documentation/pull/10802)) ([#10820](https://github.com/wazuh/wazuh-documentation/pull/10820)) ([#10821](https://github.com/wazuh/wazuh-documentation/pull/10821)) ([#10831](https://github.com/wazuh/wazuh-documentation/pull/10831))
+
+Updated the Wazuh dashboard documentation in User manual. ([#9688](https://github.com/wazuh/wazuh-documentation/pull/9688)) ([#10033](https://github.com/wazuh/wazuh-documentation/pull/10033)) ([#10036](https://github.com/wazuh/wazuh-documentation/pull/10036)) ([#10213](https://github.com/wazuh/wazuh-documentation/pull/10213)) ([#10249](https://github.com/wazuh/wazuh-documentation/pull/10249)) ([#10351](https://github.com/wazuh/wazuh-documentation/pull/10351)) ([#10386](https://github.com/wazuh/wazuh-documentation/pull/10386)) ([#10388](https://github.com/wazuh/wazuh-documentation/pull/10388)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10402](https://github.com/wazuh/wazuh-documentation/pull/10402)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10590](https://github.com/wazuh/wazuh-documentation/pull/10590)) ([#10633](https://github.com/wazuh/wazuh-documentation/pull/10633)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10772](https://github.com/wazuh/wazuh-documentation/pull/10772))
+
+Updated the Quickstart documentation. ([#9680](https://github.com/wazuh/wazuh-documentation/pull/9680)) ([#9769](https://github.com/wazuh/wazuh-documentation/pull/9769)) ([#10234](https://github.com/wazuh/wazuh-documentation/pull/10234)) ([#10248](https://github.com/wazuh/wazuh-documentation/pull/10248)) ([#10258](https://github.com/wazuh/wazuh-documentation/pull/10258)) ([#10344](https://github.com/wazuh/wazuh-documentation/pull/10344)) ([#10347](https://github.com/wazuh/wazuh-documentation/pull/10347)) ([#10379](https://github.com/wazuh/wazuh-documentation/pull/10379)) ([#10393](https://github.com/wazuh/wazuh-documentation/pull/10393)) ([#10506](https://github.com/wazuh/wazuh-documentation/pull/10506)) ([#10547](https://github.com/wazuh/wazuh-documentation/pull/10547)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10609](https://github.com/wazuh/wazuh-documentation/pull/10609)) ([#10617](https://github.com/wazuh/wazuh-documentation/pull/10617)) ([#10618](https://github.com/wazuh/wazuh-documentation/pull/10618)) ([#10629](https://github.com/wazuh/wazuh-documentation/pull/10629)) ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10750](https://github.com/wazuh/wazuh-documentation/pull/10750))
+
+Updated the Wazuh server documentation to the new Wazuh manager documentation in the User manual. ([#9728](https://github.com/wazuh/wazuh-documentation/pull/9728)) ([#9737](https://github.com/wazuh/wazuh-documentation/pull/9737)) ([#10064](https://github.com/wazuh/wazuh-documentation/pull/10064)) ([#10237](https://github.com/wazuh/wazuh-documentation/pull/10237)) ([#10343](https://github.com/wazuh/wazuh-documentation/pull/10343)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10497](https://github.com/wazuh/wazuh-documentation/pull/10497)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10673](https://github.com/wazuh/wazuh-documentation/pull/10673)) ([#10688](https://github.com/wazuh/wazuh-documentation/pull/10688)) ([#10726](https://github.com/wazuh/wazuh-documentation/pull/10726)) ([#10763](https://github.com/wazuh/wazuh-documentation/pull/10763)) ([#10785](https://github.com/wazuh/wazuh-documentation/pull/10785)) ([#10798](https://github.com/wazuh/wazuh-documentation/pull/10798)) ([#10825](https://github.com/wazuh/wazuh-documentation/pull/10825)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
+
+Updated the User administration documentation. ([#9745](https://github.com/wazuh/wazuh-documentation/pull/9745)) ([#9758](https://github.com/wazuh/wazuh-documentation/pull/9758)) ([#9765](https://github.com/wazuh/wazuh-documentation/pull/9765)) ([#9766](https://github.com/wazuh/wazuh-documentation/pull/9766)) ([#9775](https://github.com/wazuh/wazuh-documentation/pull/9775)) ([#10040](https://github.com/wazuh/wazuh-documentation/pull/10040)) ([#10236](https://github.com/wazuh/wazuh-documentation/pull/10236)) ([#10259](https://github.com/wazuh/wazuh-documentation/pull/10259)) ([#10265](https://github.com/wazuh/wazuh-documentation/pull/10265)) ([#10337](https://github.com/wazuh/wazuh-documentation/pull/10337)) ([#10389](https://github.com/wazuh/wazuh-documentation/pull/10389)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10627](https://github.com/wazuh/wazuh-documentation/pull/10627)) ([#10687](https://github.com/wazuh/wazuh-documentation/pull/10687)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701)) ([#10771](https://github.com/wazuh/wazuh-documentation/pull/10771))
+
+Updated the Monitoring GitHub documentation. ([#9836](https://github.com/wazuh/wazuh-documentation/pull/9836)) ([#9840](https://github.com/wazuh/wazuh-documentation/pull/9840)) ([#9949](https://github.com/wazuh/wazuh-documentation/pull/9949)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10793](https://github.com/wazuh/wazuh-documentation/pull/10793))
+
+Updated the Monitoring Office 365 documentation. ([#9935](https://github.com/wazuh/wazuh-documentation/pull/9935)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615))
+
+Updated the Proof of concept guide use cases for File integrity monitoring, Vulnerability detection, Security Configuration Assessment, Monitoring Docker events, Detecting an SQL injection attack, Network IDS integration, Monitoring AWS infrastructure, Detecting hidden processes, and Blocking a known malicious actor. ([#9777](https://github.com/wazuh/wazuh-documentation/pull/9777)) ([#9831](https://github.com/wazuh/wazuh-documentation/pull/9831)) ([#9916](https://github.com/wazuh/wazuh-documentation/pull/9916)) ([#10336](https://github.com/wazuh/wazuh-documentation/pull/10336)) ([#10420](https://github.com/wazuh/wazuh-documentation/pull/10420)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10622](https://github.com/wazuh/wazuh-documentation/pull/10622)) ([#10649](https://github.com/wazuh/wazuh-documentation/pull/10649)) ([#10678](https://github.com/wazuh/wazuh-documentation/pull/10678)) ([#10699](https://github.com/wazuh/wazuh-documentation/pull/10699)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10784](https://github.com/wazuh/wazuh-documentation/pull/10784)) ([#10833](https://github.com/wazuh/wazuh-documentation/pull/10833)) ([#10843](https://github.com/wazuh/wazuh-documentation/pull/10843)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
+
+Updated the Container security documentation. ([#9816](https://github.com/wazuh/wazuh-documentation/pull/9816)) ([#9819](https://github.com/wazuh/wazuh-documentation/pull/9819)) ([#9823](https://github.com/wazuh/wazuh-documentation/pull/9823)) ([#10206](https://github.com/wazuh/wazuh-documentation/pull/10206)) ([#10380](https://github.com/wazuh/wazuh-documentation/pull/10380))
+
+Updated the System inventory documentation. ([#9820](https://github.com/wazuh/wazuh-documentation/pull/9820)) ([#9832](https://github.com/wazuh/wazuh-documentation/pull/9832)) ([#10215](https://github.com/wazuh/wazuh-documentation/pull/10215)) ([#10216](https://github.com/wazuh/wazuh-documentation/pull/10216)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10580](https://github.com/wazuh/wazuh-documentation/pull/10580)) ([#10650](https://github.com/wazuh/wazuh-documentation/pull/10650)) ([#10667](https://github.com/wazuh/wazuh-documentation/pull/10667)) ([#10712](https://github.com/wazuh/wazuh-documentation/pull/10712)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738))
+
+Updated the Security configuration assessment capability documentation. ([#9834](https://github.com/wazuh/wazuh-documentation/pull/9834)) ([#9849](https://github.com/wazuh/wazuh-documentation/pull/9849)) ([#10178](https://github.com/wazuh/wazuh-documentation/pull/10178)) ([#10367](https://github.com/wazuh/wazuh-documentation/pull/10367)) ([#10377](https://github.com/wazuh/wazuh-documentation/pull/10377)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10616](https://github.com/wazuh/wazuh-documentation/pull/10616)) ([#10669](https://github.com/wazuh/wazuh-documentation/pull/10669)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10707](https://github.com/wazuh/wazuh-documentation/pull/10707)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738)) ([#10762](https://github.com/wazuh/wazuh-documentation/pull/10762)) ([#10801](https://github.com/wazuh/wazuh-documentation/pull/10801))
+
+Updated the Vulnerability detection capability documentation and added a Use cases section. ([#9835](https://github.com/wazuh/wazuh-documentation/pull/9835)) ([#9841](https://github.com/wazuh/wazuh-documentation/pull/9841)) ([#10018](https://github.com/wazuh/wazuh-documentation/pull/10018)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10408](https://github.com/wazuh/wazuh-documentation/pull/10408)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10560](https://github.com/wazuh/wazuh-documentation/pull/10560)) ([#10563](https://github.com/wazuh/wazuh-documentation/pull/10563)) ([#10564](https://github.com/wazuh/wazuh-documentation/pull/10564)) ([#10648](https://github.com/wazuh/wazuh-documentation/pull/10648)) ([#10668](https://github.com/wazuh/wazuh-documentation/pull/10668)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10709](https://github.com/wazuh/wazuh-documentation/pull/10709)) ([#10738](https://github.com/wazuh/wazuh-documentation/pull/10738)) ([#10762](https://github.com/wazuh/wazuh-documentation/pull/10762)) ([#10792](https://github.com/wazuh/wazuh-documentation/pull/10792))
+
+Updated the Command monitoring capability documentation. ([#9883](https://github.com/wazuh/wazuh-documentation/pull/9883)) ([#9915](https://github.com/wazuh/wazuh-documentation/pull/9915)) ([#10357](https://github.com/wazuh/wazuh-documentation/pull/10357)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10637](https://github.com/wazuh/wazuh-documentation/pull/10637))
+
+Updated the File integrity monitoring capability documentation to Wazuh 5.0. ([#9961](https://github.com/wazuh/wazuh-documentation/pull/9961)) ([#10165](https://github.com/wazuh/wazuh-documentation/pull/10165)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10392](https://github.com/wazuh/wazuh-documentation/pull/10392)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10671](https://github.com/wazuh/wazuh-documentation/pull/10671)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10711](https://github.com/wazuh/wazuh-documentation/pull/10711)) ([#10729](https://github.com/wazuh/wazuh-documentation/pull/10729)) ([#10806](https://github.com/wazuh/wazuh-documentation/pull/10806))
+
+Updated the Using Wazuh for GDPR compliance documentation in Regulatory compliance to Wazuh 5.0. ([#9944](https://github.com/wazuh/wazuh-documentation/pull/9944)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10705](https://github.com/wazuh/wazuh-documentation/pull/10705)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782)) ([#10844](https://github.com/wazuh/wazuh-documentation/pull/10844))
+
+Updated the Monitoring Linux system calls capability documentation to Wazuh 5.0. ([#10010](https://github.com/wazuh/wazuh-documentation/pull/10010)) ([#10391](https://github.com/wazuh/wazuh-documentation/pull/10391)) ([#10647](https://github.com/wazuh/wazuh-documentation/pull/10647)) ([#10672](https://github.com/wazuh/wazuh-documentation/pull/10672))
+
+Updated the Wazuh indexer API reference, removing the non-tracked version number from its page header, grouping its sections by plugin, and fixing a duplicate tag name that could merge two unrelated sections. ([#10015](https://github.com/wazuh/wazuh-documentation/pull/10015)) ([#10016](https://github.com/wazuh/wazuh-documentation/pull/10016)) ([#10017](https://github.com/wazuh/wazuh-documentation/pull/10017)) ([#10025](https://github.com/wazuh/wazuh-documentation/pull/10025)) ([#10041](https://github.com/wazuh/wazuh-documentation/pull/10041)) ([#10042](https://github.com/wazuh/wazuh-documentation/pull/10042)) ([#10043](https://github.com/wazuh/wazuh-documentation/pull/10043)) ([#10044](https://github.com/wazuh/wazuh-documentation/pull/10044)) ([#10048](https://github.com/wazuh/wazuh-documentation/pull/10048)) ([#10449](https://github.com/wazuh/wazuh-documentation/pull/10449)) ([#10450](https://github.com/wazuh/wazuh-documentation/pull/10450)) ([#10518](https://github.com/wazuh/wazuh-documentation/pull/10518))
+
+Updated the Using Wazuh for TSC compliance documentation in Regulatory compliance to Wazuh 5.0. ([#10027](https://github.com/wazuh/wazuh-documentation/pull/10027)) ([#10045](https://github.com/wazuh/wazuh-documentation/pull/10045)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10710](https://github.com/wazuh/wazuh-documentation/pull/10710)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774))
+
+Updated the Log data collection capability documentation to Wazuh 5.0, covering Wazuh agent configuration, collecting logs from files and operating systems, log data analysis, and new use cases. ([#10034](https://github.com/wazuh/wazuh-documentation/pull/10034)) ([#10037](https://github.com/wazuh/wazuh-documentation/pull/10037)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10568](https://github.com/wazuh/wazuh-documentation/pull/10568)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10822](https://github.com/wazuh/wazuh-documentation/pull/10822))
+
+Updated the Reference documentation to Wazuh 5.0, splitting the local configuration reference into separate `wazuh-manager.conf` and `ossec.conf` sections, renaming manager daemons and tools with the `wazuh-manager-` prefix, updating the internal configuration, daemons, and tools references, and removing documentation for configuration sections and CLI tools no longer supported in Wazuh 5.0, and adding the Wazuh Common Schema (WCS) section, with the How WCS works, How Wazuh uses WCS fields, and Key WCS fields pages and the WCS field reference with the findings and state indices, plus the Helper functions reference. ([#10047](https://github.com/wazuh/wazuh-documentation/pull/10047)) ([#10070](https://github.com/wazuh/wazuh-documentation/pull/10070)) ([#10071](https://github.com/wazuh/wazuh-documentation/pull/10071)) ([#10072](https://github.com/wazuh/wazuh-documentation/pull/10072)) ([#10177](https://github.com/wazuh/wazuh-documentation/pull/10177)) ([#10215](https://github.com/wazuh/wazuh-documentation/pull/10215)) ([#10266](https://github.com/wazuh/wazuh-documentation/pull/10266)) ([#10271](https://github.com/wazuh/wazuh-documentation/pull/10271)) ([#10323](https://github.com/wazuh/wazuh-documentation/pull/10323)) ([#10345](https://github.com/wazuh/wazuh-documentation/pull/10345)) ([#10365](https://github.com/wazuh/wazuh-documentation/pull/10365)) ([#10366](https://github.com/wazuh/wazuh-documentation/pull/10366)) ([#10400](https://github.com/wazuh/wazuh-documentation/pull/10400)) ([#10401](https://github.com/wazuh/wazuh-documentation/pull/10401)) ([#10409](https://github.com/wazuh/wazuh-documentation/pull/10409)) ([#10421](https://github.com/wazuh/wazuh-documentation/pull/10421)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10500](https://github.com/wazuh/wazuh-documentation/pull/10500)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10540](https://github.com/wazuh/wazuh-documentation/pull/10540)) ([#10589](https://github.com/wazuh/wazuh-documentation/pull/10589)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10601](https://github.com/wazuh/wazuh-documentation/pull/10601)) ([#10602](https://github.com/wazuh/wazuh-documentation/pull/10602)) ([#10615](https://github.com/wazuh/wazuh-documentation/pull/10615)) ([#10624](https://github.com/wazuh/wazuh-documentation/pull/10624)) ([#10638](https://github.com/wazuh/wazuh-documentation/pull/10638)) ([#10645](https://github.com/wazuh/wazuh-documentation/pull/10645)) ([#10651](https://github.com/wazuh/wazuh-documentation/pull/10651)) ([#10654](https://github.com/wazuh/wazuh-documentation/pull/10654)) ([#10657](https://github.com/wazuh/wazuh-documentation/pull/10657)) ([#10658](https://github.com/wazuh/wazuh-documentation/pull/10658)) ([#10665](https://github.com/wazuh/wazuh-documentation/pull/10665)) ([#10666](https://github.com/wazuh/wazuh-documentation/pull/10666)) ([#10675](https://github.com/wazuh/wazuh-documentation/pull/10675)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10700](https://github.com/wazuh/wazuh-documentation/pull/10700)) ([#10725](https://github.com/wazuh/wazuh-documentation/pull/10725)) ([#10726](https://github.com/wazuh/wazuh-documentation/pull/10726)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10752](https://github.com/wazuh/wazuh-documentation/pull/10752)) ([#10769](https://github.com/wazuh/wazuh-documentation/pull/10769)) ([#10781](https://github.com/wazuh/wazuh-documentation/pull/10781)) ([#10783](https://github.com/wazuh/wazuh-documentation/pull/10783)) ([#10786](https://github.com/wazuh/wazuh-documentation/pull/10786)) ([#10800](https://github.com/wazuh/wazuh-documentation/pull/10800)) ([#10802](https://github.com/wazuh/wazuh-documentation/pull/10802)) ([#10825](https://github.com/wazuh/wazuh-documentation/pull/10825)) ([#10831](https://github.com/wazuh/wazuh-documentation/pull/10831)) ([#10836](https://github.com/wazuh/wazuh-documentation/pull/10836)) ([#10838](https://github.com/wazuh/wazuh-documentation/pull/10838)) ([#10840](https://github.com/wazuh/wazuh-documentation/pull/10840))
+
+Updated the Active response capability documentation to Wazuh 5.0, covering configuration from the Wazuh dashboard, the consolidated `block-ip` script, developing custom scripts, migrating custom scripts from Wazuh 4.x, and new use cases for blocking web attacks and removing malicious files. ([#10062](https://github.com/wazuh/wazuh-documentation/pull/10062)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10768](https://github.com/wazuh/wazuh-documentation/pull/10768)) ([#10796](https://github.com/wazuh/wazuh-documentation/pull/10796))
+
+Replaced the `admin` user with the dedicated `wazuh-manager` user in the Wazuh indexer connector credential examples, and standardized the indexer connector certificate name to `indexer-connector.pem`/`indexer-connector-key.pem` across the Installation guide, Deployment options, and User manual documentation, also correcting the certificate ownership and permissions in the Installation guide's certificate deployment step so the Wazuh manager can read them after dropping privileges. ([#10063](https://github.com/wazuh/wazuh-documentation/pull/10063))
+
+Updated the Using Wazuh for PCI DSS compliance documentation in Regulatory compliance to Wazuh 5.0. ([#10066](https://github.com/wazuh/wazuh-documentation/pull/10066)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10357](https://github.com/wazuh/wazuh-documentation/pull/10357)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10677](https://github.com/wazuh/wazuh-documentation/pull/10677)) ([#10703](https://github.com/wazuh/wazuh-documentation/pull/10703)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782))
+
+Updated the Getting started documentation to Wazuh 5.0, covering the dashboard screenshot gallery, the Architecture section's overview, component communication and required ports, and the Use cases section. ([#10069](https://github.com/wazuh/wazuh-documentation/pull/10069)) ([#10073](https://github.com/wazuh/wazuh-documentation/pull/10073)) ([#10231](https://github.com/wazuh/wazuh-documentation/pull/10231)) ([#10239](https://github.com/wazuh/wazuh-documentation/pull/10239)) ([#10244](https://github.com/wazuh/wazuh-documentation/pull/10244)) ([#10246](https://github.com/wazuh/wazuh-documentation/pull/10246)) ([#10364](https://github.com/wazuh/wazuh-documentation/pull/10364)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10499](https://github.com/wazuh/wazuh-documentation/pull/10499)) ([#10526](https://github.com/wazuh/wazuh-documentation/pull/10526)) ([#10527](https://github.com/wazuh/wazuh-documentation/pull/10527)) ([#10637](https://github.com/wazuh/wazuh-documentation/pull/10637)) ([#10673](https://github.com/wazuh/wazuh-documentation/pull/10673)) ([#10674](https://github.com/wazuh/wazuh-documentation/pull/10674)) ([#10785](https://github.com/wazuh/wazuh-documentation/pull/10785)) ([#10798](https://github.com/wazuh/wazuh-documentation/pull/10798)) ([#10823](https://github.com/wazuh/wazuh-documentation/pull/10823)) ([#10824](https://github.com/wazuh/wazuh-documentation/pull/10824)) ([#10847](https://github.com/wazuh/wazuh-documentation/pull/10847))
+
+Updated the Using Wazuh for HIPAA compliance documentation in Regulatory compliance to Wazuh 5.0. ([#10083](https://github.com/wazuh/wazuh-documentation/pull/10083)) ([#10191](https://github.com/wazuh/wazuh-documentation/pull/10191)) ([#10321](https://github.com/wazuh/wazuh-documentation/pull/10321)) ([#10704](https://github.com/wazuh/wazuh-documentation/pull/10704)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774))
+
+Updated the Monitoring Google Cloud documentation in Cloud security to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the integration from the Wazuh dashboard, a consolidated log sink export flow, and configuring the Wazuh modules for Pub/Sub and Storage buckets. ([#10092](https://github.com/wazuh/wazuh-documentation/pull/10092)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701))
+
+Updated the Wazuh indexer documentation in User manual to Wazuh 5.0, covering data streams, stateful indices and data retention, the Wazuh Common Schema, Sigma rules, index templates, the Setup, Content Manager, Reporting, Security Analytics, Notifications, and Alerting modules, indexer tuning, migrating indices, backup and restore, role-based access control, and audit logs. ([#10093](https://github.com/wazuh/wazuh-documentation/pull/10093)) ([#10271](https://github.com/wazuh/wazuh-documentation/pull/10271)) ([#10350](https://github.com/wazuh/wazuh-documentation/pull/10350)) ([#10362](https://github.com/wazuh/wazuh-documentation/pull/10362)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10599](https://github.com/wazuh/wazuh-documentation/pull/10599)) ([#10613](https://github.com/wazuh/wazuh-documentation/pull/10613)) ([#10701](https://github.com/wazuh/wazuh-documentation/pull/10701)) ([#10732](https://github.com/wazuh/wazuh-documentation/pull/10732)) ([#10733](https://github.com/wazuh/wazuh-documentation/pull/10733))
+
+Updated the Monitoring Microsoft Azure documentation in Cloud security to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the integration from the Wazuh dashboard, configuring credentials for Azure Log Analytics, Azure Storage, and the standalone Wazuh module for Microsoft Graph, the Microsoft Intune integration, and use cases. ([#10139](https://github.com/wazuh/wazuh-documentation/pull/10139)) ([#10390](https://github.com/wazuh/wazuh-documentation/pull/10390)) ([#10520](https://github.com/wazuh/wazuh-documentation/pull/10520)) ([#10729](https://github.com/wazuh/wazuh-documentation/pull/10729)) ([#10817](https://github.com/wazuh/wazuh-documentation/pull/10817))
+
+Updated the Wazuh indexer cluster documentation in User manual to Wazuh 5.0, covering cluster architecture and node types, required ports, cluster configuration, certificate deployment, cluster tuning, security initialization, adding and removing nodes, cluster management, and troubleshooting. ([#10183](https://github.com/wazuh/wazuh-documentation/pull/10183)) ([#10185](https://github.com/wazuh/wazuh-documentation/pull/10185)) ([#10228](https://github.com/wazuh/wazuh-documentation/pull/10228)) ([#10350](https://github.com/wazuh/wazuh-documentation/pull/10350)) ([#10416](https://github.com/wazuh/wazuh-documentation/pull/10416)) ([#10451](https://github.com/wazuh/wazuh-documentation/pull/10451)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10498](https://github.com/wazuh/wazuh-documentation/pull/10498)) ([#10689](https://github.com/wazuh/wazuh-documentation/pull/10689)) ([#10773](https://github.com/wazuh/wazuh-documentation/pull/10773)) ([#10842](https://github.com/wazuh/wazuh-documentation/pull/10842))
+
+Updated the Deployment on Docker documentation to Wazuh 5.0, covering the Nginx agent connection role, readiness checks and restart steps, Docker Compose plugin requirements, local image build options, container access and persistence, uninstall steps, and a corrected internal link in Wazuh Docker utilities. ([#10212](https://github.com/wazuh/wazuh-documentation/pull/10212)) ([#10325](https://github.com/wazuh/wazuh-documentation/pull/10325)) ([#10333](https://github.com/wazuh/wazuh-documentation/pull/10333)) ([#10356](https://github.com/wazuh/wazuh-documentation/pull/10356)) ([#10528](https://github.com/wazuh/wazuh-documentation/pull/10528)) ([#10632](https://github.com/wazuh/wazuh-documentation/pull/10632)) ([#10770](https://github.com/wazuh/wazuh-documentation/pull/10770)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832)) ([#10839](https://github.com/wazuh/wazuh-documentation/pull/10839))
+
+Updated the Deployment with Ansible documentation to Wazuh 5.0, covering generated deployment passwords, enrollment token-based agent deployment, certificate handling, and the Roles and Variables references. ([#10319](https://github.com/wazuh/wazuh-documentation/pull/10319)) ([#10341](https://github.com/wazuh/wazuh-documentation/pull/10341)) ([#10639](https://github.com/wazuh/wazuh-documentation/pull/10639)) ([#10659](https://github.com/wazuh/wazuh-documentation/pull/10659)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670)) ([#10691](https://github.com/wazuh/wazuh-documentation/pull/10691)) ([#10776](https://github.com/wazuh/wazuh-documentation/pull/10776)) ([#10832](https://github.com/wazuh/wazuh-documentation/pull/10832))
+
+Updated the Deployment on Kubernetes documentation to Wazuh 5.0, covering the resource requirements, network policies, Amazon EKS and local cluster deployment steps, enrollment token-based agent deployment, and the clean up steps. Removed the steps to change the password of Wazuh users. ([#9941](https://github.com/wazuh/wazuh-documentation/pull/9941)) ([#10320](https://github.com/wazuh/wazuh-documentation/pull/10320)) ([#10324](https://github.com/wazuh/wazuh-documentation/pull/10324)) ([#10346](https://github.com/wazuh/wazuh-documentation/pull/10346)) ([#10358](https://github.com/wazuh/wazuh-documentation/pull/10358)) ([#10525](https://github.com/wazuh/wazuh-documentation/pull/10525)) ([#10607](https://github.com/wazuh/wazuh-documentation/pull/10607)) ([#10621](https://github.com/wazuh/wazuh-documentation/pull/10621)) ([#10626](https://github.com/wazuh/wazuh-documentation/pull/10626))
+
+Updated the Using Wazuh for NIST 800-53 compliance documentation in Regulatory compliance to Wazuh 5.0. ([#10381](https://github.com/wazuh/wazuh-documentation/pull/10381)) ([#10706](https://github.com/wazuh/wazuh-documentation/pull/10706)) ([#10736](https://github.com/wazuh/wazuh-documentation/pull/10736)) ([#10774](https://github.com/wazuh/wazuh-documentation/pull/10774)) ([#10782](https://github.com/wazuh/wazuh-documentation/pull/10782))
+
+Updated the Wazuh indexer API documentation for Wazuh 5.0, including the use of data streams and the Wazuh Common Schema fields in the examples, and the JSON Web Token authentication steps. ([#10419](https://github.com/wazuh/wazuh-documentation/pull/10419)) ([#10442](https://github.com/wazuh/wazuh-documentation/pull/10442)) ([#10460](https://github.com/wazuh/wazuh-documentation/pull/10460)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10799](https://github.com/wazuh/wazuh-documentation/pull/10799))
+
+Updated the Monitoring Amazon Web Services (AWS) documentation in Cloud security to Wazuh 5.0, covering the Wazuh agent-only prerequisites, enabling the AWS integrations from the Wazuh dashboard, the updated policies and service configuration, findings-based use cases, the new Amazon ECR image scanning use case, the Custom Logs Buckets and AWS Security Hub CSPM sections, and troubleshooting. ([#10420](https://github.com/wazuh/wazuh-documentation/pull/10420)) ([#10446](https://github.com/wazuh/wazuh-documentation/pull/10446)) ([#10459](https://github.com/wazuh/wazuh-documentation/pull/10459)) ([#10606](https://github.com/wazuh/wazuh-documentation/pull/10606))
+
+Updated the Wazuh server API documentation to the new Wazuh manager API documentation in the User manual, including its use cases. ([#10530](https://github.com/wazuh/wazuh-documentation/pull/10530)) ([#10690](https://github.com/wazuh/wazuh-documentation/pull/10690)) ([#10698](https://github.com/wazuh/wazuh-documentation/pull/10698)) ([#10702](https://github.com/wazuh/wazuh-documentation/pull/10702)) ([#10734](https://github.com/wazuh/wazuh-documentation/pull/10734)) ([#10819](https://github.com/wazuh/wazuh-documentation/pull/10819))
+
+Updated the Offline installation guide documentation. ([#10630](https://github.com/wazuh/wazuh-documentation/pull/10630)) ([#10641](https://github.com/wazuh/wazuh-documentation/pull/10641)) ([#10652](https://github.com/wazuh/wazuh-documentation/pull/10652)) ([#10670](https://github.com/wazuh/wazuh-documentation/pull/10670))
+
+Updated the Malware detection documentation in Capabilities to Wazuh 5.0, covering the threat detection ruleset, threat intelligence, rootkit detection, file integrity monitoring with threat intelligence, and use cases. ([#10727](https://github.com/wazuh/wazuh-documentation/pull/10727)) ([#10751](https://github.com/wazuh/wazuh-documentation/pull/10751)) ([#10818](https://github.com/wazuh/wazuh-documentation/pull/10818))
+
+Updated the Wazuh server cluster documentation in User manual to the new Wazuh manager cluster documentation for Wazuh 5.0, covering the cluster architecture, security requirements, node configuration, data synchronization, certificates deployment, adding nodes, Wazuh agent connections, load balancers, and their troubleshooting. ([#10728](https://github.com/wazuh/wazuh-documentation/pull/10728)) ([#10767](https://github.com/wazuh/wazuh-documentation/pull/10767)) ([#10841](https://github.com/wazuh/wazuh-documentation/pull/10841))
+
+Updated the Upgrade guide: removed the steps and sample output that only applied to 4.x, updated the sample output and manager configuration path, and added the `node.options` backup, the `opensearch.yml` prompt note and the `ossec.conf.new` note. ([#10845](https://github.com/wazuh/wazuh-documentation/pull/10845))
+
+<a id="removed"></a>
+Removed
+
+Removed all `agent-auth` references as this tool was replaced by `wazuh-agent-auth`. ([#8718](https://github.com/wazuh/wazuh/pull/8718))
+
+Removed `compatibility.override_main_response_version` setting from Wazuh Indexer configuration as it is no longer supported in OpenSearch 3.0. ([#8609](https://github.com/wazuh/wazuh-documentation/pull/8609))
+
+Removed several Rootcheck configuration options and added a corresponding note to the central components upgrade guide. ([#8759](https://github.com/wazuh/wazuh-documentation/pull/8759))
+
+Removed references to the server version of the `manage_agents` tool. ([#8792](https://github.com/wazuh/wazuh-documentation/pull/8792))
+
+Removed `cron.prefix`, `cron.statistics.*`, and `wazuh.monitoring.*` configuration settings from the Wazuh dashboard. ([#8790](https://github.com/wazuh/wazuh-documentation/pull/8790))
+
+Removed references to deprecated client communication and FIM configuration options. ([#8809](https://github.com/wazuh/wazuh-documentation/pull/8809))
+
+Removed documentation and references to deprecated Wazuh Manager daemons: `wazuh-agentlessd`, `wazuh-csyslogd`, `wazuh-dbd`, `wazuh-integratord`, `wazuh-maild`, and `wazuh-reportd`. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
+
+Removed documentation and references to deprecated CLI tools: `clear_stats`, `update_ruleset`, and `wazuh-regex`. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
+
+Removed documentation to deprecated `fluent-forward` tool. ([#8778](https://github.com/wazuh/wazuh-documentation/pull/8778))
+
+Removed support for legacy operating systems, including Red Hat 5, CentOS 5, Oracle Linux 5, SUSE Linux Enterprise Server 11, AIX, HP-UX, Solaris, Windows XP, Windows Vista, and Windows Server 2003. ([#8894](https://github.com/wazuh/wazuh-documentation/pull/8894))
+
+Removed deprecated configuration variables in the Deployment with Puppet documentation. ([#9378](https://github.com/wazuh/wazuh-documentation/pull/9378))
+
+Removed Osquery references as this capability is now deprecated. ([#8958](https://github.com/wazuh/wazuh-documentation/pull/8958))
+
+Removed the Migrating a Wazuh Docker deployment from Wazuh 4.x to 5.x page from the Deployment on Docker documentation. Its URL now redirects to the Docker deployments section of the Transitioning from 4.x to 5.x documentation. ([#10839](https://github.com/wazuh/wazuh-documentation/pull/10839))
+
+<a id="v41411"></a>
+[v4.14.11]
+
+<a id="added-1"></a>
+Added
+
+Added a note on the launchd resource limits that can make the Wazuh agent miss macOS ULS events under high CPU load, and how to remove them, to the Log data collection documentation. ([#10717](https://github.com/wazuh/wazuh-documentation/pull/10717))
+
+Added the `rootcheck.max_pid` internal option, updated the `rootcheck.sleep` description, and added a note to the `check_pids` setting, in the Reference documentation. ([#10805](https://github.com/wazuh/wazuh-documentation/pull/10805))
+
+<a id="fixed"></a>
+Fixed
+
+Corrected the description of the files that the Wazuh manager pushes to the agents in a group, noting that the manager skips files whose names start with a dot and binary files, in the Centralized configuration reference documentation. ([#10780](https://github.com/wazuh/wazuh-documentation/pull/10780))
+
+<a id="v41410"></a>
+[v4.14.10]
+
+<a id="added-2"></a>
+Added
+
+Added the `analysisd.rule_tree_memory_warning` and `analysisd.rule_tree_memory_limit` internal options and a section on the rule tree memory thresholds to the Internal configuration reference documentation. ([#10397](https://github.com/wazuh/wazuh-documentation/pull/10397))
+
+Post-release: Added the Using the Wazuh dashboard method to the Upgrading the Wazuh agent documentation, and a paragraph on the automatic removal of disconnected agents with the `monitord.delete_old_agents` internal option to the Removing agents documentation. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
+
+Post-release: Added the two-tenant example and the multi-tenant behavior to the ms-graph reference and Microsoft Graph API setup documentation, the daemons that accept `-t` to Verifying configuration, and a note on running `agent_control` in a cluster to the agent_control reference. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
+
+<a id="changed-1"></a>
+Changed
+
+Removed the `auth.timeout_seconds` and `auth.timeout_microseconds` internal options from the Internal configuration reference documentation. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399))
+
+Documented that `logcollector.remote_commands` also controls the sockets and socket targets that Wazuh agents receive through centralized configuration, in the Internal configuration, localfile, socket, and Centralized configuration reference documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Updated the macOS ULS log tool style description in the Log data collection documentation to cover the `--style ndjson` format used on macOS 10.15 and later. ([#10567](https://github.com/wazuh/wazuh-documentation/pull/10567))
+
+Updated the `wazuh-certs-generator` image version to 0.0.5 in the Deployment on Docker and Upgrading Wazuh Docker documentation. ([#10588](https://github.com/wazuh/wazuh-documentation/pull/10588))
+
+Post-release: Updated the Wazuh agent installation documentation for Windows to list Windows Server 2025 and to add the commands that download the installer. ([#10681](https://github.com/wazuh/wazuh-documentation/pull/10681))
+
+Post-release: Documented that Wazuh 4.14.7 and later don't include the database output (`wazuh-dbd`) in the database_output, wazuh-dbd, Internal configuration, wazuh-control, Alert management and Installing the Wazuh server from sources documentation. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
+
+Post-release: Updated the Elastic Stack, OpenSearch, Splunk and Amazon Security Lake integration documentation for Logstash 9.5.6. ([#10814](https://github.com/wazuh/wazuh-documentation/pull/10814))
+
+<a id="fixed-1"></a>
+Fixed
+
+Removed Amazon Inspector Classic from the Amazon Inspector integration documentation, which now covers Amazon Inspector (v2) only. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399))
+
+Added the Windows and macOS agent restart commands and the Windows path of shared policies to the steps for enabling, disabling, and sharing policies, and corrected the fields of checks marked as not applicable, in the Security Configuration Assessment documentation. ([#10399](https://github.com/wazuh/wazuh-documentation/pull/10399)) ([#10425](https://github.com/wazuh/wazuh-documentation/pull/10425)) ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Added a note about the pages that a read-only user cannot open to the User administration documentation. ([#10425](https://github.com/wazuh/wazuh-documentation/pull/10425))
+
+Added a note that the Wazuh module for Google Cloud Pub/Sub supports only one `gcp-pubsub` block per configuration file to the Monitoring Google Cloud Pub/Sub documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
+
+Corrected the queue list in the Wazuh server queue documentation, the allowed `<protocol>` values in the Wazuh manager documentation, and the archives files in the Event logging documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
+
+Corrected the restart step in the SSL with NGINX documentation and the node address placeholders in the Wazuh dashboard certificates documentation. ([#10430](https://github.com/wazuh/wazuh-documentation/pull/10430))
+
+Corrected the Shuffle webhook URL in the Integration with external APIs documentation and the request method and log files in the VirusTotal integration documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Corrected the default values of `email_alert_level` and `email_log_source` in the Local configuration (ossec.conf) reference, the rule `502` example, the SMTP relay packages for RHEL 9, and the SASL password map for RHEL 10 in the Alert management documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10566](https://github.com/wazuh/wazuh-documentation/pull/10566))
+
+Corrected the default port scan setting, the macOS configuration file path, the port field mappings, the Traffic tab description, the Listeners tab name, and the alert field names in the System inventory documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
+
+Added CentOS Stream 9 and 10 to the Packages list, and corrected the default port scan setting, the macOS configuration file path, and the CentOS entries of the compatibility matrix in the Vulnerability detection documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Corrected the command that adds the attacker IP address in the Blocking a known malicious actor proof of concept, and added a note about the initial scan to the File integrity monitoring proof of concept. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Corrected the sample alerts in the Microsoft Graph setup documentation and the `only_future_events` and invalid configuration descriptions in the ms-graph reference. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
+
+Corrected the macOS default directories in the syscheck reference and the macOS Unified Logging query in the Log data collection documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519))
+
+Corrected the password change and agent installation steps in the Wazuh Puppet module documentation, the Puppet repository commands in the Puppet server and Puppet agent installation documentation, and added a note that the Puppet server package is not published for Ubuntu 24.04 to the Puppet server installation documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10579](https://github.com/wazuh/wazuh-documentation/pull/10579))
+
+Corrected the Python dependency steps for Ubuntu 24.04, Debian 13, and RHEL 10 in the Google Cloud and Microsoft Azure documentation. ([#10519](https://github.com/wazuh/wazuh-documentation/pull/10519)) ([#10600](https://github.com/wazuh/wazuh-documentation/pull/10600))
+
+Corrected the disk space requirement in the Wazuh server installation documentation and the process name fields of eBPF who-data alerts in the File integrity monitoring documentation. ([#10587](https://github.com/wazuh/wazuh-documentation/pull/10587))
+
+Replaced the "here" link text with descriptive link text in the Via agent configuration enrollment documentation. ([#10605](https://github.com/wazuh/wazuh-documentation/pull/10605))
+
+Post-release: Fixed the breadcrumbs home link, which had no accessible name for screen readers, and the missing styling of the development notice on the documentation home page. ([#10660](https://github.com/wazuh/wazuh-documentation/pull/10660))
+
+Post-release: Clarified the Windows agent installation paths in the Via agent configuration, Using password authentication, Wazuh manager identity verification, Wazuh agent identity verification, and Installing a custom WPK documentation, and corrected the key and certificate paths and the package name in the Deployment variables documentation for macOS and Windows. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
+
+Post-release: Corrected the `generate_wpk_package.sh` usage and the manual Linux steps in the Creating a custom WPK documentation, and linked the Agent upgrade module documentation to its configuration reference. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
+
+Post-release: Updated the menu screenshot in the Wazuh agent connection documentation, and corrected the menu paths and figures in the MITRE ATT&CK framework documentation. ([#10694](https://github.com/wazuh/wazuh-documentation/pull/10694))
+
+Post-release: Corrected the allowed values of the `name`, `os`, and `profile` filters, the temporary file name, the reload description, the keepalive interval and the sample log, and added the limits for group files in the Centralized configuration (agent.conf) reference, and corrected the `config-profile` description in the client reference. ([#10686](https://github.com/wazuh/wazuh-documentation/pull/10686)) ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778))
+
+Post-release: Added the Reporting prerequisite for a read-only user, the document level security limits and the group policy actions for the agent group use case to the Wazuh RBAC documentation, and the step that deletes the built-in role list mapper to the Keycloak documentation. Corrected product names and image titles, replaced two screenshots, added two, and added alt text to the screenshots in the Single sign-on documentation. ([#10695](https://github.com/wazuh/wazuh-documentation/pull/10695)) ([#10777](https://github.com/wazuh/wazuh-documentation/pull/10777))
+
+Post-release: Corrected the who-data setup, the Windows rules, integration, and active response, and the YARA attack emulation steps in the File integrity monitoring, Detecting and removing malware using VirusTotal integration, and Detecting malware using YARA integration proofs of concept, and the Windows agent service name in the Proof of Concept guide. ([#10693](https://github.com/wazuh/wazuh-documentation/pull/10693))
+
+Post-release: Renamed the sample title of the vulnerability inventory data in the How it works page of the Vulnerability detection documentation. ([#10692](https://github.com/wazuh/wazuh-documentation/pull/10692))
+
+Post-release: Added the `PATH` export to the CMake installation step for CentOS 6/7 and an Amazon Linux 2 tab to the Yum steps of the Installing the Wazuh agent from sources documentation. ([#10683](https://github.com/wazuh/wazuh-documentation/pull/10683))
+
+Post-release: Corrected the cluster name in the expected output of the cluster test in the Installing the Wazuh indexer using the assisted installation method documentation. ([#10682](https://github.com/wazuh/wazuh-documentation/pull/10682))
+
+Post-release: Removed the leading `.\` from the PowerShell command in the Deploying Wazuh agents on Windows endpoints installation documentation, so it matches the CMD command. ([#10684](https://github.com/wazuh/wazuh-documentation/pull/10684))
+
+Post-release: Added `apt-get update` to the APT commands that install the required packages and dependencies in the Deploying Wazuh agents on Linux endpoints, Installing the Wazuh indexer step by step, Installing the Wazuh server step by step, Installing the Wazuh dashboard step by step, and Wazuh central components upgrade documentation. ([#10746](https://github.com/wazuh/wazuh-documentation/pull/10746))
+
+Post-release: Corrected the default values and allowed values of `notify_time`, `logcollector.max_lines`, `skip_nfs`, and the GitHub and Office 365 `interval` options, the gcp-bucket example interval and the `only_logs_after` description and example, the `discard_regex` field name in the wodle name="aws-s3" reference, and the macOS tab name in the syscheck reference. Clarified the auth, remote, socket, syscheck and syslog_output reference descriptions and the wazuh-logcollector.state file paths. ([#10778](https://github.com/wazuh/wazuh-documentation/pull/10778)) ([#10835](https://github.com/wazuh/wazuh-documentation/pull/10835))
+
+Post-release: Standardized the Windows agent service name in the restart commands, documented when remote commands are needed for policies pushed from the Wazuh server and for policies enabled in `agent.conf` outside the `ruleset/sca` folder, added the starting check ID for custom policies, and updated the Available SCA policies table and the use case examples in the Security Configuration Assessment documentation. ([#10779](https://github.com/wazuh/wazuh-documentation/pull/10779)) ([#10813](https://github.com/wazuh/wazuh-documentation/pull/10813))
+
+Post-release: Removed the `<options>` line, which has no effect on PagerDuty incidents, from the PagerDuty example in the integration reference documentation. ([#10803](https://github.com/wazuh/wazuh-documentation/pull/10803))
+
+Post-release: Corrected the synchronization description in the File integrity monitoring documentation, which now says that the Wazuh server inventory updates by default rather than always in the How it works, Advanced settings, and Windows Registry monitoring pages, and refers to the "registry inventory" instead of the "file inventory" in the Windows Registry monitoring page. ([#10135](https://github.com/wazuh/wazuh-documentation/pull/10135)) ([#10815](https://github.com/wazuh/wazuh-documentation/pull/10815))
+
+Post-release: Added `--ignore-installed` to the Python 3.8–3.10 pip command of the Microsoft Azure documentation, so it installs next to the packages the system manages, such as the RPM `chardet` on Amazon Linux 2023. ([#10846](https://github.com/wazuh/wazuh-documentation/pull/10846))
+
+<a id="v4149"></a>
+[v4.14.9]
+
+<a id="added-3"></a>
+Added
+
+Added the `agent.tcp_keepidle`, `agent.tcp_keepintvl`, `agent.tcp_keepcnt`, and `agent.send_timeout` internal options to the Internal configuration reference documentation. ([#10029](https://github.com/wazuh/wazuh-documentation/pull/10029))
+
+<a id="changed-2"></a>
+Changed
+
+Updated the Wazuh server disk space requirements in the Installation guide to include the vulnerability detection database. ([#10267](https://github.com/wazuh/wazuh-documentation/pull/10267))
+
+Updated the eBPF who-data requirements and fallback behavior in the File integrity monitoring and Reference documentation to describe the eBPF health check instead of a kernel version check. ([#10331](https://github.com/wazuh/wazuh-documentation/pull/10331))
+
+Post-release: Updated the Wazuh Cloud service documentation to describe Wazuh Cloud as the software as a service (SaaS) edition of Wazuh, including the introduction, benefits, shared responsibility model, FAQ and limitations. ([#10413](https://github.com/wazuh/wazuh-documentation/pull/10413)) ([#10433](https://github.com/wazuh/wazuh-documentation/pull/10433))
+
+<a id="fixed-2"></a>
+Fixed
+
+Fixed the Distributed deployment steps for securing the installation in the Wazuh dashboard step-by-step installation documentation. ([#10330](https://github.com/wazuh/wazuh-documentation/pull/10330))
+
+Fixed code samples and commands that could not be copied and used as written across the Regulatory compliance, Deployment options, Development, Migration guide, Proof of concept guide, Upgrade guide and User manual documentation. ([#10334](https://github.com/wazuh/wazuh-documentation/pull/10334)) ([#10369](https://github.com/wazuh/wazuh-documentation/pull/10369)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10371](https://github.com/wazuh/wazuh-documentation/pull/10371)) ([#10373](https://github.com/wazuh/wazuh-documentation/pull/10373)) ([#10374](https://github.com/wazuh/wazuh-documentation/pull/10374)) ([#10385](https://github.com/wazuh/wazuh-documentation/pull/10385)) ([#10516](https://github.com/wazuh/wazuh-documentation/pull/10516)) ([#10614](https://github.com/wazuh/wazuh-documentation/pull/10614))
+
+Fixed dead links, typos, garbled sentences, broken inline markup and XML code blocks marked as `console` across the Compliance, Deployment options, Getting started, Installation guide, Integrations guide, Release notes, Upgrade guide and User manual documentation. ([#10335](https://github.com/wazuh/wazuh-documentation/pull/10335)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10372](https://github.com/wazuh/wazuh-documentation/pull/10372)) ([#10375](https://github.com/wazuh/wazuh-documentation/pull/10375)) ([#10448](https://github.com/wazuh/wazuh-documentation/pull/10448))
+
+Fixed incorrect field names, setting names, menu names, values and examples that did not work as written across the Cloud security, User manual and Wazuh Cloud documentation, including the Wazuh indexer API, the Wazuh dashboard, the Wazuh manager and the single sign-on guides. ([#10354](https://github.com/wazuh/wazuh-documentation/pull/10354)) ([#10355](https://github.com/wazuh/wazuh-documentation/pull/10355)) ([#10369](https://github.com/wazuh/wazuh-documentation/pull/10369)) ([#10370](https://github.com/wazuh/wazuh-documentation/pull/10370)) ([#10371](https://github.com/wazuh/wazuh-documentation/pull/10371)) ([#10372](https://github.com/wazuh/wazuh-documentation/pull/10372)) ([#10433](https://github.com/wazuh/wazuh-documentation/pull/10433)) ([#10514](https://github.com/wazuh/wazuh-documentation/pull/10514)) ([#10517](https://github.com/wazuh/wazuh-documentation/pull/10517)) ([#10554](https://github.com/wazuh/wazuh-documentation/pull/10554)) ([#10557](https://github.com/wazuh/wazuh-documentation/pull/10557))
+
+Post-release: Fixed the Python 3.11–3.13 dependency installation command in the Google Cloud prerequisites documentation, which failed on Python 3.13. ([#10414](https://github.com/wazuh/wazuh-documentation/pull/10414))
+
+Post-release: Fixed missing image alt text, generic "here" link text and a duplicate page title across the Cloud security, Regulatory compliance, Development, Proof of concept guide and User manual documentation. ([#10415](https://github.com/wazuh/wazuh-documentation/pull/10415))
+
+Post-release: Fixed the manager address placeholder in the configuration step of the Solaris and HP-UX Wazuh agent installation documentation to match the installed `ossec.conf`. ([#10555](https://github.com/wazuh/wazuh-documentation/pull/10555))
+
+Post-release: Fixed the list of registry value types supported by `report_changes` in the Windows Registry monitoring page of the File integrity monitoring documentation and in the Reference documentation. ([#10556](https://github.com/wazuh/wazuh-documentation/pull/10556))
+
+Post-release: Fixed the site header search button and footer links toggle, which had no accessible names for screen readers. ([#10593](https://github.com/wazuh/wazuh-documentation/pull/10593))
+
+Post-release: Fixed the CloudTrail and CloudWatch spelling on the Amazon S3 wodle page and the option group headings on the SCA page of the Reference documentation. ([#10603](https://github.com/wazuh/wazuh-documentation/pull/10603)) ([#10604](https://github.com/wazuh/wazuh-documentation/pull/10604))
+
+<a id="v4148"></a>
+[v4.14.8]
+
+<a id="added-4"></a>
+Added
+
+Post-release: Added a note to the Regulatory compliance documentation stating that the rule and control mappings are indicative and require an independent qualified assessor for formal certification. ([#10202](https://github.com/wazuh/wazuh-documentation/pull/10202))
+
+<a id="fixed-3"></a>
+Fixed
+
+Post-release: Clarified where the `wazuh-install-files.tar` archive is created in the Quickstart documentation's installation note. ([#10186](https://github.com/wazuh/wazuh-documentation/pull/10186))
+
+Post-release: Added `curl` to the prerequisite package list for the APT repository instructions in the Installation guide's Wazuh indexer, manager, dashboard, and agent sections. ([#10188](https://github.com/wazuh/wazuh-documentation/pull/10188))
+
+Post-release: Fixed the version selector incorrectly showing versions 4.4 through 4.14 as unavailable across the Regulatory compliance documentation pages. ([#10203](https://github.com/wazuh/wazuh-documentation/pull/10203))
+
+Post-release: Fixed the version selector and old-URL redirect handling for 5 archived Cloud security and User manual pages that had never been registered as valid in `redirects.js`. ([#10204](https://github.com/wazuh/wazuh-documentation/pull/10204))
+
+<a id="v4147"></a>
+[v4.14.7]
+
+<a id="added-5"></a>
+Added
+
+Post-release: Added guidance about matching the Wazuh manager version to the existing cluster nodes in the Adding new Wazuh server nodes documentation. ([#10007](https://github.com/wazuh/wazuh-documentation/pull/10007)) ([#10130](https://github.com/wazuh/wazuh-documentation/pull/10130))
+
+<a id="fixed-4"></a>
+Fixed
+
+Post-release: Obscured the sample private key values in the GCP credentials documentation. ([#9971](https://github.com/wazuh/wazuh-documentation/pull/9971))
+
+Post-release: Fixed the User manual index page so it shows the full page list for the Wazuh dashboard and Data analysis subsections. ([#9992](https://github.com/wazuh/wazuh-documentation/pull/9992))
+
+Post-release: Fixed the Deployment with Puppet index page so the Wazuh Puppet module reference pages are listed. ([#9992](https://github.com/wazuh/wazuh-documentation/pull/9992))
+
+Post-release: Fixed a duplicate heading in the Architecture documentation's component communication section, separating the Wazuh dashboard's connections to the Wazuh server and Wazuh indexer. ([#10038](https://github.com/wazuh/wazuh-documentation/pull/10038))
+
+Post-release: Clarified the LDAPS connection success step and updated its screenshot in the Active Directory and LDAP integration documentation. ([#10039](https://github.com/wazuh/wazuh-documentation/pull/10039))
+
+Post-release: Fixed missing or non-descriptive image alt text in the Installation guide, Deployment options, Quickstart, Proof of concept guide, Integrations guide, Cloud security, Upgrade guide, and Active Response documentation. ([#10057](https://github.com/wazuh/wazuh-documentation/pull/10057)) ([#10081](https://github.com/wazuh/wazuh-documentation/pull/10081)) ([#10082](https://github.com/wazuh/wazuh-documentation/pull/10082)) ([#10089](https://github.com/wazuh/wazuh-documentation/pull/10089))
+
+Post-release: Fixed the heading hierarchy in the Using Wazuh for TSC compliance documentation by converting two bolded subtopics into real H2 sections. ([#10060](https://github.com/wazuh/wazuh-documentation/pull/10060))
+
+Post-release: Fixed third-party brand-name casing inconsistencies (CloudTrail, VirusTotal, PyInstaller, AlienVault) in the Proof of concept guide documentation. ([#10087](https://github.com/wazuh/wazuh-documentation/pull/10087)) ([#10166](https://github.com/wazuh/wazuh-documentation/pull/10166))
+
+Post-release: Fixed a stray, garbled label fragment left in the GDPR compliance documentation's page titles, which also affected the sitewide sidebar navigation. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
+
+Post-release: Fixed the shared site footer's Getting started and Installation guide links, which pointed at the wrong domain. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
+
+Post-release: Corrected the `<certificate>` configuration option's stated default value in the Indexer integration documentation. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
+
+Post-release: Updated the User administration documentation to name the Google identity provider integration by its full product name, Google Workspace. ([#10090](https://github.com/wazuh/wazuh-documentation/pull/10090))
+
+Post-release: Disambiguated duplicated Attack emulation and Visualize the alerts headings in the Proof of concept guide's YARA integration and VirusTotal malware-detection pages by naming the target OS in each. ([#10091](https://github.com/wazuh/wazuh-documentation/pull/10091))
+
+Post-release: Fixed links pointing to the `current` documentation version instead of the version being read, in the Cloud service, PCI DSS compliance, and System inventory documentation. ([#10126](https://github.com/wazuh/wazuh-documentation/pull/10126))
+
+Post-release: Fixed typos and wrong `code-block` language tags in the Capabilities documentation's command monitoring, file integrity, log data collection, and malware detection use cases. ([#10127](https://github.com/wazuh/wazuh-documentation/pull/10127))
+
+Post-release: Fixed a malformed `code-block` directive that silently dropped its content in the Generate agent package documentation. ([#10128](https://github.com/wazuh/wazuh-documentation/pull/10128))
+
+Post-release: Fixed reference-page formatting and completeness issues and worked-example value mismatches across the Reference, Indexer API, Ruleset, and User manual documentation. ([#10129](https://github.com/wazuh/wazuh-documentation/pull/10129)) ([#10136](https://github.com/wazuh/wazuh-documentation/pull/10136))
+
+Post-release: Fixed typos, subject/verb agreement, and formatting issues in the Wazuh manager, Wazuh dashboard, Wazuh indexer, and Wazuh server cluster documentation. ([#10130](https://github.com/wazuh/wazuh-documentation/pull/10130))
+
+Post-release: Fixed the overlapping agent range labels in the Quickstart hardware requirements table and the en dash in the `--uninstall` installation assistant flag. ([#10133](https://github.com/wazuh/wazuh-documentation/pull/10133))
+
+Post-release: Fixed inconsistent Windows service naming, a `registry_ignore` example mismatch, leftover file-based wording in the attribute recording section, and inaccurate default scan-frequency wording in the File integrity monitoring documentation's Windows Registry monitoring page, and added notes disambiguating the `recursion_level` limits for `<directories>` and `<windows_registry>`. ([#10134](https://github.com/wazuh/wazuh-documentation/pull/10134)) ([#10137](https://github.com/wazuh/wazuh-documentation/pull/10137))
+
+Post-release: Removed a stale, unpublished `pm_event` table from the wazuh-db daemon reference's source and dropped two `wodle-osquery` cross-references from the Deploying with Ansible reference that pointed at the wrong page. ([#10138](https://github.com/wazuh/wazuh-documentation/pull/10138))
+
+Post-release: Fixed an image filename containing a space in the CloudTrail documentation and corrected the `only_logs_after` date format documented in the GCP bucket reference and capability pages. ([#10140](https://github.com/wazuh/wazuh-documentation/pull/10140))
+
+Post-release: Normalized inconsistent tab labels across the documentation that were silently splitting synchronized tab selections into separate, unsynced groups. ([#10143](https://github.com/wazuh/wazuh-documentation/pull/10143))
+
+Post-release: Fixed mismatched screenshot titles in the Proof of concept guide and Active Response documentation. ([#10161](https://github.com/wazuh/wazuh-documentation/pull/10161))
+
+Post-release: Corrected a false version-support claim and a URL-breaking formatting issue in `llms.txt`. ([#10162](https://github.com/wazuh/wazuh-documentation/pull/10162))
+
+Post-release: Fixed a third-party brand-name casing inconsistency (PagerDuty) in the Integration with external APIs documentation. ([#10166](https://github.com/wazuh/wazuh-documentation/pull/10166))
+
+Post-release: Clarified the Security configuration assessment documentation's policy enabling and disabling section and removed the nonexistent `sca_win_audit` entry from the available policies table. ([#10179](https://github.com/wazuh/wazuh-documentation/pull/10179))
+
+Post-release: Fixed missing, duplicated, and overlong meta descriptions across the documentation, and removed unreferenced leftover images. ([#10180](https://github.com/wazuh/wazuh-documentation/pull/10180))
+
+<a id="v4146"></a>
+[v4.14.6]
+
+<a id="changed-3"></a>
+Changed
+
+Post-release: Updated the Monitoring Microsoft Azure documentation page title. ([#9923](https://github.com/wazuh/wazuh-documentation/pull/9923))
+
+<a id="fixed-5"></a>
+Fixed
+
+Post-release: Fixed dead link in release notes. ([#9761](https://github.com/wazuh/wazuh-documentation/pull/9761))
+
+Post-release: Fixed broken link in the Adding new Wazuh server nodes section and moved the root user privileges note into the All-in-one deployment and Distributed deployment pages. ([#9934](https://github.com/wazuh/wazuh-documentation/pull/9934)) ([#9937](https://github.com/wazuh/wazuh-documentation/pull/9937))
+
+<a id="v4145"></a>
+[v4.14.5]
+
+<a id="added-6"></a>
+Added
+
+Post-release: Added upgrade warning for the `data.user` to `data.dstuser` field mapping change introduced in Wazuh 4.14.1. ([#9741](https://github.com/wazuh/wazuh-documentation/pull/9741))
+
+Post-release: Added authentik to the Single Sign-On documentation. ([#9656](https://github.com/wazuh/wazuh-documentation/pull/9656))
+
+Post-release: Added the System requirements section to the Wazuh server cluster documentation. ([#9668](https://github.com/wazuh/wazuh-documentation/pull/9668))
+
+<a id="changed-4"></a>
+Changed
+
+Post-release: Updated the User administration index page. ([#9528](https://github.com/wazuh/wazuh-documentation/pull/9528))
+
+Post-release: Updated the Active Directory and LDAP integration section. ([#9533](https://github.com/wazuh/wazuh-documentation/pull/9533))
+
+Post-release: Added a clarification about expected command outputs. ([#9593](https://github.com/wazuh/wazuh-documentation/pull/9593))
+
+Post-release: Updated the Installation guide. ([#9691](https://github.com/wazuh/wazuh-documentation/pull/9691)) ([#9692](https://github.com/wazuh/wazuh-documentation/pull/9692)) ([#9694](https://github.com/wazuh/wazuh-documentation/pull/9694)) ([#9742](https://github.com/wazuh/wazuh-documentation/pull/9742)) ([#9746](https://github.com/wazuh/wazuh-documentation/pull/9746))
+
+<a id="fixed-6"></a>
+Fixed
+
+Post-release: Fixed the Apache ``access_log`` path on the Windows endpoint in the Blocking a known malicious actor section of the Proof of Concept guide. ([#9530](https://github.com/wazuh/wazuh-documentation/pull/9530))
+
+Post-release: Fixed the ``opensearch_dashboards.yml`` configuration for Google Workspace in the Single Sign-On documentation. ([#9586](https://github.com/wazuh/wazuh-documentation/pull/9586))
+
+Post-release: Fixed the ``cluster`` reference values in the ossec.conf documentation. ([#9666](https://github.com/wazuh/wazuh-documentation/pull/9666))
+
+<a id="v4144"></a>
+[v4.14.4]
+
+<a id="added-7"></a>
+Added
+
+Added a reference for the Linux ARM WPK packages to the WPK list. ([#9317](https://github.com/wazuh/wazuh-documentation/pull/9317))
+
+Added note to the Installing the Wazuh agent section in the Deploying with Ansible documentation about Amazon Linux 2 systems. ([#9430](https://github.com/wazuh/wazuh-documentation/pull/9430))
+
+<a id="changed-5"></a>
+Changed
+
+Post-release: Updated command to change ownership of the private key file in the PingOne Single Sign-On documentation. ([#9432](https://github.com/wazuh/wazuh-documentation/pull/9432))
+
+Post-release: Updated the Wazuh server API documentation. ([#9468](https://github.com/wazuh/wazuh-documentation/pull/9468))
+
+Post-release: Updated the Wazuh server cluster documentation. ([#9436](https://github.com/wazuh/wazuh-documentation/pull/9436))
+
+<a id="fixed-7"></a>
+Fixed
+
+Added a step to start the Docker service upon installation in the Monitoring Docker events PoC. ([#9376](https://github.com/wazuh/wazuh-documentation/pull/9376))
+
+Post-release: Added steps to the Single Sign-On documentation. ([#9392](https://github.com/wazuh/wazuh-documentation/pull/9392)) ([#9395](https://github.com/wazuh/wazuh-documentation/pull/9395))
+
+Post-release: Fixed AARCH64 WPK package download links. ([#9392](https://github.com/wazuh/wazuh-documentation/pull/9392)) ([#9398](https://github.com/wazuh/wazuh-documentation/pull/9398))
+
+<a id="changed-6"></a>
+Changed
+
+Post-release: Updated the Using Wazuh for GDPR compliance documentation. ([#9431](https://github.com/wazuh/wazuh-documentation/pull/9431))
+
+<a id="v4143"></a>
+[v4.14.3]
+
+<a id="added-8"></a>
+Added
+
+Added the macOS 26 (Tahoe) SCA policy reference to the Available SCA policies section. ([#9158](https://github.com/wazuh/wazuh-documentation/pull/9158))
+
+Added a reference for the macOS ARM WPK package to the WPK list. ([#9215](https://github.com/wazuh/wazuh-documentation/pull/9215))
+
+Post-release: Added note about Linux WPK ARM packages in 4.14.3 and earlier versions. ([#9304](https://github.com/wazuh/wazuh-documentation/pull/9304))
+
+Post-release: Updated the Agent documentation structure. ([#9367](https://github.com/wazuh/wazuh-documentation/pull/9367))
+
+<a id="changed-7"></a>
+Changed
+
+Added ARM64 to Deployment on Docker prerequisites and updated certificate generator version. ([#9163](https://github.com/wazuh/wazuh-documentation/pull/9163))
+
+Updated steps in the Building Docker images locally section. ([#9174](https://github.com/wazuh/wazuh-documentation/pull/9174))
+
+Post-release: Updated the Deployment with Ansible documentation. ([#9295](https://github.com/wazuh/wazuh-documentation/pull/9295))
+
+Post-release: Updated the Configure Python and YARA section of the Proof of concept guide documentation. ([#9315](https://github.com/wazuh/wazuh-documentation/pull/9315))
+
+Post-release: Updated the Network IDS integration section of the Proof of concept guide documentation. ([#9314](https://github.com/wazuh/wazuh-documentation/pull/9314))
+
+Post-release: Updated the Single sign-on documentation. ([#9300](https://github.com/wazuh/wazuh-documentation/pull/9300)) ([#9332](https://github.com/wazuh/wazuh-documentation/pull/9332))
+
+Post-release: Updated images in the File integrity monitoring documentation. ([#9326](https://github.com/wazuh/wazuh-documentation/pull/9326))
+
+Post-release: Updated the Adding new Wazuh indexer nodes section. ([#9331](https://github.com/wazuh/wazuh-documentation/pull/9331))
+
+Post-release: Updated the File integrity monitoring documentation. ([#9326](https://github.com/wazuh/wazuh-documentation/pull/9326)) ([#9333](https://github.com/wazuh/wazuh-documentation/pull/9333))
+
+Post-release: Updated the Use Cases section of the Wazuh server API documentation. ([#9335](https://github.com/wazuh/wazuh-documentation/pull/9335))
+
+Post-release: Updated the Regulatory compliance documentation. ([#9375](https://github.com/wazuh/wazuh-documentation/pull/9375))
+
+Post-release: Updated the Wazuh server documentation. ([#9374](https://github.com/wazuh/wazuh-documentation/pull/9374))
+
+Post-release: Updated securing your Wazuh installation steps in Installing the Wazuh dashboard step by step documentation. ([#9379](https://github.com/wazuh/wazuh-documentation/pull/9379))
+
+Post-release: Updated the default value of `run_as` to `true` in the Wazuh dashboard configuration. ([#9377](https://github.com/wazuh/wazuh-documentation/pull/9377))
+
+Post-release: Updated the RBAC configuration. ([#9380](https://github.com/wazuh/wazuh-documentation/pull/9380))
+
+Post-release: Updated the agent_upgrade tool reference documentation to show current version and added the ``-d, --debug`` option. ([#9382](https://github.com/wazuh/wazuh-documentation/pull/9382))
+
+<a id="fixed-8"></a>
+Fixed
+
+Post-release: Fixed Wazuh Server image rendering in Installation Guide documentation. ([#9369](https://github.com/wazuh/wazuh-documentation/pull/9369)) ([#9371](https://github.com/wazuh/wazuh-documentation/pull/9371))
+
+<a id="v4142"></a>
+[v4.14.2]
+
+<a id="added-9"></a>
+Added
+
+Post-release: Added LLMs-ready documentation. ([#9201](https://github.com/wazuh/wazuh-documentation/pull/9201)) ([#9232](https://github.com/wazuh/wazuh-documentation/pull/9232)) ([#9238](https://github.com/wazuh/wazuh-documentation/pull/9238))
+
+Post-release: Added note about macOS WPK ARM packages in 4.14.2 and earlier versions. ([#9224](https://github.com/wazuh/wazuh-documentation/pull/9224))
+
+Post-release: Added note about disabling Wazuh repositories in the Wazuh central components section of the Uprade guide. ([#9224](https://github.com/wazuh/wazuh-documentation/pull/9224))
+
+<a id="changed-8"></a>
+Changed
+
+Updated the Wazuh module for Filebeat version references to ``0.5``. ([#9149](https://github.com/wazuh/wazuh-documentation/pull/9149))
+
+Post-release: Updated the Use case: Detecting malware on Windows endpoints using YARA section. ([#9205](https://github.com/wazuh/wazuh-documentation/pull/9205))
+
+Post-release: Added new step in Disk space utilization on Linux endpoint documentation. ([#9210](https://github.com/wazuh/wazuh-documentation/pull/9210))
+
+Post-release: Updated step in Upgrading the Wazuh dashboard documentation. ([#9217](https://github.com/wazuh/wazuh-documentation/pull/9217))
+
+Post-release: Updated Wazuh server configuration section in Malware Detection documentation. ([#9236](https://github.com/wazuh/wazuh-documentation/pull/9236))
+
+Post-release: Updated the Monitoring Microsoft Azure with Wazuh documentation. ([#9231](https://github.com/wazuh/wazuh-documentation/pull/9231)) ([#9255](https://github.com/wazuh/wazuh-documentation/pull/9255)) ([#9264](https://github.com/wazuh/wazuh-documentation/pull/9264))
+
+Post-release: Changed warnings to notes across the documentation. ([#9240](https://github.com/wazuh/wazuh-documentation/pull/9240))
+
+Post-release: Updated Monitoring Google Cloud services documentation. ([#9251](https://github.com/wazuh/wazuh-documentation/pull/9251))
+
+Post-release: Updated step in the Wazuh RBAC Creating and setting a Wazuh admin user section. ([#9252](https://github.com/wazuh/wazuh-documentation/pull/9252))
+
+Post-release: Updated the Active Response documentation. ([#9254](https://github.com/wazuh/wazuh-documentation/pull/9254)) ([#9258](https://github.com/wazuh/wazuh-documentation/pull/9258)) ([#9262](https://github.com/wazuh/wazuh-documentation/pull/9262))
+
+Post-release: Updated the Monitoring system calls documentation. ([#9271](https://github.com/wazuh/wazuh-documentation/pull/9271))
+
+Post-release: Updated the Installing the Wazuh dashboard step by step documentation. ([#9260](https://github.com/wazuh/wazuh-documentation/pull/9260))
+
+<a id="fixed-9"></a>
+Fixed
+
+Fixed code block highlighting and indentation for ``securityContext`` in Upgrading Wazuh on Kubernetes. ([#9161](https://github.com/wazuh/wazuh-documentation/pull/9161))
+
+Post-release: Fixed command syntax in the Monitoring GitHub audit logs section. ([#9213](https://github.com/wazuh/wazuh-documentation/pull/9213))
+
+Post-release: Fixed Change the password of Wazuh users steps in the Deployment on Kubernetes guide. ([#9296](https://github.com/wazuh/wazuh-documentation/pull/9296))
+
+<a id="v4141"></a>
+[v4.14.1]
+
+<a id="added-10"></a>
+Added
+
+Post-release: Added clarification to the ``field`` option in the Rules syntax section. ([#9103](https://github.com/wazuh/wazuh-documentation/pull/9103))
+
+Post-release: Added Syscollector parameter references. ([#9108](https://github.com/wazuh/wazuh-documentation/pull/9108)) ([#9109](https://github.com/wazuh/wazuh-documentation/pull/9109))
+
+Post-release: Added ``apache`` to the allowed ``log_format`` values in the localfile configuration documentation. ([#9114](https://github.com/wazuh/wazuh-documentation/pull/9114))
+
+Post-release: Added step to set file ownership and permissions when modifying default decoders. ([#9141](https://github.com/wazuh/wazuh-documentation/pull/9141))
+
+<a id="changed-9"></a>
+Changed
+
+Post-release: Updated the Navigating the Wazuh dashboard section. ([#9105](https://github.com/wazuh/wazuh-documentation/pull/9105))
+
+Post-release: Updated the Development section. ([#9104](https://github.com/wazuh/wazuh-documentation/pull/9104))
+
+Post-release: Updated the Agents manifests in the Deployment on Kubernetes section. ([#9111](https://github.com/wazuh/wazuh-documentation/pull/9111))
+
+Post-release: Updated the Deployment on Kubernetes section to include separate configurations for EKS and other cluster types. ([#9181](https://github.com/wazuh/wazuh-documentation/pull/9181))
+
+Post-release: Updated the Deployment on Kubernetes documentation. ([#9154](https://github.com/wazuh/wazuh-documentation/pull/9154)) ([#9195](https://github.com/wazuh/wazuh-documentation/pull/9195))
+
+Post-release: Updated the Monitoring Microsoft Graph services with Wazuh section. ([#9107](https://github.com/wazuh/wazuh-documentation/pull/9107))
+
+Post-release: Updated the log_format reference sub-section. ([#9117](https://github.com/wazuh/wazuh-documentation/pull/9117))
+
+Post-release: Updated deployment on Docker documentation. ([#9138](https://github.com/wazuh/wazuh-documentation/pull/9138))
+
+Post-release: Updated the auditd restart command. ([#9140](https://github.com/wazuh/wazuh-documentation/pull/9140))
+
+Post-release: Updated the Resources table in the RBAC reference guide. ([#9118](https://github.com/wazuh/wazuh-documentation/pull/9118))
+
+Post-release: Updated the command in the Wazuh sever API Getting started guide. ([#9143](https://github.com/wazuh/wazuh-documentation/pull/9143))
+
+Post-release: Updated the Adding new Wazuh server nodes section. ([#9144](https://github.com/wazuh/wazuh-documentation/pull/9144)) ([#9145](https://github.com/wazuh/wazuh-documentation/pull/9145))
+
+Post-release: Updated the Wazuh Cloud service documentation. ([#9136](https://github.com/wazuh/wazuh-documentation/pull/9136))
+
+Post-release: Updated the version references for the Wazuh certificates generation tool. ([#9152](https://github.com/wazuh/wazuh-documentation/pull/9152))
+
+Post-release: Updated steps on the Upgrading Wazuh Docker section. ([#9155](https://github.com/wazuh/wazuh-documentation/pull/9155))
+
+Post-release: Updated the Detecting malware using YARA integration PoC guide. ([#9165](https://github.com/wazuh/wazuh-documentation/pull/9165))
+
+Post-release: Updated the File integrity monitoring and YARA section. ([#9166](https://github.com/wazuh/wazuh-documentation/pull/9166))
+
+Post-release: Updated the File integrity monitoring capability documentation. ([#9167](https://github.com/wazuh/wazuh-documentation/pull/9167))
+
+Post-release: Updated the Installation from sources documentation. ([#9168](https://github.com/wazuh/wazuh-documentation/pull/9168))
+
+Post-release: Updated diagram images in the documentation. ([#9097](https://github.com/wazuh/wazuh-documentation/pull/9097))
+
+Post-release: Updated the Wazuh signed package (WPK) files section. ([#9175](https://github.com/wazuh/wazuh-documentation/pull/9175))
+
+Post-release: Updated `offline-url` setting reference in the vulnerability detection capability section. ([#9197](https://github.com/wazuh/wazuh-documentation/pull/9197))
+
+Post-release: Updated the Wazuh Indexer API documentation. ([#9200](https://github.com/wazuh/wazuh-documentation/pull/9200))
+
+Post-release: Updated the How to configure SCA section. ([#9202](https://github.com/wazuh/wazuh-documentation/pull/9202))
+
+<a id="fixed-10"></a>
+Fixed
+
+Post-release: Updated the OpenSearch Dashboards version references. ([#9190](https://github.com/wazuh/wazuh-documentation/pull/9190))
+
+<a id="removed-1"></a>
+Removed
+
+Post-release: Removed the Environment variables sub-section in Configuring AWS credentials. ([#9110](https://github.com/wazuh/wazuh-documentation/pull/9110))
+
+Post-release: Removed note about the credentials file in Amazon Security Lake section. ([#9112](https://github.com/wazuh/wazuh-documentation/pull/9112))
+
+<a id="v4140"></a>
+[v4.14.0]
+
+<a id="added-11"></a>
+Added
+
+Added AlmaLinux 10 to the Wazuh agent packages list and the vulnerability detection compatibility matrix. ([#8691](https://github.com/wazuh/wazuh-documentation/pull/8691))
+
+Added Rocky Linux 10 to the Wazuh agent packages list and the available SCA policies. ([#8799](https://github.com/wazuh/wazuh-documentation/pull/8799))
+
+Updated monitoring Amazon Inspector documentation to include Inspector v2. ([#8820](https://github.com/wazuh/wazuh-documentation/pull/8820))
+
+Updated the `filter` option in the `localfile` reference section. ([#8837](https://github.com/wazuh/wazuh-documentation/pull/8837))
+
+Added Wazuh agent support for Debian 13. ([#8946](https://github.com/wazuh/wazuh-documentation/pull/8946))
+
+Added a Change the password of Wazuh users step in Deployment on Kubernetes documentation. ([#8979](https://github.com/wazuh/wazuh-documentation/pull/8979))
+
+Post-release: Added Wazuh indexer indices. ([#9009](https://github.com/wazuh/wazuh-documentation/pull/9009))
+
+Post-release: Added mandatory dependency installation step for Debian-based operating systems in the Deploying Wazuh agents on Linux endpoints documentation. ([#9054](https://github.com/wazuh/wazuh-documentation/pull/9054))
+
+Post-release: Added keystore update command in the section on installing the Wazuh dashboard. ([#9091](https://github.com/wazuh/wazuh-documentation/pull/9091))
+
+<a id="changed-10"></a>
+Changed
+
+Updated the Filebeat package revision number. ([#8627](https://github.com/wazuh/wazuh-documentation/pull/8627))
+
+Updated centralized configuration (`agent.conf`) documentation to reflect that agents apply changes automatically (hot reload) without requiring a manual restart. ([#8711](https://github.com/wazuh/wazuh-documentation/pull/8711))
+
+Updated the cloud security module dependencies for Python 3.13 compatibility. ([#8985](https://github.com/wazuh/wazuh-documentation/pull/8985))
+
+Updated Docker and Kubernetes configurations to reflect new Wazuh indexer file paths. ([#8982](https://github.com/wazuh/wazuh-documentation/pull/8982))
+
+Post-release: Updated step in Keeping your custom Docker Compose files section. ([#9010](https://github.com/wazuh/wazuh-documentation/pull/9010))
+
+Post-release: Updated the Deployment with Puppet documentation. ([#9012](https://github.com/wazuh/wazuh-documentation/pull/9012)) ([#9016](https://github.com/wazuh/wazuh-documentation/pull/9016))
+
+Post-release: Updated the command for changing Wazuh server API user passwords in the Password management documentation. ([#9051](https://github.com/wazuh/wazuh-documentation/pull/9051))
+
+Post-release: Updated the Configuring existing components to connect with the new node sections. ([#9057](https://github.com/wazuh/wazuh-documentation/pull/9057))
+
+Post-release: Updated the vulnerability detection compatibility matrix. ([#9060](https://github.com/wazuh/wazuh-documentation/pull/9060))
+
+Post-release: Updated the IT hygiene use cases in the Getting started guide. ([#9071](https://github.com/wazuh/wazuh-documentation/pull/9071))
+
+Post-release: Updated the Deployment on Kubernetes documentation. ([#9022](https://github.com/wazuh/wazuh-documentation/pull/9022))
+
+Post-release: Updated the System Inventory documentation. ([#9052](https://github.com/wazuh/wazuh-documentation/pull/9052)) ([#9053](https://github.com/wazuh/wazuh-documentation/pull/9053)) ([#9067](https://github.com/wazuh/wazuh-documentation/pull/9067)) ([#9070](https://github.com/wazuh/wazuh-documentation/pull/9070)) ([#9073](https://github.com/wazuh/wazuh-documentation/pull/9073))
+
+Post-release: Updated regulatory compliance documentation. ([#9074](https://github.com/wazuh/wazuh-documentation/pull/9074))
+
+Post-release: Updated clarification on ``sca.remote_commands`` flag. ([#9077](https://github.com/wazuh/wazuh-documentation/pull/9077))
+
+Post-release: Updated steps in the Upgrading the Wazuh server section. ([#9094](https://github.com/wazuh/wazuh-documentation/pull/9094))
+
+<a id="fixed-11"></a>
+Fixed
+
+Post-release: Added missing step to Updating old paths in Upgrading Wazuh on Kubernetes. ([#9069](https://github.com/wazuh/wazuh-documentation/pull/9069))
+
+Post-release: Updated the referenced OpenSearch version in the upgrade guide. ([#9068](https://github.com/wazuh/wazuh-documentation/pull/9068))
+
+Post-release: Fixed indentation in ``remove-threat.py`` code line. ([#9078](https://github.com/wazuh/wazuh-documentation/pull/9078))
+
+<a id="removed-2"></a>
+Removed
+
+Post-release: Removed deprecation warnings for legacy operating systems. ([#9011](https://github.com/wazuh/wazuh-documentation/pull/9011))
+
+<a id="v4131"></a>
+[v4.13.1]
+
+<a id="added-12"></a>
+Added
+
+Post-release: Updated the Wazuh Amazon Machine Images (AMI) documentation. ([#8938](https://github.com/wazuh/wazuh-documentation/pull/8938))
+
+Post-release: Added the Wazuh global queries documentation. ([#8949](https://github.com/wazuh/wazuh-documentation/pull/8949))
+
+<a id="changed-11"></a>
+Changed
+
+Post-release: Updated the upgrade guide for Wazuh central components. ([#8934](https://github.com/wazuh/wazuh-documentation/pull/8934)) ([#8941](https://github.com/wazuh/wazuh-documentation/pull/8941)) ([#8944](https://github.com/wazuh/wazuh-documentation/pull/8944)) ([#8947](https://github.com/wazuh/wazuh-documentation/pull/8947)) ([#8956](https://github.com/wazuh/wazuh-documentation/pull/8956))
+
+Post-release: Added indexer connector configuration steps to vulnerability detection documentation and removed troubleshooting section. ([#8942](https://github.com/wazuh/wazuh-documentation/pull/8942))
+
+Post-release: Updated the Navigating the Wazuh dashboard section. ([#8950](https://github.com/wazuh/wazuh-documentation/pull/8950))
+
+Post-release: Updated the System inventory documentation. ([#8955](https://github.com/wazuh/wazuh-documentation/pull/8955))
+
+Post-release: Updated the Getting started guide. ([#8962](https://github.com/wazuh/wazuh-documentation/pull/8962)) ([#8963](https://github.com/wazuh/wazuh-documentation/pull/8963)) ([#8964](https://github.com/wazuh/wazuh-documentation/pull/8964)) ([#8965](https://github.com/wazuh/wazuh-documentation/pull/8965))
+
+Post-release: Updated the URLs of malware samples. ([#8961](https://github.com/wazuh/wazuh-documentation/pull/8961))
+
+Post-release: Updated the installation guide. ([#8936](https://github.com/wazuh/wazuh-documentation/pull/8936))
+
+Post-release: Updated user manual documentation for Wazuh dashboard. ([#8967](https://github.com/wazuh/wazuh-documentation/pull/8967))
+
+Post-release: Updated the prerequisites sub-section in Deployment on Docker. ([#8977](https://github.com/wazuh/wazuh-documentation/pull/8977))
+
+Post-release: Updated the Virtual Machine (VM) documentation. ([#8981](https://github.com/wazuh/wazuh-documentation/pull/8981))
+
+Post-release: Removed duplicated introductory bullets from source/cloud-security/azure/index.rst ([#8987](https://github.com/wazuh/wazuh-documentation/pull/8987))
+
+Post-release: Updated the Installation from sources documentation. ([#8980](https://github.com/wazuh/wazuh-documentation/pull/8980))
+
+Post-release: Updated the Amazon Security Lake integration documentation. ([#8989](https://github.com/wazuh/wazuh-documentation/pull/8989))
+
+Post-release: Updated the Deployment with Puppet documentation. ([#8994](https://github.com/wazuh/wazuh-documentation/pull/8994))
+
+Post-release: Updated the vulnerability detection compatibility matrix. ([#9061](https://github.com/wazuh/wazuh-documentation/pull/9061))
+
+Post-release: Updated the Resources table in the RBAC reference guide. ([#9119](https://github.com/wazuh/wazuh-documentation/pull/9119))
+
+Post-release: Updated the Installation from sources documentation. ([#9170](https://github.com/wazuh/wazuh-documentation/pull/9170))
+
+Post-release: Updated the Wazuh signed package (WPK) files section. ([#9176](https://github.com/wazuh/wazuh-documentation/pull/9176))
+
+<a id="fixed-12"></a>
+Fixed
+
+Post-release: Removed wazuh-states-fim index references. ([#8948](https://github.com/wazuh/wazuh-documentation/pull/8948))
+
+Post-release: Removed unnecessary code block from agent installation from sources. ([#9000](https://github.com/wazuh/wazuh-documentation/pull/9000))
+
+Post-release: Fixed indentation in ``remove-threat.py`` code line. ([#9079](https://github.com/wazuh/wazuh-documentation/pull/9079))
+
+<a id="removed-3"></a>
+Removed
+
+Post-release: Removed deprecation warnings for legacy operating systems. ([#9013](https://github.com/wazuh/wazuh-documentation/pull/9013))
+
+<a id="v4130"></a>
+[v4.13.0]
+
+<a id="added-13"></a>
+Added
+
+Added support for CentOS Stream 10. ([#8607](https://github.com/wazuh/wazuh-documentation/pull/8607))
+
+Added support for Red Hat Enterprise Linux 10. ([#8608](https://github.com/wazuh/wazuh-documentation/pull/8608))
+
+Added the Wazuh indexer configuration on hardened endpoints section. ([#8437](https://github.com/wazuh/wazuh-documentation/pull/8437))
+
+Added steps to preserve custom settings in the JVM configuration file during the indexer upgrade. ([#8603](https://github.com/wazuh/wazuh-documentation/pull/8603))
+
+Added the CentOS Stream 9 SCA policy reference to the Available SCA policies section. ([#8602](https://github.com/wazuh/wazuh-documentation/pull/8602))
+
+Added steps for installing a single node stack via Puppet in Deployment with Puppet. ([#8611](https://github.com/wazuh/wazuh-documentation/pull/8611))
+
+Added information about filters in the Windows agent to block UNC and mapped drive paths to mitigate NetNTLMv2 vulnerabilities. ([#8665](https://github.com/wazuh/wazuh-documentation/pull/8665))
+
+Prepared the Wazuh global queries documentation for publication. ([#8722](https://github.com/wazuh/wazuh-documentation/pull/8722)) ([#8909](https://github.com/wazuh/wazuh-documentation/pull/8909))
+
+Added `remoted.ctrl_msg_queue_size` internal option and new remoted statistics fields. ([#8769](https://github.com/wazuh/wazuh-documentation/pull/8769))
+
+Added Wazuh agent deployment on Docker documentation. ([#8798](https://github.com/wazuh/wazuh-documentation/pull/8798)) ([#8845](https://github.com/wazuh/wazuh-documentation/pull/8845)) ([#8857](https://github.com/wazuh/wazuh-documentation/pull/8857))
+
+Added Wazuh indexer indices. ([#8887](https://github.com/wazuh/wazuh-documentation/pull/8887))
+
+Added deprecation warnings for legacy operating systems. ([#8897](https://github.com/wazuh/wazuh-documentation/pull/8897))
+
+Post-release: Added the `wazuh_modules.rlimit_nofile` internal configuration option. ([#8922](https://github.com/wazuh/wazuh-documentation/pull/8922))
+
+<a id="changed-12"></a>
+Changed
+
+Updated the Available SCA policies section. ([#8602](https://github.com/wazuh/wazuh-documentation/pull/8602))
+
+Added instructions for retrieving the correct Puppet agent node name and to set the ``<PUPPET_AGENT_NODE_NAME>`` placeholder in the manifest. ([#8664](https://github.com/wazuh/wazuh-documentation/pull/8664))
+
+Updated the Deployment on Docker section. ([#8688](https://github.com/wazuh/wazuh-documentation/pull/8688))
+
+Updated default values for `agents_disconnection_time` and `notify_time`. ([#8769](https://github.com/wazuh/wazuh-documentation/pull/8769))
+
+Updated the default value of the `all` attribute in the `ports` Syscollector configuration option. ([#8840](https://github.com/wazuh/wazuh-documentation/pull/8840))
+
+Replaced version references with replacement variables in Wazuh package generation. ([#8906](https://github.com/wazuh/wazuh-documentation/pull/8906))
+
+Updated System inventory documentation. ([#8910](https://github.com/wazuh/wazuh-documentation/pull/8910))
+
+Post-release: Updated 4.13.0 release notes entry. ([#8923](https://github.com/wazuh/wazuh-documentation/pull/8923)) ([#8925](https://github.com/wazuh/wazuh-documentation/pull/8925)) ([#8928](https://github.com/wazuh/wazuh-documentation/pull/8928))
+
+Post-release: Updated steps in Upgrade Guide for exporting customizations from the Wazuh Dashboard. ([#8921](https://github.com/wazuh/wazuh-documentation/pull/8921))
+
+Post-release: Updated references to Twitter. ([#8933](https://github.com/wazuh/wazuh-documentation/pull/8933))
+
+<a id="v4120"></a>
+[v4.12.0]
+
+<a id="added-14"></a>
+Added
+
+Added reference to macOS arm64 WPK. ([#7883](https://github.com/wazuh/wazuh-documentation/pull/7883))
+
+Added Ubuntu 24.04 SCA to the list of available SCAs. ([#8021](https://github.com/wazuh/wazuh-documentation/pull/8021))
+
+Added the `<aws_profile>` authentication parameter to the Amazon Security Lake documentation. ([#8199](https://github.com/wazuh/wazuh-documentation/pull/8199))
+
+Added ARM64 to the central components architecture references. ([#8173](https://github.com/wazuh/wazuh-documentation/pull/8173))
+
+Added a note warning that downgrades to 4.11 and earlier versions from 4.12 and later are not possible. ([#8425](https://github.com/wazuh/wazuh-documentation/pull/8425))
+
+Added new configuration options to the MS Graph integration documentation. ([#8226](https://github.com/wazuh/wazuh-documentation/pull/8226)) ([#8495](https://github.com/wazuh/wazuh-documentation/pull/8495)) ([#8496](https://github.com/wazuh/wazuh-documentation/pull/8496))
+
+Post-release: Added troubleshooting steps to the Virtual Machine (OVA) installation guide. ([#8562](https://github.com/wazuh/wazuh-documentation/pull/8562))
+
+Post-release: Added a note in the installation guide about firewall configuration to prevent communication issues between Wazuh components. ([#8622](https://github.com/wazuh/wazuh-documentation/pull/8622))
+
+Post-release: Added instruction to run Windows backup commands in CMD (Command Prompt) and not PowerShell. ([#8672](https://github.com/wazuh/wazuh-documentation/pull/8672))
+
+Post-release: Added clarification references to the Agent upgrade module section. ([#8687](https://github.com/wazuh/wazuh-documentation/pull/8687))
+
+Post-release: Added the Wazuh AI Analyst service section to the Cloud service documentation. ([#8690](https://github.com/wazuh/wazuh-documentation/pull/8690))
+
+Post-release: Added DNF package manager support for installation and configuration steps. ([#8689](https://github.com/wazuh/wazuh-documentation/pull/8689))
+
+Post-release: Added security update for the `remove-threat.py` script and a warning to the Detecting and removing malware using VirusTotal integration POC guide. ([#8697](https://github.com/wazuh/wazuh-documentation/pull/8697))
+
+Post-release: Added note about manual replication of `ossec.conf` between master and worker nodes. ([#8720](https://github.com/wazuh/wazuh-documentation/pull/8720))
+
+Post-release: Added a table describing the possible environment statuses in the cloud service documentation. ([#8407](https://github.com/wazuh/wazuh-documentation/pull/8407))
+
+Post-release: Added the Wazuh indexer API reference. ([#8756](https://github.com/wazuh/wazuh-documentation/pull/8756))
+
+Post-release: Added examples of Wazuh tools to the user manual reference. ([#8763](https://github.com/wazuh/wazuh-documentation/pull/8763))
+
+Post-release: Added the `ap-northeast-1` (Tokyo) region. ([#8818](https://github.com/wazuh/wazuh-documentation/pull/8818))
+
+Post-release: Added a Q&A to the Cloud service FAQ section. ([#8832](https://github.com/wazuh/wazuh-documentation/pull/8832))
+
+Post-release: Added agent restart commands to Agent enrollment methods section. ([#8836](https://github.com/wazuh/wazuh-documentation/pull/8836))
+
+Post-release: Added Wazuh Docker support for Windows. ([#8852](https://github.com/wazuh/wazuh-documentation/pull/8852))
+
+Post-release: Added new steps and images to the API Permission section of the Wazuh Microsoft Graph API setup documentation. ([#8898](https://github.com/wazuh/wazuh-documentation/pull/8898))
+
+<a id="changed-13"></a>
+Changed
+
+Updated Wazuh dashboard package generation guide. ([#7961](https://github.com/wazuh/wazuh-documentation/pull/7961))
+
+Updated images in FIM PoC. [#7979](https://github.com/wazuh/wazuh-documentation/pull/7979)
+
+Added clarification about PCRE2 case sensitivity and modifiers in the ruleset XML syntax guide. ([#8717](https://github.com/wazuh/wazuh-documentation/pull/8717))
+
+Replaced the `--version` parameter with `--commit-sha` in the Wazuh dashboard package generation guide. ([#8216](https://github.com/wazuh/wazuh-documentation/pull/8216))
+
+Updated the Filebeat package references in Packages list. ([#8348](https://github.com/wazuh/wazuh-documentation/pull/8348))
+
+Updated Microsoft Entra ID SSO setup steps for the administrator role. ([#8399](https://github.com/wazuh/wazuh-documentation/pull/8399)) ([#8424](https://github.com/wazuh/wazuh-documentation/pull/8424))
+
+Updated filebeat installation commands. ([#8410](https://github.com/wazuh/wazuh-documentation/pull/8410))
+
+Updated the Profiles section in Configuring AWS credentials. ([#8426](https://github.com/wazuh/wazuh-documentation/pull/8426)) ([#8429](https://github.com/wazuh/wazuh-documentation/pull/8429))
+
+Updated the Who-data monitoring on Linux section. ([#8435](https://github.com/wazuh/wazuh-documentation/pull/8435)), ([#8492](https://github.com/wazuh/wazuh-documentation/pull/8492))
+
+Updated the Agents sub-section in Deployment on Kubernetes. ([#8475](https://github.com/wazuh/wazuh-documentation/pull/8475))
+
+Updated the available SCA policies table. ([#8500](https://github.com/wazuh/wazuh-documentation/pull/8500))
+
+Post-release: Updated the 4.12.0 release notes highlights text. ([#8510](https://github.com/wazuh/wazuh-documentation/pull/8510))
+
+Post-release: Changed the Packages list title to Open Virtual Appliances in the Virtual Machine (OVA) section. ([#8514](https://github.com/wazuh/wazuh-documentation/pull/8514))
+
+Post-release: Updated the launchctl `unload` and `load` commands with `launchctl bootout system` and `launchctl bootstrap system`. ([#8591](https://github.com/wazuh/wazuh-documentation/pull/8591))
+
+Post-release: Updated the Wazuh repository addition steps for RHEL 9-compatible systems. ([#8594](https://github.com/wazuh/wazuh-documentation/pull/8594))
+
+Post-release: Updated the `alienvault_reputation.ipset` download link in the Blocking a known malicious actor PoC. ([#8594](https://github.com/wazuh/wazuh-documentation/pull/8604))
+
+Post-release: Updated agent upgrade documentation to include examples for upgrading multiple agents at once using the `-a` flag. ([#8617](https://github.com/wazuh/wazuh-documentation/pull/8617))
+
+Post-release: Updated the Wazuh package generation guide. ([#8600](https://github.com/wazuh/wazuh-documentation/pull/8600)) ([#8626](https://github.com/wazuh/wazuh-documentation/pull/8626))
+
+Post-release: Added steps to export and import dashboard customizations in the upgrade guide. ([#8618](https://github.com/wazuh/wazuh-documentation/pull/8618))
+
+Post-release: Updated the vulnerability detection capability section. ([#8693](https://github.com/wazuh/wazuh-documentation/pull/8693))
+
+Post-release: Changed the warning note on using the `$` and `&` characters when changing passwords in Docker deployments. ([#8694](https://github.com/wazuh/wazuh-documentation/pull/8694))
+
+Post-release: Changed Windows commands in the backup guide to PowerShell. ([#8761](https://github.com/wazuh/wazuh-documentation/pull/8761))
+
+Post-release: Updated 4.12.0 command output examples. ([#8779](https://github.com/wazuh/wazuh-documentation/pull/8779)) ([#8780](https://github.com/wazuh/wazuh-documentation/pull/8780))
+
+Post-release: Updated the Deployment on Docker documentation. ([#8793](https://github.com/wazuh/wazuh-documentation/pull/8793)) ([#8839](https://github.com/wazuh/wazuh-documentation/pull/8839)) ([#8843](https://github.com/wazuh/wazuh-documentation/pull/8843))
+
+Post-release: Updated the Windows logo in the documentation. ([#8804](https://github.com/wazuh/wazuh-documentation/pull/8804))
+
+Post-release: Updated the offline installation guide. ([#8803](https://github.com/wazuh/wazuh-documentation/pull/8803))
+
+Post-release: Updated the instruction and images in Wazuh server API getting started documentation to reflect the new navigation path (Server management > Dev Tools). ([#8811](https://github.com/wazuh/wazuh-documentation/pull/8811))
+
+Post-release: Updated the Getting started with Wazuh - Architecture documentation. ([#8819](https://github.com/wazuh/wazuh-documentation/pull/8819))
+
+Post-release: Changed Suricata ruleset file permission in POC guide. ([#8821](https://github.com/wazuh/wazuh-documentation/pull/8821))
+
+Post-release: Adjusted the Data analysis documentation. ([#8850](https://github.com/wazuh/wazuh-documentation/pull/8850))
+
+Post-release: Updated images and powershell command in Leveraging LLMs for alert enrichment PoC. [#8888](https://github.com/wazuh/wazuh-documentation/pull/8888)
+
+Post-release: Updated RBAC reference to show actual policy names with wildcards. ([#8904](https://github.com/wazuh/wazuh-documentation/pull/8904))
+
+Post-release: Updated steps in Upgrade Guide for exporting customizations from the Wazuh Dashboard. ([#8929](https://github.com/wazuh/wazuh-documentation/pull/8929))
+
+Post-release: Updated user manual documentation for Wazuh dashboard. ([#8970](https://github.com/wazuh/wazuh-documentation/pull/8970))
+
+Post-release: Updated the Installation from sources documentation. ([#8988](https://github.com/wazuh/wazuh-documentation/pull/8988))
+
+Post-release: Updated the Amazon Security Lake integration documentation. ([#8990](https://github.com/wazuh/wazuh-documentation/pull/8990))
+
+Post-release: Updated the vulnerability detection compatibility matrix. ([#9062](https://github.com/wazuh/wazuh-documentation/pull/9062))
+
+Post-release: Updated the Resources table in the RBAC reference guide. ([#9120](https://github.com/wazuh/wazuh-documentation/pull/9120))
+
+Post-release: Updated the Installation from sources documentation. ([#9173](https://github.com/wazuh/wazuh-documentation/pull/9173))
+
+Post-release: Updated the Wazuh signed package (WPK) files section. ([#9177](https://github.com/wazuh/wazuh-documentation/pull/9177))
+
+<a id="fixed-13"></a>
+Fixed
+
+Post-release: Updated the package list to include missing ARM64 architecture references for the Wazuh indexer and Wazuh dashboard. ([#8511](https://github.com/wazuh/wazuh-documentation/pull/8511))
+
+Post-release: Fixed Filebeat DEB package URLs in the package list. ([#8577](https://github.com/wazuh/wazuh-documentation/pull/8577))
+
+Post-release: Removed outdated version notices from documentation. ([#8578](https://github.com/wazuh/wazuh-documentation/pull/8578))
+
+Post-release: Fixed command errors in the "Starting the service" section of the Wazuh server cluster documentation. ([#8587](https://github.com/wazuh/wazuh-documentation/pull/8587))
+
+Post-release: Removed extra `PUT /rules/files/{filename}` reference from `rules:delete` ([#8599](https://github.com/wazuh/wazuh-documentation/pull/8599))
+
+Post-release: Fixed incorrect reference from Ubuntu to Windows endpoint in the SCA use case documentation. ([#8629](https://github.com/wazuh/wazuh-documentation/pull/8629))
+
+Post-release: Fixed incorrect URL and filepaths in the YARA download steps of the Leveraging LLMs for Alert Enrichment PoC. ([#8686](https://github.com/wazuh/wazuh-documentation/pull/8686))
+
+Post-release: Corrected inaccurate references to the Wazuh Syscollector module. ([#8713](https://github.com/wazuh/wazuh-documentation/pull/8713))
+
+Post-release: Corrected git command syntax in the Wazuh dashboard package generation guide. ([#8903](https://github.com/wazuh/wazuh-documentation/pull/8903))
+
+Post-release: Removed unnecessary code block from agent installation from sources. ([#9002](https://github.com/wazuh/wazuh-documentation/pull/9002))
+
+Post-release: Fixed indentation in ``remove-threat.py`` code line. ([#9080](https://github.com/wazuh/wazuh-documentation/pull/9080))
+
+<a id="removed-4"></a>
+Removed
+
+Post-release: Removed `us-gov-*` AWS regions references. ([#8791](https://github.com/wazuh/wazuh-documentation/pull/8791))
+
+<a id="v4112"></a>
+[v4.11.2]
+
+<a id="added-15"></a>
+Added
+
+Added the ``authentication_pool_size`` option to the Wazuh server API configuration section. ([#8287](https://github.com/wazuh/wazuh-documentation/pull/8287))
+
+Added clarifications that `<disabled>` is required in `active-response` blocks in Use cases and Active response reference sections. ([#8428](https://github.com/wazuh/wazuh-documentation/pull/8428))
+
+Added new section on creating agent groups. ([#8436](https://github.com/wazuh/wazuh-documentation/pull/8436))
+
+Post-release: Backported troubleshooting steps to the Virtual Machine (OVA) installation guide. ([#8563](https://github.com/wazuh/wazuh-documentation/pull/8563))
+
+Post-release: Added security update for the `remove-threat.py` script and a warning to the Detecting and removing malware using VirusTotal integration POC guide. ([#8705](https://github.com/wazuh/wazuh-documentation/pull/8705))
+
+Post-release: Changed Windows commands in the backup guide to PowerShell. ([#8764](https://github.com/wazuh/wazuh-documentation/pull/8764))
+
+Post-release: Updated the offline installation guide. ([#8806](https://github.com/wazuh/wazuh-documentation/pull/8806))
+
+<a id="changed-14"></a>
+Changed
+
+Post-release: Clarified the conditions for the Wazuh repository disabling recommendation upon installation. ([#8408](https://github.com/wazuh/wazuh-documentation/pull/8408))
+
+Post-release: Updated certificate location reference for Logstash and file permissions change command. ([#8415](https://github.com/wazuh/wazuh-documentation/pull/8415))
+
+Post-release: Moved the note in the Configuring vulnerability detection documentation to appear after the `<indexer>` block. ([#8427](https://github.com/wazuh/wazuh-documentation/pull/8427))
+
+Post-release: Included checkout command in Amazon Security Lake integration guide. ([#8423](https://github.com/wazuh/wazuh-documentation/pull/8423))
+
+Post-release: Updated Vulnerability Detection Proof of Concept. ([#8422](https://github.com/wazuh/wazuh-documentation/pull/8422))
+
+Post-release: Updated images and powershell command in Leveraging LLMs for alert enrichment PoC. [#8889](https://github.com/wazuh/wazuh-documentation/pull/8889)
+
+Post-release: Adjusted the Data analysis documentation. ([#8899](https://github.com/wazuh/wazuh-documentation/pull/8899))
+
+Post-release: Updated user manual documentation for Wazuh dashboard. ([#8972](https://github.com/wazuh/wazuh-documentation/pull/8972))
+
+Post-release: Updated the Amazon Security Lake integration documentation. ([#8991](https://github.com/wazuh/wazuh-documentation/pull/8991))
+
+Post-release: Updated the vulnerability detection compatibility matrix. ([#9063](https://github.com/wazuh/wazuh-documentation/pull/9063))
+
+Post-release: Fixed indentation in ``remove-threat.py`` code line. ([#9081](https://github.com/wazuh/wazuh-documentation/pull/9081))
+
+Post-release: Updated the Resources table in the RBAC reference guide. ([#9121](https://github.com/wazuh/wazuh-documentation/pull/9121))
+
+<a id="fixed-14"></a>
+Fixed
+
+Post-release: Added missing Oracle Linux to the vulnerability detection compatibility matrix and fixed heading level. ([#8391](https://github.com/wazuh/wazuh-documentation/pull/8391))
+
+Post-release: Added specific version for Email app in Shuffle integration section. ([#8420](https://github.com/wazuh/wazuh-documentation/pull/8420))
+
+Post-release: Fixed mispelled word "address" occurrences. ([#8421](https://github.com/wazuh/wazuh-documentation/pull/8421))
+
+Post-release: Fixed `wazuh-certs-tool` download command from static version number to use `WAZUH_CURRENT_VERSION` ([#8473](https://github.com/wazuh/wazuh-documentation/pull/8473))
+
+Post-release: Add missing changes in Download configuration files from remote location section. ([#8476](https://github.com/wazuh/wazuh-documentation/pull/8476))
+
+Post-release: Reverted new configuration options added to the MS Graph integration documentation. ([#8495](https://github.com/wazuh/wazuh-documentation/pull/8495))
+
+<a id="v4111"></a>
+[v4.11.1]
+
+Post-release: Added missing entry to 4.11.1 release notes. ([#8280](https://github.com/wazuh/wazuh-documentation/pull/8280))
+
+Post-release: Added clarification about the user account used to access the Wazuh dashboard. ([#8282](https://github.com/wazuh/wazuh-documentation/pull/8282))
+
+<a id="v4110"></a>
+[v4.11.0]
+
+<a id="added-16"></a>
+Added
+
+Added architecture information to assistant pages. ([#7830](https://github.com/wazuh/wazuh-documentation/pull/7830))
+
+Added CISA to the vulnerability source enumerations and compatibility matrix. ([#8201](https://github.com/wazuh/wazuh-documentation/pull/8201))
+
+Post-release: Added new configuration options to the MS Graph integration documentation. ([#8226](https://github.com/wazuh/wazuh-documentation/pull/8226))
+
+Post-release: Added Wazuh indexer API documentation. ([#8231](https://github.com/wazuh/wazuh-documentation/pull/8231))
+
+Post-release: Added a table describing the possible environment statuses in the cloud service documentation. ([#8407](https://github.com/wazuh/wazuh-documentation/pull/8407))
+
+<a id="changed-15"></a>
+Changed
+
+Updated note about uninstalling Wazuh agents in Solaris. ([#7925](https://github.com/wazuh/wazuh-documentation/pull/7925))
+
+Updated screenshots from System Inventory.  ([#8044](https://github.com/wazuh/wazuh-documentation/pull/8044))
+
+Updated the Virtual Machine (OVA) and Amazon Machine Images (AMI) sections. Updated the operating system component to AL2023. ([#8201](https://github.com/wazuh/wazuh-documentation/pull/8201))
+
+Post-release: Updated the explanation of the `frequency` option in the `localfile` documentation.
+
+Post-release: Updated the Filebeat installation commands. ([#8390](https://github.com/wazuh/wazuh-documentation/pull/8390))
+
+Post-release: Changed Suricata ruleset file permissions in POC guide. ([#8822](https://github.com/wazuh/wazuh-documentation/pull/8822))
+
+<a id="removed-5"></a>
+Removed
+
+Removed note about plugins and upgrading Wazuh central components. ([#8020](https://github.com/wazuh/wazuh-documentation/pull/8020))
+
+<a id="fixed-15"></a>
+Fixed
+
+Post-release: Removed prompt symbol from code block. ([#8211](https://github.com/wazuh/wazuh-documentation/pull/8211))
+
+Post-release: Increased note and code block indentation. ([8213](https://github.com/wazuh/wazuh-documentation/pull/8213))
+
+Post-release: Fixed script argument in dashboard package generation command. ([8265](https://github.com/wazuh/wazuh-documentation/pull/8265))
+
+Post-release: Fixed OpenSearch Dashboards version reference. ([8265](https://github.com/wazuh/wazuh-documentation/pull/8265))
+
+<a id="v4105"></a>
+[v4.10.5]
+
+Support for Wazuh 4.10.5
+
+<a id="v4104"></a>
+[v4.10.4]
+
+Support for Wazuh 4.10.4
+
+<a id="v4103"></a>
+[v4.10.3]
+
+Support for Wazuh 4.10.3
+
+<a id="v4102"></a>
+[v4.10.2]
+
+<a id="fixed-16"></a>
+Fixed
+
+Removed prompt symbol from code block. ([#8561](https://github.com/wazuh/wazuh-documentation/pull/8561))
+
+Added specific version for Email app in Shuffle integration section. ([#8565](https://github.com/wazuh/wazuh-documentation/pull/8565))
+
+<a id="v4101"></a>
+[v4.10.1]
+
+Support for Wazuh 4.10.1
+
+<a id="v4100"></a>
+[v4.10.0]
+
+<a id="added-17"></a>
+Added
+
+Added documentation for the MDM Intune integration. ([#7661](https://github.com/wazuh/wazuh-documentation/pull/7661))
+
+Added the agent uninstall RBAC action. ([#7708](https://github.com/wazuh/wazuh-documentation/pull/7708))
+
+Added the ``anti_tampering`` configuration block documentation. ([#7580](https://github.com/wazuh/wazuh-documentation/pull/7580))
+
+Added PowerPC package references back to the packages list. ([#7724](https://github.com/wazuh/wazuh-documentation/pull/7724))
+
+Added dependencies to the dependency requirements in the Offline installation guide using the installation assistant. ([#7931](https://github.com/wazuh/wazuh-documentation/pull/7931))
+
+Added ``wazuh.updates.disabled`` to the Wazuh dashboard settings reference document. ([#7977](https://github.com/wazuh/wazuh-documentation/pull/7977))
+
+Added a troubleshooting guide to the Vulnerability detection capability section. ([#8014](https://github.com/wazuh/wazuh-documentation/pull/8014))
+
+<a id="changed-16"></a>
+Changed
+
+Replaced the commands to start and stop the Wazuh agent on macOS systems. ([#7498](https://github.com/wazuh/wazuh-documentation/pull/7498))
+
+Updated the available options and examples for the MSI package generation command. ([#7501](https://github.com/wazuh/wazuh-documentation/pull/7501))
+
+Updated the available SCA policies table. ([#7698](https://github.com/wazuh/wazuh-documentation/pull/7698))
+
+Updated default and allowed ``chunk_size`` values for upgrading agents using wpk files. ([#7717](https://github.com/wazuh/wazuh-documentation/pull/7717))
+
+Updated upgrading steps for Wazuh on Docker and Wazuh on Kubernetes deployments. ([#7859](https://github.com/wazuh/wazuh-documentation/pull/7859))
+
+Replaced ``wazuh-packages`` repository references with ``wazuh-virtual-machines`` in the OVA generation guide. ([#7926](https://github.com/wazuh/wazuh-documentation/pull/7926))
+
+Updated agent dashboard screenshots: Inventory, Stats, and Configuration. ([#7942](https://github.com/wazuh/wazuh-documentation/pull/7942))
+
+Updated references for the new Wazuh dashboard Agents management section. ([#7944](https://github.com/wazuh/wazuh-documentation/pull/7944))
+
+Replaced VirusTotal screenshot in the getting started guide. ([#7946](https://github.com/wazuh/wazuh-documentation/pull/7946))
+
+Updated malware detection screenshots to include VirusTotal. ([#7975](https://github.com/wazuh/wazuh-documentation/pull/7975))
+
+Updated Inventory Data page screenshots to reflect the newly added tabs: Software, Network, and Processes. ([#7976 ](https://github.com/wazuh/wazuh-documentation/pull/7976))
+
+Changed ``urllib3`` dependency version to ``1.26.20`` and fixed references to the minimum Python version. ([#7978](https://github.com/wazuh/wazuh-documentation/pull/7978))
+
+Updated references to the ``wazuh-packages`` repository in commands for building agent packages to reflect the latest repository structure. ([#7995](https://github.com/wazuh/wazuh-documentation/pull/7995))
+
+Updated dashboard query configuration screenshots. ([#8027](https://github.com/wazuh/wazuh-documentation/pull/8027))
+
+Improved Password management section. ([#8026](https://github.com/wazuh/wazuh-documentation/pull/8026))
+
+<a id="fixed-17"></a>
+Fixed
+
+Updated URL in Puppet agent installation step. ([#7920](https://github.com/wazuh/wazuh-documentation/pull/7920))
+
+Added ``gnupg`` to the dependencies installation step in the Install Ansible guide. ([#7932](https://github.com/wazuh/wazuh-documentation/pull/7932))
+
+Added step in the Upgrading Wazuh Docker guide. ([#7929](https://github.com/wazuh/wazuh-documentation/pull/7929))
+
+Fixed Securing your Wazuh installation steps for distributed deployments in Password management section. ([#8026](https://github.com/wazuh/wazuh-documentation/pull/8026))
+
+<a id="removed-6"></a>
+Removed
+
+Removed the step to disable the Wazuh manager service from the Uninstalling the Wazuh central components guide. ([#7814](https://github.com/wazuh/wazuh-documentation/pull/7814))
+
+Removed ``wazuh-packages`` repository reference from release notes. ([#7970](https://github.com/wazuh/wazuh-documentation/pull/7970))
+
+<a id="v492"></a>
+[v4.9.2]
+
+<a id="added-18"></a>
+Added
+
+Updated the API host default value. ([#7933](https://github.com/wazuh/wazuh-documentation/pull/7933))
+
+<a id="v491"></a>
+[v4.9.1]
+
+<a id="added-19"></a>
+Added
+
+Added dependency requirements to the offline installation guide. ([#7755](https://github.com/wazuh/wazuh-documentation/pull/7755))
+
+Added `SECURITY.md` to the Wazuh documentation repository. ([#7764](https://github.com/wazuh/wazuh-documentation/pull/7764))
+
+Added support for Python 3.12 in configuration steps. ([#7673](https://github.com/wazuh/wazuh-documentation/pull/7673))
+
+Added ARM64 Wazuh manager package references to Packages list. ([#7806](https://github.com/wazuh/wazuh-documentation/pull/7806))
+
+Added macOS Sequoia 15 to the Available SCA policies list. ([#7864](https://github.com/wazuh/wazuh-documentation/pull/7864))
+
+<a id="changed-17"></a>
+Changed
+
+Replaced  Wazuh keystore password insertion commands with a safer method and added a new parameter to the list of available options. ([#7593](https://github.com/wazuh/wazuh-documentation/pull/7593))
+
+Restored Wazuh dashboard package revision number. ([#7762](https://github.com/wazuh/wazuh-documentation/pull/7762))
+
+<a id="fixed-18"></a>
+Fixed
+
+Added a step for creating a retention policy using the Visual editor in the Index life management section. ([#7685](https://github.com/wazuh/wazuh-documentation/pull/7685))
+
+Fixed debugging command for the Wazuh dashboard. ([#7769](https://github.com/wazuh/wazuh-documentation/pull/7769))
+
+Fixed Wazuh indexer repository reference in the Wazuh indexer package generation guide. ([#7779](https://github.com/wazuh/wazuh-documentation/pull/7779))
+
+Fixed highlighting in Docker compose configuration file example. ([#7867](https://github.com/wazuh/wazuh-documentation/pull/7867))
+
+<a id="removed-7"></a>
+Removed
+
+Removed the command to delete `opensearch_dashboards.yml` in the Upgrading the Wazuh dashboard section. ([#7777](https://github.com/wazuh/wazuh-documentation/pull/7777))
+
+Removed the step to delete ss4o index templates in Upgrading the Wazuh indexer. ([#7810](https://github.com/wazuh/wazuh-documentation/pull/7810))
+
+<a id="v490"></a>
+[v4.9.0]
+
+<a id="added-20"></a>
+Added
+
+Added AWS Security Hub section to the monitoring AWS based services documentation. ([#7111](https://github.com/wazuh/wazuh-documentation/pull/7111)) ([#7649](https://github.com/wazuh/wazuh-documentation/pull/7649))
+
+Added custom Filebeat user information and deleted obsolete information about ossec.conf file on Wazuh server. ([#7382](https://github.com/wazuh/wazuh-documentation/pull/7382))
+
+Added journald log collection documentation. ([#7363](https://github.com/wazuh/wazuh-documentation/pull/7363))
+
+Added documentation for Wazuh dashboard Packages generation. ([#7356](https://github.com/wazuh/wazuh-documentation/pull/7356))
+
+Added documentation for Wazuh Indexer Packages generation. ([#7355](https://github.com/wazuh/wazuh-documentation/pull/7355))
+
+Added instructions to collect core dumps in Red Hat based endpoints. ([#7347](https://github.com/wazuh/wazuh-documentation/pull/7347))
+
+Added documentation for Wazuh as a custom source for the Amazon Security Lake integration. ([#7310](https://github.com/wazuh/wazuh-documentation/pull/7310)) ([#7586](https://github.com/wazuh/wazuh-documentation/pull/7586))
+
+Added instructions to collect core dumps in Windows endpoints. ([#7299](https://github.com/wazuh/wazuh-documentation/pull/7299))
+
+Added python and pip installation templates. ([#7298](https://github.com/wazuh/wazuh-documentation/pull/7298))
+
+Added a note to warns of default auditd rule in some system that prevent Wazuh from working properly. ([#7291](https://github.com/wazuh/wazuh-documentation/pull/7291))
+
+Added core dumps collection documentation. ([#7281](https://github.com/wazuh/wazuh-documentation/pull/7281))
+
+Added HAProxy helper documentation. ([#7279](https://github.com/wazuh/wazuh-documentation/pull/7279)) ([#7403](https://github.com/wazuh/wazuh-documentation/pull/7403))
+
+Added ability to disable the edition of configuration through API endpoints and UI. ([#7220](https://github.com/wazuh/wazuh-documentation/pull/7220))
+
+Added journald log format to localfile reference. ([#7202](https://github.com/wazuh/wazuh-documentation/pull/7202))
+
+Added required dependencies for AIX agent installation. ([#7196]https://github.com/wazuh/wazuh-documentation/pull/7196)
+
+Added functionality to forward alerts to Fluentd. ([#6691](https://github.com/wazuh/wazuh-documentation/pull/6691))
+
+Added the ``<forward_to>`` global option to the ``ossec.conf`` configuration reference. ([#6974](https://github.com/wazuh/wazuh-documentation/pull/6974))
+
+Added guide to install Wazuh components offline using the assistant. ([#6920](https://github.com/wazuh/wazuh-documentation/pull/6920)) ([#7571](https://github.com/wazuh/wazuh-documentation/pull/7571)) ([#7672](https://github.com/wazuh/wazuh-documentation/pull/7672))
+
+Added storage roles to the Creating Google Cloud credentials steps. ([#7577](https://github.com/wazuh/wazuh-documentation/pull/7577))
+
+Added the NumPy dependency to the AWS prerequisites. ([#7589](https://github.com/wazuh/wazuh-documentation/pull/7589))
+
+Updated the Available SCA policies table. ([#7644](https://github.com/wazuh/wazuh-documentation/pull/7644)) ([#7697](https://github.com/wazuh/wazuh-documentation/pull/7697))
+
+Added a note advising on the minimum GCC compiler version required to build the Wazuh agent from source. ([#7648](https://github.com/wazuh/wazuh-documentation/pull/7648))
+
+<a id="changed-18"></a>
+Changed
+
+Updated note related to 'never,task' rule in auditd. ([#7381](https://github.com/wazuh/wazuh-documentation/pull/7381))
+
+Update API script file name. ([#7296](https://github.com/wazuh/wazuh-documentation/pull/7296))
+
+Updated syscollector scan minimum value ([#7247](https://github.com/wazuh/wazuh-documentation/pull/7247))
+
+Updated new WPK paths and names. ([#7246](https://github.com/wazuh/wazuh-documentation/pull/7246))
+
+Updated Windows agent GUI image. ([#7241](https://github.com/wazuh/wazuh-documentation/pull/7241))
+
+Updated manual package generation documentation after package migration. ([#7204](https://github.com/wazuh/wazuh-documentation/pull/7204))
+
+Removed the container ``path`` option and changed the container ``name`` in the Azure Storage use case to keep consistency with the values shown in the images. ([#6835](https://github.com/wazuh/wazuh-documentation/pull/6835))
+
+Updated the ``/groups/{group_id}/files/{file_name}`` endpoint references. ([#7006](https://github.com/wazuh/wazuh-documentation/pull/7006))
+
+Bumped cloud services Python minimum version to 3.8. ([#7130](https://github.com/wazuh/wazuh-documentation/pull/7130))
+
+Changed the ``azure-storage-blob`` dependency version. ([#7443](https://github.com/wazuh/wazuh-documentation/pull/7443))
+
+Updated single sign-on user administration section in the User manual to address OpenSearch changes. ([#7630](https://github.com/wazuh/wazuh-documentation/pull/7630)) ([#7635](https://github.com/wazuh/wazuh-documentation/pull/7635))
+
+Updated the Google Cloud Platform posture management documentation. ([#7668](https://github.com/wazuh/wazuh-documentation/pull/7668))
+
+Updated the Custom logos in the Wazuh dashboard documentation. ([#7665](https://github.com/wazuh/wazuh-documentation/pull/7665)) ([#7678](https://github.com/wazuh/wazuh-documentation/pull/7678))
+
+Updated the Creating the ``wazuh-archives-*`` index pattern GIF image in the Event logging section of the Wazuh server documentation. ([#7669](https://github.com/wazuh/wazuh-documentation/pull/7669)).
+
+Updated the Wazuh agent documentation in User manual. ([#7637](https://github.com/wazuh/wazuh-documentation/pull/7637))
+
+Updated the Wazuh server cluster documentation in User manual. ([#7704](https://github.com/wazuh/wazuh-documentation/pull/7704))
+
+Updated the Wazuh dashboard documentation in User manual. ([#7711](https://github.com/wazuh/wazuh-documentation/pull/7711))
+
+<a id="fixed-19"></a>
+Fixed
+
+Fix Amazon Security Lake Source integration validation step. ([#7360](https://github.com/wazuh/wazuh-documentation/pull/7360))
+
+Updated commands in installing the Wazuh agent from sources section. ([#6973](https://github.com/wazuh/wazuh-documentation/pull/6973))
+
+Fixed Indexer management and Dashboard management references. ([#7583](https://github.com/wazuh/wazuh-documentation/pull/7583))
+
+Fixed the name of the property customization.logo.reports. ([#7646](https://github.com/wazuh/wazuh-documentation/pull/7646))
+
+Fixed ``wazuh-template.json`` links. ([#7652](https://github.com/wazuh/wazuh-documentation/pull/7652))
+
+<a id="removed-8"></a>
+Removed
+
+Removed unreferenced files. ([#7222](https://github.com/wazuh/wazuh-documentation/pull/7222))
+
+Removed the ``logs.level`` app setting and the references to the plugin log files and App logs application. ([#6810](https://github.com/wazuh/wazuh-documentation/pull/6810))
+
+Removed PowerPC package references from the packages list. ([#7684](https://github.com/wazuh/wazuh-documentation/pull/7684)) ([#7729](https://github.com/wazuh/wazuh-documentation/pull/7729))
+
+Removed references to Alpine Linux Wazuh agent installation and upgrade. ([#7729](https://github.com/wazuh/wazuh-documentation/pull/7729))
+
+Removed the Policy monitoring capability section. ([#7725](https://github.com/wazuh/wazuh-documentation/pull/7725))
+
+<a id="v482"></a>
+[v4.8.2]
+
+Support for Wazuh 4.8.2
+
+<a id="v481"></a>
+[v4.8.1]
+
+<a id="added-21"></a>
+Added
+
+Added clarification about the conditions to trigger an alert. ([#7506](https://github.com/wazuh/wazuh-documentation/pull/7506))
+
+<a id="changed-19"></a>
+Changed
+
+Updated the available options table for `wazuh-passwords-tool.sh`. ([#7412](https://github.com/wazuh/wazuh-documentation/pull/7412))
+
+Updated `docker` and `urllib3` package version references. ([#7483](https://github.com/wazuh/wazuh-documentation/pull/7483))
+
+Replaced `:ref:` with `:doc:` in AWS documentation. ([#7487](https://github.com/wazuh/wazuh-documentation/pull/7487))
+
+<a id="fixed-20"></a>
+Fixed
+
+Fixed MS Graph module configuration example. ([#7378] (https://github.com/wazuh/wazuh-documentation/pull/7378))
+
+<a id="v480"></a>
+[v4.8.0]
+
+<a id="added-22"></a>
+Added
+
+Added the `timeout` and `retries` settings to the `integratord` configuration. ([#6442](https://github.com/wazuh/wazuh-documentation/pull/6442))
+
+Added support for deploying with Ansible on Windows. ([#6640](https://github.com/wazuh/wazuh-documentation/pull/6640))
+
+Added Wazuh v4.8.0 release notes. ([#6550](https://github.com/wazuh/wazuh-documentation/pull/6550))
+
+Added the ``update_check`` configuration option. ([#6673](https://github.com/wazuh/wazuh-documentation/pull/6673))
+
+Added the Filebeat deployment into Wazuh manager worker nodes for distributed deployments with Puppet. ([#6872](https://github.com/wazuh/wazuh-documentation/pull/6872))
+
+Added keystore management tool section. ([#7000](https://github.com/wazuh/wazuh-documentation/pull/7000)) ([#7072](https://github.com/wazuh/wazuh-documentation/pull/7072))
+
+Added available SCA policies in 4.8.0 version. ([#7049](https://github.com/wazuh/wazuh-documentation/pull/7049))
+
+Added environment variable for Wazuh indexer in Wazuh on Docker deployment. ([#6750](https://github.com/wazuh/wazuh-documentation/pull/6750)) ([#7057](https://github.com/wazuh/wazuh-documentation/pull/7057))
+
+Added step to remove the ss4o index templates from the Wazuh indexer upgrade guide. ([#7093](https://github.com/wazuh/wazuh-documentation/pull/7093))
+
+Added deprecation notice for the ``cache`` Wazuh API configuration option. ([#7106](https://github.com/wazuh/wazuh-documentation/pull/7106))
+
+Added warning about 4.8.0 upgrade. ([#7135](https://github.com/wazuh/wazuh-documentation/pull/7135))
+
+Added the ``indexer`` configuration option to the Wazuh API documentation. ([#7164](https://github.com/wazuh/wazuh-documentation/pull/7164))
+
+Added the ``offline-url`` vulnerability detection option to the Reference guide. ([#7193](https://github.com/wazuh/wazuh-documentation/pull/7193))
+
+Added a note in the Reference guide about the ``<vulnerability-detector>`` change. ([#7243](https://github.com/wazuh/wazuh-documentation/pull/7243))
+
+Added warning message about changing passwords for Docker and Kubernetes deployments. ([#7321](https://github.com/wazuh/wazuh-documentation/pull/7321))
+
+Added sub-section about assigning multiple agents to a group in Grouping agents. ([#7309](https://github.com/wazuh/wazuh-documentation/pull/7309))
+
+Added the ``vulnerability-detection.remediation_lru_size`` internal option to the reference guide. ([#7339](https://github.com/wazuh/wazuh-documentation/pull/7339))
+
+Updated the list of supported Debian and Ubuntu operating system versions in the Deployment with Puppet guide. ([#7331](https://github.com/wazuh/wazuh-documentation/pull/7331))
+
+Added steps to the password change process in the Deployment with Docker and Deployment with Kubernetes guides. ([#7365](https://github.com/wazuh/wazuh-documentation/pull/7365))
+
+Added vulnerability detection configurations to the Upgrade guide. ([#7369](https://github.com/wazuh/wazuh-documentation/pull/7369))
+
+Added the ``integrations`` -> ``virustotal`` -> ``public_key`` API configuration option. [#7359](https://github.com/wazuh/wazuh-documentation/pull/7359)
+
+<a id="changed-20"></a>
+Changed
+
+Updated the `logcollector.ip_update_interval` setting in the Internal options documentation. ([#6373](https://github.com/wazuh/wazuh-documentation/pull/6373))
+
+Updated OSD version to 2.10.0. ([#6568](https://github.com/wazuh/wazuh-documentation/pull/6568))
+
+Updated dashboard settings screenshots. ([#6711](https://github.com/wazuh/wazuh-documentation/pull/6711))
+
+Changed the Wazuh dashboard home URL in single sign on configuration to just the base path. ([#6775](https://github.com/wazuh/wazuh-documentation/pull/6775)) ([#6809](https://github.com/wazuh/wazuh-documentation/pull/6809))
+
+Enhanced the description and examples of the ``discard_regex`` and ``field`` feature. ([#6770](https://github.com/wazuh/wazuh-documentation/pull/6770))
+
+Changed custom branding configuration documents. ([#6779](https://github.com/wazuh/wazuh-documentation/pull/6779))
+
+Changed the ``ssl_protocol`` options and default value. ([#6790](https://github.com/wazuh/wazuh-documentation/pull/6790))
+
+Updated the minimum supported OS requirement for the Wazuh manager. ([#6811](https://github.com/wazuh/wazuh-documentation/pull/6811))
+
+Changed the AWS pyarrow PIP dependency version. ([#6814](https://github.com/wazuh/wazuh-documentation/pull/6814))
+
+Updated a step in Upgrading the Wazuh server. ([#6879](https://github.com/wazuh/wazuh-documentation/pull/6879))
+
+Updated Filebeat module revision to `0.4`. ([#6861](https://github.com/wazuh/wazuh-documentation/pull/6861))
+
+Updated AWS, Azure, and GCP cloud security dependency installation steps. ([#6847](https://github.com/wazuh/wazuh-documentation/pull/6847))
+
+Updated the vulnerability detection (VD) sections following the VD module refactor. ([#6792](https://github.com/wazuh/wazuh-documentation/pull/6792)) ([#7046](https://github.com/wazuh/wazuh-documentation/pull/7046)) ([#7058](https://github.com/wazuh/wazuh-documentation/pull/7058))
+
+Updated screenshot and module reference from Security events to Threat Hunting in Amazon Security Lake section. ([#6956](https://github.com/wazuh/wazuh-documentation/pull/6956))
+
+Improved steps in the Google Cloud Platform prerequisites section. ([#6964](https://github.com/wazuh/wazuh-documentation/pull/6964))
+
+Updated Azure Diagnostics images. ([#6987](https://github.com/wazuh/wazuh-documentation/pull/6987))
+
+Updated Azure Log Analytics images. ([#7002](https://github.com/wazuh/wazuh-documentation/pull/7002))
+
+Updated ``installation-guide/wazuh-server/step-by-step`` considering configuration requirements for vulnerability detection. ([#7149](https://github.com/wazuh/wazuh-documentation/pull/7149))
+
+Updated the ``user-manual/reference/unattended-installation`` section. ([#7162](https://github.com/wazuh/wazuh-documentation/pull/7162))
+
+Changed Docker version requirement to ``6.0.0``. ([#7133](https://github.com/wazuh/wazuh-documentation/pull/7133))
+
+Updated the Vulnerability detection PoC. ([#7215](https://github.com/wazuh/wazuh-documentation/pull/7215))
+
+Replaced ``localhost`` occurrences. ([#7234](https://github.com/wazuh/wazuh-documentation/pull/7234)) ([#7285](https://github.com/wazuh/wazuh-documentation/pull/7285))
+
+Updated the upgrading central components section. ([#7273](https://github.com/wazuh/wazuh-documentation/pull/7273))
+
+Updated the Monitoring Office 365 audit logs section. ([#7275](https://github.com/wazuh/wazuh-documentation/pull/7275))
+
+Updated Installing the Wazuh manager from sources with the latest vulnerability detection changes. ([#7316](https://github.com/wazuh/wazuh-documentation/pull/7316))
+
+Updated screenshots and references to the new 4.8.0 interface look. ([#7280](https://github.com/wazuh/wazuh-documentation/pull/7280))
+
+<a id="fixed-21"></a>
+Fixed
+
+Added the ``wazuh::repo`` class in Puppet manifest example in install Wazuh agent via Puppet section. ([#6954](https://github.com/wazuh/wazuh-documentation/pull/6954))
+
+Removed steps to modify the number of shards from the offline installation guide. ([#6958](https://github.com/wazuh/wazuh-documentation/pull/6958))
+
+Fixed password update step for distributed deployments. ([#6967](https://github.com/wazuh/wazuh-documentation/pull/6967))
+
+Added fixes and updates to the MITRE ATT&CK framework section. ([#6962](https://github.com/wazuh/wazuh-documentation/pull/6962))
+
+Modified master node address name to uppercase. ([#7127](https://github.com/wazuh/wazuh-documentation/pull/7127))
+
+Added securing credentials steps to the Vulnerability detection capability section and the Upgrading central components section. ([#7235](https://github.com/wazuh/wazuh-documentation/pull/7235))
+
+Replaced Wazuh app and Wazuh plugin references with Wazuh dashboard references. ([#7274](https://github.com/wazuh/wazuh-documentation/pull/7274))
+
+<a id="removed-9"></a>
+Removed
+
+Deprecated ``/vulnerability`` API endpoints. ([#6738](https://github.com/wazuh/wazuh-documentation/pull/6738))
+
+Removed implicit ``id!=000`` WQL filter in the search bar. ([#6815](https://github.com/wazuh/wazuh-documentation/pull/6815))
+
+Removed ``launchctl`` unload step from macOS uninstalling manual. ([#7123](https://github.com/wazuh/wazuh-documentation/pull/7123))
+
+Removed ``Wazuh_Ruleset.pdf`` references. ([#7142](https://github.com/wazuh/wazuh-documentation/pull/7142))
+
+Removed documentation for the ``allow-os`` vulnerability detection option. ([#7177](https://github.com/wazuh/wazuh-documentation/pull/7177))
+
+Removed the Migrating from OSSEC section. ([#7301](https://github.com/wazuh/wazuh-documentation/pull/7301))
+
+Removed notes about the lack of multi-tenancy support in MS-Graph sections. ([#7379](https://github.com/wazuh/wazuh-documentation/pull/7379))
+
+<a id="v475"></a>
+[v4.7.5]
+
+Support for Wazuh 4.7.5
+
+<a id="v474"></a>
+[v4.7.4]
+
+Support for Wazuh 4.7.4
+
+<a id="v473"></a>
+[v4.7.3]
+
+Support for Wazuh 4.7.3
+
+<a id="v472"></a>
+[v4.7.2]
+
+<a id="added-23"></a>
+Added
+
+Added custom role creation steps to GCP credentials configuration section. ([#6837](https://github.com/wazuh/wazuh-documentation/pull/6837))
+
+Added a subsection for alert visualization in AWS Security Lake. Added a note about time to display alerts. ([#6838](https://github.com/wazuh/wazuh-documentation/pull/6838))
+
+Added ``urllib3==1.26.18`` dependency to Docker installation steps. ([#6824](https://github.com/wazuh/wazuh-documentation/pull/6824))
+
+<a id="changed-21"></a>
+Changed
+
+Added minimum configuration reading permissions to RBAC section use case. ([#6850](https://github.com/wazuh/wazuh-documentation/pull/6850))
+
+Updated AWS profile configuration instructions. ([#6803](https://github.com/wazuh/wazuh-documentation/pull/6803))
+
+Updated configuration step in Yara use case and Apache web server installation step in Malware detection PoC. ([#6894](https://github.com/wazuh/wazuh-documentation/pull/6894))
+
+<a id="v471"></a>
+[v4.7.1]
+
+<a id="added-24"></a>
+Added
+
+Added deb/rpm selection tabs in offline installation download step. ([#6686](https://github.com/wazuh/wazuh-documentation/pull/6686))
+
+Added missing RBAC policies for ``PUT /decoders/files/{filename}`` and ``PUT /rules/files/{filename}`` API endpoints. ([#6693](https://github.com/wazuh/wazuh-documentation/pull/6693))
+
+Added ``pyarrow_hotfix`` dependency to AWS Prerequisites section. ([#6766](https://github.com/wazuh/wazuh-documentation/pull/6766))
+
+Added clarifications to bucket policy configurations. ([#6769](https://github.com/wazuh/wazuh-documentation/pull/6769))
+
+<a id="changed-22"></a>
+Changed
+
+Updated the Wazuh Ansible documentation, including the Windows agent deployment example and the variable references. ([#6761](https://github.com/wazuh/wazuh-documentation/pull/6761))
+
+<a id="v470"></a>
+[v4.7.0]
+
+<a id="added-25"></a>
+Added
+
+Added support for Amazon Linux 2023 in Vulnerability Detector. ([#6446](https://github.com/wazuh/wazuh-documentation/pull/6446))
+
+Clarified that Syscollector is now capable of fetching the PYPI and node packages. [#3464](https://github.com/wazuh/wazuh-documentation/pull/6346)
+
+Added the Maltiverse integration section. ([#6257](https://github.com/wazuh/wazuh-documentation/pull/6257))
+
+Added the New Custom Logs Buckets documentation. ([#6254](https://github.com/wazuh/wazuh-documentation/pull/6254))
+
+Added the `options` section for integrations. ([#5962](https://github.com/wazuh/wazuh-documentation/pull/5962))
+
+<a id="changed-23"></a>
+Changed
+
+Updated the Maltiverse rule id. ([#6420](https://github.com/wazuh/wazuh-documentation/pull/6420))
+
+Updated `PIP` and `process`` information in ports inventory. ([#6308](https://github.com/wazuh/wazuh-documentation/pull/6308))
+
+Updated the link to "Using Dashboards Query Language". ([#6588](https://github.com/wazuh/wazuh-documentation/pull/6588))
+
+Updated Filebeat module revision to `0.3`. ([#6760](https://github.com/wazuh/wazuh-documentation/pull/6760))
+
+Changed the `allow_higher_versions` default value to `no`. ([#6776](https://github.com/wazuh/wazuh-documentation/pull/6776))
+
+<a id="fixed-22"></a>
+Fixed
+
+Fixed paths to log files in VirusTotal integration section. ([#6651](https://github.com/wazuh/wazuh-documentation/pull/6651))
+
+<a id="removed-10"></a>
+Removed
+
+Removed reference for Wazuh indexer and dashboard mixed node from Deploying with Ansible guide. ([#6653](https://github.com/wazuh/wazuh-documentation/pull/6653))
+
+<a id="v460"></a>
+[v4.6.0]
+
+<a id="added-26"></a>
+Added
+
+Added integration for the Microsoft Graph API. ([#6317](https://github.com/wazuh/wazuh-documentation/pull/6317))
+
+Added support for Debian Bookworm in Vulnerability Detector. ([#6338](https://github.com/wazuh/wazuh-documentation/pull/6368))
+
+Added `<allow_higher_versions>` to 'remote' and 'auth' sections. ([#6333](https://github.com/wazuh/wazuh-documentation/pull/6333))
+
+Added agent version filter option. ([#6312](https://github.com/wazuh/wazuh-documentation/pull/6312))
+
+Added events webhook docs. ([#6151](https://github.com/wazuh/wazuh-documentation/pull/6151))
+
+Added documentation to include user `.aws/config` file as default config. ([#6005](https://github.com/wazuh/wazuh-documentation/pull/6005))
+
+Added the FIM wildcard Windows registers documentation. ([#5932](https://github.com/wazuh/wazuh-documentation/pull/5932))
+
+Support AlmaLinux in Vulnerability Detector. ([#5904](https://github.com/wazuh/wazuh-documentation/pull/5904))
+
+wazuh-authd can now generate X509 certificates. ([#5461](https://github.com/wazuh/wazuh-documentation/pull/5461))
+
+Added a note in the Microsoft Graph documentation stating that multi-tenant is not supported. ([#6505](https://github.com/wazuh/wazuh-documentation/pull/6505))
+
+Added the Email app version for the Shuffle integration. ([#6502](https://github.com/wazuh/wazuh-documentation/pull/6502))
+
+Added differentiation between commands from different Python versions. ([#6514](https://github.com/wazuh/wazuh-documentation/pull/6514))
+
+Added `path` parameter usage example to Azure Storage documentation. ([#6524](https://github.com/wazuh/wazuh-documentation/pull/6524))
+
+Added documentation to change passwords for Kubernetes deployments. ([#6591](https://github.com/wazuh/wazuh-documentation/pull/6591))
+
+Added the Wazuh v4.6.0 release notes. ([#6034](https://github.com/wazuh/wazuh-documentation/pull/6034)) ([#6561](https://github.com/wazuh/wazuh-documentation/pull/6561)) ([#6608](https://github.com/wazuh/wazuh-documentation/pull/6608)) ([#6682](https://github.com/wazuh/wazuh-documentation/pull/6682)) ([#6684](https://github.com/wazuh/wazuh-documentation/pull/6684))
+
+<a id="changed-24"></a>
+Changed
+
+Updated `securityadmin.sh` script output examples in SSO docs. ([#6436](https://github.com/wazuh/wazuh-documentation/pull/6436))
+
+Updated output examples for indexer 4.6.0. ([#6437](https://github.com/wazuh/wazuh-documentation/pull/6437))
+
+Updated the Deploy new agent section from UI screenshots. ([#6841](https://github.com/wazuh/wazuh-documentation/pull/6481))
+
+Changed the Python 3.11 `pyarrow` dependency version. ([#6513](https://github.com/wazuh/wazuh-documentation/pull/6513))
+
+Improved descriptions of the GCP wodle options. ([#6570](https://github.com/wazuh/wazuh-documentation/pull/6570))
+
+Changed references to `wazuh/wazuh-kibana-app` repository. ([#6637](https://github.com/wazuh/wazuh-documentation/pull/6637))
+
+Reduced the EPS limit default value for FIM. ([#6646](https://github.com/wazuh/wazuh-documentation/pull/6646))([#6657](https://github.com/wazuh/wazuh-documentation/pull/6657))
+
+Adjusted the default vacuum settings. ([#6705](https://github.com/wazuh/wazuh-documentation/pull/6705))
+
+<a id="fixed-23"></a>
+Fixed
+
+Fixed the GCP configuration examples. ([#6509](https://github.com/wazuh/wazuh-documentation/pull/6509))
+
+Added several fixes to the Integration guide. ([#6526](https://github.com/wazuh/wazuh-documentation/pull/6526)) ([#6575](https://github.com/wazuh/wazuh-documentation/pull/6575))
+
+<a id="removed-11"></a>
+Removed
+
+Removed references to the Wazuh Kibana plugin and the Wazuh Splunk app. ([#6401](https://github.com/wazuh/wazuh-documentation/pull/6401))
+
+<a id="v454"></a>
+[v4.5.4]
+
+<a id="added-27"></a>
+Added
+
+Added the Wazuh v4.5.4 release notes. ([#6645](https://github.com/wazuh/wazuh-documentation/pull/6645))
+
+<a id="v453"></a>
+[v4.5.3]
+<a id="added-28"></a>
+Added
+
+Added support for Kibana 7.17.13. ([#6531](https://github.com/wazuh/wazuh-documentation/pull/6531))
+
+Add a nested query example in the Filtering data using API queries page. ([#6362](https://github.com/wazuh/wazuh-documentation/pull/6362))
+
+Added clarification to change one user password at a time on Docker. ([#6554](https://github.com/wazuh/wazuh-documentation/pull/6554))
+
+Added clarifications for multi-node deployment steps on Docker. ([#6555](https://github.com/wazuh/wazuh-documentation/pull/6555)) ([#6578](https://github.com/wazuh/wazuh-documentation/pull/6578))
+
+Added the Wazuh v4.5.3 release notes. ([#6522](https://github.com/wazuh/wazuh-documentation/pull/6522))([#6562](https://github.com/wazuh/wazuh-documentation/pull/6562))([#6566](https://github.com/wazuh/wazuh-documentation/pull/6566))([#6590](https://github.com/wazuh/wazuh-documentation/pull/6590))([#6602](https://github.com/wazuh/wazuh-documentation/pull/6602))
+
+<a id="changed-25"></a>
+Changed
+
+Updated the SUSE OVAL URL for offline update. ([#6435](https://github.com/wazuh/wazuh-documentation/pull/6435))
+
+Updated the `agent_upgrade` command `force` flag description in the agent upgrade module documentation. ([#6345](https://github.com/wazuh/wazuh-documentation/pull/6345))
+
+<a id="fixed-24"></a>
+Fixed
+
+Fixed configuration inconsistency in Wazuh Puppet agent installation. ([#6506](https://github.com/wazuh/wazuh-documentation/pull/6506))
+
+Fixed an error on the API reference pages that was preventing the page from loading the header and the version selector. ([#6496](https://github.com/wazuh/wazuh-documentation/pull/6496))
+
+Fixed an error in the first link in the "On this page" lateral menu. ([#6464](https://github.com/wazuh/wazuh-documentation/pull/6464))
+
+Fixed Solaris 10 installation and upgrade steps. ([#6586](https://github.com/wazuh/wazuh-documentation/pull/6586))
+
+<a id="v452"></a>
+[v4.5.2]
+
+<a id="added-29"></a>
+Added
+
+Added the `connection_overtake_time` setting to the remoted documentation. ([#6361](https://github.com/wazuh/wazuh-documentation/pull/6361))
+
+Explained how to use the Wazuh installation assistant `-p|--port` option in the Wazuh dashboard installation guide. ([#6322](https://github.com/wazuh/wazuh-documentation/pull/6322))
+
+Added instructions on how to install Ansible on CentOS/RHEL 8. ([#6341](https://github.com/wazuh/wazuh-documentation/pull/6341))
+
+Added steps for updating Wazuh API user passwords and enhanced instructions for changing passwords of Wazuh indexer users in Docker deployments. ([#6306](https://github.com/wazuh/wazuh-documentation/pull/6306))
+
+Added support for Kibana 7.17.12. ([#6400](https://github.com/wazuh/wazuh-documentation/pull/6400))
+
+Updated the Debian OVAL URL for offline update. ([#6430](https://github.com/wazuh/wazuh-documentation/pull/6430))
+
+Added the Wazuh v4.5.2 release notes. ([#6389](https://github.com/wazuh/wazuh-documentation/pull/6389))
+
+<a id="v451"></a>
+[v4.5.1]
+
+<a id="added-30"></a>
+Added
+
+Included the new macOS Apple silicon installers. ([#6296](https://github.com/wazuh/wazuh-documentation/pull/6296))
+
+Added `discard_regex` parameter to the services section of the AWS module reference. ([#6207](https://github.com/wazuh/wazuh-documentation/pull/6207))
+
+Added support for Kibana 7.17.10 and 7.17.11. ([#6311](https://github.com/wazuh/wazuh-documentation/pull/6311))
+
+Added the Wazuh v4.5.1 release notes. ([#6309](https://github.com/wazuh/wazuh-documentation/pull/6309))
+
+Fixed the 'Setting up Puppet certificates' document indentation. ([#6355](https://github.com/wazuh/wazuh-documentation/pull/6355))
+
+Updated Windows service name. [(#6160](https://github.com/wazuh/wazuh-documentation/pull/6160))

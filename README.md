@@ -1,40 +1,23 @@
-# Wazuh documentation
+Wazuh documentation
 
-Wazuh is a free and open source security platform that unifies XDR and SIEM capabilities. It protects workloads across on-premises, virtualized, containerized, and cloud-based environments.
+This is my copy of the [Wazuh documentation](https://github.com/wazuh/wazuh-documentation). Wazuh and its contributors wrote the original guides. The [official documentation](https://documentation.wazuh.com) has the published versions.
 
-Wazuh helps organizations and individuals to protect their data assets against security threats. It is widely used by thousands of organizations worldwide, from small businesses to large enterprises.
+Wazuh is free, open source security software. It collects security data and helps find threats on computers, servers, containers and cloud systems.
 
-This repository contains the source files for the official Wazuh documentation, available at [documentation.wazuh.com](https://documentation.wazuh.com).
+<a id="branches"></a>
+Branches
 
-## Branches
+The original project's `main` branch holds the guides for the version being developed. Branches such as `4.14` hold guides for specific stable releases. A version still being developed may use a branch such as `5.0.0` before it has a `5.0` branch. Check which branches are available before choosing one.
 
-| Branch | Content |
-|--------|---------|
-| `main` | Documentation for the [latest development version](https://github.com/wazuh/wazuh-documentation/blob/main/source/_variables/settings.py#L24) |
-| `4.14`, `4.13`, `4.12`, ..., `2.1` | Documentation for each stable release |
-| `X.Y.Z` (e.g. `5.0.0`) | Documentation for a release still in development, before it has its own stable `X.Y` branch |
+Build the guides
 
-If you are looking for the documentation source of a specific Wazuh release, switch to the corresponding version branch. A release still in development may not have a plain `X.Y` branch yet — check the repository's branch list for an `X.Y.Z`-named branch matching your target version instead.
+The guides use Sphinx and reStructuredText. Pagefind is an optional search tool. Read [CONTRIBUTING.md](CONTRIBUTING.md) to set up Python and build the pages with `make html`.
 
-## Built with
+Report a problem
 
-- [Sphinx](https://www.sphinx-doc.org/) — documentation generator
-- [reStructuredText](https://docutils.sourceforge.io/rst.html) — markup language
-- [Pagefind](https://pagefind.app/) — optional alternative search engine
+Report problems in the official guides to the [original documentation project](https://github.com/wazuh/wazuh-documentation/issues). Report problems with the software to the [matching Wazuh project](https://github.com/wazuh). The [Wazuh community](https://wazuh.com/community/) also offers help.
 
-## Contributing
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) to set up a local Python environment, build the docs with `make html`, and submit a pull request.
-
-To report a bug or typo in the documentation, open an issue in this repository.
-
-If you have found a problem with Wazuh itself rather than its documentation, please report it in the [appropriate component repository](https://github.com/wazuh).
-
-## Community
-
-Join the conversation and get help at [wazuh.com/community](https://wazuh.com/community/).
-
-## License
+License
 
 Copyright (C) 2015, Wazuh, Inc.
 

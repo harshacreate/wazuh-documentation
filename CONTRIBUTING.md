@@ -1,22 +1,23 @@
-# Contributing to the Wazuh documentation
+<a id="contributing-to-the-wazuh-documentation"></a>
+Contributing to the Wazuh documentation
 
 This document explains how to report issues, set up a local environment, and submit a pull request to the Wazuh documentation repository.
 
----
+<a id="reporting-issues"></a>
+Reporting issues
 
-## Reporting issues
+We value feedback from the community. When reporting an issue, include the URL or section where the problem occurs and provide all relevant details.
 
-We value feedback from the community. When reporting an issue, include the **URL or section** where the problem occurs and provide all relevant details.
+If something in the documentation seems inaccurate, unclear, or confusing, open an issue in this repository.
 
-- If something in the documentation seems inaccurate, unclear, or confusing, open an issue in this repository.
-- If you encounter bugs or unexpected behavior when using Wazuh itself, report it in the corresponding component repository:
-  - [All Wazuh repositories](https://github.com/wazuh)
+If you encounter bugs or unexpected behavior when using Wazuh itself, report it in the corresponding component repository:
+
+[All Wazuh repositories](https://github.com/wazuh)
 
 Every pull request must be associated with an open issue. If one does not exist yet, please create it before submitting your PR.
 
----
-
-## Branching
+<a id="branching"></a>
+Branching
 
 Refer to the [branch model in README.md](README.md#branches) for an overview of how branches map to Wazuh versions.
 
@@ -26,17 +27,20 @@ A release still in development may not have a plain `X.Y` branch yet. For exampl
 
 Long-lived branches (`main` and version branches) are protected. Only authorized members of the documentation team can merge changes into them.
 
----
+<a id="setting-up-a-local-environment"></a>
+Setting up a local environment
 
-## Setting up a local environment
+<a id="prerequisites"></a>
+Prerequisites
 
-### Prerequisites
+Python 3 and `pip`
 
-- Python 3 and `pip`
-- `git`
-- `make`
+`git`
 
-### Build the documentation
+`make`
+
+<a id="build-the-documentation"></a>
+Build the documentation
 
 With a virtual environment created and activated:
 
@@ -60,34 +64,38 @@ To remove previous builds:
 make clean
 ```
 
----
+<a id="submitting-a-contribution"></a>
+Submitting a contribution
 
-## Submitting a contribution
-
-### 1. Fork and create a branch
+<a id="1-fork-and-create-a-branch"></a>
+1. Fork and create a branch
 
 Fork the repository and create a branch from the appropriate base branch. Follow this naming convention:
 
-| Type | Branch name |
-|------|-------------|
-| Bug fix | `bug/<issueID>-short-description` |
-| New content or enhancement | `enhancement/<issueID>-short-description` |
-| Test-related | `test/<issueID>-short-description` |
-| Other changes (e.g. rollbacks) | `change/<issueID>-short-description` |
+Bug fix: `bug/<issueID>-short-description`
+
+New content or enhancement: `enhancement/<issueID>-short-description`
+
+Test-related: `test/<issueID>-short-description`
+
+Other changes (e.g. rollbacks): `change/<issueID>-short-description`
+
 
 Use lowercase letters, numbers, and hyphens. Avoid spaces and special characters. Replace `<issueID>` with the corresponding issue number.
 
 Example: `bug/1234-fix-agent-installation-steps`
 
-### 2. Make your changes
+<a id="2-make-your-changes"></a>
+2. Make your changes
 
 Follow the writing and formatting guidelines below before committing.
 
-### 3. Commit your changes
+<a id="3-commit-your-changes"></a>
+3. Commit your changes
 
 Write clear commit messages that describe what changed and why. Feel free to make as many commits as needed while working on your branch.
 
-**Every commit must be signed and show as verified on GitHub.** This repository's branches enforce required commit signatures, so a PR containing unsigned commits cannot be merged, no matter how many approvals it has.
+Every commit must be signed and show as verified on GitHub. This repository's branches enforce required commit signatures, so a PR containing unsigned commits cannot be merged, no matter how many approvals it has.
 
 To sign your commits:
 
@@ -100,22 +108,25 @@ git config commit.gpgsign true
 
 If you already made unsigned commits, sign them retroactively, for example with an interactive rebase (`git rebase --exec 'git commit --amend --no-edit -S' -i <base-commit>`), then force-push the branch.
 
-### 4. Open a pull request
+<a id="4-open-a-pull-request"></a>
+4. Open a pull request
 
 Open a pull request against the appropriate base branch. In your PR description:
 
-- Explain what the PR changes and why.
-- Link to the related issue. You can use the `closes #<issueID>` keyword.
-- Add links to any relevant external resources or related PRs.
-- Resolve any merge conflicts before requesting review.
+Explain what the PR changes and why.
+
+Link to the related issue. You can use the `closes #<issueID>` keyword.
+
+Add links to any relevant external resources or related PRs.
+
+Resolve any merge conflicts before requesting review.
 
 The documentation team will review your PR. At least one approval from a team member is required before merging.
 
 Before submitting, make sure your PR meets the checklist in the pull request template.
 
----
-
-## Updating CHANGELOG.md
+<a id="updating-changelogmd"></a>
+Updating CHANGELOG.md
 
 Add an entry under the corresponding version header using the following format:
 
@@ -135,13 +146,13 @@ Add an entry under the corresponding version header using the following format:
 - Description of the fix. ([#PR](https://github.com/wazuh/wazuh-documentation/pull/PR))
 ```
 
-Use **Post-release:** as a prefix for entries that apply to an already published version. Link every entry to its corresponding pull request.
+Use Post-release: as a prefix for entries that apply to an already published version. Link every entry to its corresponding pull request.
 
----
+<a id="writing-and-formatting-guidelines"></a>
+Writing and formatting guidelines
 
-## Writing and formatting guidelines
-
-### Indentation
+<a id="indentation"></a>
+Indentation
 
 Use three-space indentation in `.rst` files. For example:
 
@@ -153,13 +164,17 @@ Use three-space indentation in `.rst` files. For example:
    -  Password: <ADMIN_PASSWORD>
 ```
 
-### Links
+<a id="links"></a>
+Links
 
-- Use the `:ref:` role to link to sections within the same page.
-- Use the `:doc:` role to link to other documentation pages. Do not use
+Use the `:ref:` role to link to sections within the same page.
+
+Use the `:doc:` role to link to other documentation pages. Do not use
+
   `:ref:` to link to a full page.
-- Use `:api-ref:` to link to the Wazuh API reference.
-- Use anonymous hyperlinks (double underscores) for external links:
+Use `:api-ref:` to link to the Wazuh API reference.
+
+Use anonymous hyperlinks (double underscores) for external links:
 
 ```rst
   `https://example.com`__
@@ -167,24 +182,26 @@ Use three-space indentation in `.rst` files. For example:
   `Example site <https://example.com>`__
 ```
 
-- To prevent Sphinx from converting a URL into a link, prepend `\`:
+To prevent Sphinx from converting a URL into a link, prepend `\`:
 
 ```rst
   This is the sample URL \https://example.com used as an example.
 ```
 
-### Headings
+<a id="headings"></a>
+Headings
 
 Use the following underline characters consistently:
 
-| Level | Character |
-|-------|-----------|
-| H1 | `=` |
-| H2 | `-` |
-| H3 | `^` |
-| H4 | `~` |
-| H5 | `.` |
+H1: `=`
 
----
+H2: `-`
+
+H3: `^`
+
+H4: `~`
+
+H5: `.`
+
 
 Thank you for contributing to the Wazuh documentation.
